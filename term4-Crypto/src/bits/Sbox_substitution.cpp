@@ -1,6 +1,7 @@
 #include "Sbox_substitution.hpp"
 #include <cstddef>
 #include <cstdint>
+#include <cstdio>
 #include <stdexcept>
 #include <vector>
   
@@ -32,46 +33,56 @@ substitute(const std::vector<uint8_t> &bits,
 
     auto curr_byte_id = 0;
     auto bit_pos_in_byte = 0;
-    auto curr_key = 0;
     auto curr_out_byte_id = 0;
     auto bit_pos_out_byte = 0;
-    
+    auto curr_key = 0;
+            printf("hello pre for, total blocks = %lu\n", total_blocks_in);
+
     for (auto in_block_id = 0; in_block_id < total_blocks_in; in_block_id++)
-    {
+    {        printf("hello for\n");
+        if (bit_pos_in_byte == 8) 
+        {
+            bit_pos_in_byte = 0;
+            curr_byte_id++;
+        }
         if (bit_pos_in_byte + block_size_in <= 8)
         {
             curr_key = (bits[curr_byte_id] >> (8 - block_size_in - bit_pos_in_byte)) 
                         & ((1 << block_size_in) - 1);
             bit_pos_in_byte += block_size_in;
-            if (bit_pos_in_byte == 8) 
-            {
-                bit_pos_in_byte = 0;
-                curr_byte_id++;
-            }
         }
+
         else //if key devided between adjacent bytes
         {
+            printf("hello else %d\n", bit_pos_in_byte);
 
             size_t bits_from_current = 8 - bit_pos_in_byte;
             size_t bits_from_next = block_size_in - bits_from_current;        
             uint8_t current_part = bits[curr_byte_id] & ((1 << bits_from_current) - 1);        
             curr_byte_id++;
+            bit_pos_in_byte = 0;
             uint8_t next_part = bits[curr_byte_id] >> (8 - bits_from_next);
             curr_key = (current_part << bits_from_next) | next_part;
+            bit_pos_in_byte = bits_from_next;
         }
+        printf("curr_key = 0x%02X\n", curr_key);
+
         auto out_bits = s_block.at(curr_key) & ((1 << block_size_out) - 1);
-        if (bit_pos_out_byte + block_size_out == 8)
-        {
-            bit_pos_out_byte = 0;
-            curr_out_byte_id++;
-        }
+
+        if (bit_pos_out_byte == 8)
+            {
+                bit_pos_out_byte = 0;
+                curr_out_byte_id++;
+            }
         if (bit_pos_out_byte + block_size_out <= 8)
         {
+            printf("hello else if(out)\n");
             result[curr_out_byte_id] |= out_bits << (8 - block_size_out - bit_pos_out_byte);
             bit_pos_out_byte += block_size_out;
         }
         else 
         {
+            printf("hello out else\n");
             size_t total_bits_from_current = 8 - bit_pos_out_byte;
             size_t total_bits_from_next = block_size_out - total_bits_from_current;
             auto current_part = out_bits >> total_bits_from_next;
@@ -82,26 +93,23 @@ substitute(const std::vector<uint8_t> &bits,
             result[curr_out_byte_id] |= next_part << (8 - total_bits_from_next /* - bit_pos_out_byte == 0*/);
             bit_pos_out_byte = total_bits_from_next; 
         }
+    }
 
-        if (bits_remaining_in > 0)
-    {
-        size_t base_bit = total_blocks_in * block_size_in;
-        
-        for (size_t b = 0; b < bits_remaining_in; ++b)
+    if (bits_remaining_in > 0)
         {
-            size_t in_byte_idx = (base_bit + b) / 8;
-            size_t in_bit_idx = 7 - ((base_bit + b) % 8);
-            uint8_t bit_val = (bits[in_byte_idx] >> in_bit_idx) & 1;
-                        
-            size_t out_byte_idx = (total_blocks_in * block_size_out + b) / 8;
-            size_t out_bit_idx = 7 - ((total_blocks_in * block_size_out + b) % 8);
+            size_t base_bit = total_blocks_in * block_size_in;
             
-            result[out_byte_idx] |= bit_val << out_bit_idx;
+            for (size_t b = 0; b < bits_remaining_in; ++b)
+            {
+                size_t in_byte_idx = (base_bit + b) / 8;
+                size_t in_bit_idx = 7 - ((base_bit + b) % 8);
+                uint8_t bit_val = (bits[in_byte_idx] >> in_bit_idx) & 1;
+
+                size_t out_byte_idx = (total_blocks_in * block_size_out + b) / 8;
+                size_t out_bit_idx = 7 - ((total_blocks_in * block_size_out + b) % 8);
+                
+                result[out_byte_idx] |= bit_val << out_bit_idx;
+            }
         }
-    }
-
     return result;
-    }
-
-
 }
