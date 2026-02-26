@@ -179,4 +179,4 @@ TEST(SboxSubstitutionTest, SingleBitBlocks) {
     auto result = substitute(input, s_block, 1, 1);
     ASSERT_EQ(result.size(), 1);
     EXPECT_EQ(result[0], 0b01010101);
-}
+};

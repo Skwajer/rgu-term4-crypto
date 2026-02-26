@@ -33,7 +33,7 @@ std::vector<uint8_t> bit_Pbox_permutation
         {
             res_bit = (value[index / 8] >> (7 - (index % 8))) & 1;
         }
-        result[i / 8] |= res_bit << (7 - (index % 8));
+        result[i / 8] |= res_bit << (7 - (i % 8));
     }
     return result;
 }
