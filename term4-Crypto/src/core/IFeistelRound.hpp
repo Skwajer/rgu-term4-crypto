@@ -6,7 +6,6 @@ namespace crypto {
     public:
         virtual ~IFeistelRound() = default;
         
-        // Шифрующее преобразование раунда сети Фейстеля
-        virtual ByteArray encryptRound(const ByteArray& block, const ByteArray& roundKey) = 0;
+        virtual Bytes encryptRound(const Bytes& block, const Bytes& roundKey) = 0;
     };
 }

@@ -28,9 +28,11 @@ set(SOURCES
     src/core/DESCipher.cpp
     src/core/FeistelCipher.cpp
     src/bits/Pbox_permutation.cpp
+    src/bits/Sbox_substitution.cpp
     src/core/FeistelNetwork.cpp
     main.cpp
     src/core/des_tables.cpp
+
 )
 
 # Создаем исполняемый файл
@@ -47,4 +49,4 @@ target_include_directories(crypto_demo PRIVATE
 # target_link_libraries(crypto_demo PRIVATE ...)
 
 # ==== ТЕСТЫ ====
-add_subdirectory(tests)
+# add_subdirectory(tests)

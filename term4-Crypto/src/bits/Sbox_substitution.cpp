@@ -36,10 +36,9 @@ substitute(const std::vector<uint8_t> &bits,
     auto curr_out_byte_id = 0;
     auto bit_pos_out_byte = 0;
     auto curr_key = 0;
-            printf("hello pre for, total blocks = %lu\n", total_blocks_in);
 
     for (auto in_block_id = 0; in_block_id < total_blocks_in; in_block_id++)
-    {        printf("hello for\n");
+    {
         if (bit_pos_in_byte == 8) 
         {
             bit_pos_in_byte = 0;
@@ -54,7 +53,6 @@ substitute(const std::vector<uint8_t> &bits,
 
         else //if key devided between adjacent bytes
         {
-            printf("hello else %d\n", bit_pos_in_byte);
 
             size_t bits_from_current = 8 - bit_pos_in_byte;
             size_t bits_from_next = block_size_in - bits_from_current;        
@@ -65,7 +63,6 @@ substitute(const std::vector<uint8_t> &bits,
             curr_key = (current_part << bits_from_next) | next_part;
             bit_pos_in_byte = bits_from_next;
         }
-        printf("curr_key = 0x%02X\n", curr_key);
 
         auto out_bits = s_block.at(curr_key) & ((1 << block_size_out) - 1);
 
@@ -76,13 +73,11 @@ substitute(const std::vector<uint8_t> &bits,
             }
         if (bit_pos_out_byte + block_size_out <= 8)
         {
-            printf("hello else if(out)\n");
             result[curr_out_byte_id] |= out_bits << (8 - block_size_out - bit_pos_out_byte);
             bit_pos_out_byte += block_size_out;
         }
         else 
         {
-            printf("hello out else\n");
             size_t total_bits_from_current = 8 - bit_pos_out_byte;
             size_t total_bits_from_next = block_size_out - total_bits_from_current;
             auto current_part = out_bits >> total_bits_from_next;

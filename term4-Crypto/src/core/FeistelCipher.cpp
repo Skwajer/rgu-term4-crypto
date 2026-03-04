@@ -1,32 +1,40 @@
 #include "FeistelCipher.hpp"
-#include <exception>
 #include <stdexcept>
-namespace crypto {
+namespace crypto 
+{
     FeistelCipher::FeistelCipher(std::unique_ptr<FeistelNetwork> network)
-        : m_feistelNetwork(std::move(network)) {
-        if (!m_feistelNetwork) 
+        : m_feistelNetwork(std::move(network)) 
         {
-            throw std::invalid_argument("sdfsf");
+            if (!m_feistelNetwork) 
+            {
+                throw std::invalid_argument("network pointer is nullptr");
+            }
         }
-    }
     
-    void FeistelCipher::setKey(const ByteArray& key) {
+    void FeistelCipher::setKey(const Bytes& key) 
+    {
         m_currentKey = key;
     }
     
-    ByteArray FeistelCipher::encryptBlock(const ByteArray& block) {
-        ByteArray working = block;
+    Bytes FeistelCipher::encryptBlock(const Bytes& block) 
+    {
+        Bytes working = block;
+        m_feistelNetwork->set_round_keys(m_currentKey);
+
         preEncrypt(working);
-        working = m_feistelNetwork->encrypt(working, m_currentKey);
+        working = m_feistelNetwork->encrypt(working);
         postEncrypt(working);
         return working;
     }
     
-    ByteArray FeistelCipher::decryptBlock(const ByteArray& block) {
-        ByteArray working = block;
-        preDecrypt(working);
-        working = m_feistelNetwork->decrypt(working, m_currentKey);
-        postDecrypt(working);
+    Bytes FeistelCipher::decryptBlock(const Bytes& block) 
+    {
+        Bytes working = block;
+        m_feistelNetwork->set_round_keys(m_currentKey);
+        
+        preEncrypt(working);
+        working = m_feistelNetwork->decrypt(working);
+        postEncrypt(working);
         return working;
     }
 }

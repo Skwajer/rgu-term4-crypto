@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/_deps/googletest-subbuild/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

@@ -6,13 +6,10 @@ namespace crypto {
     public:
         virtual ~ISymmetricCipher() = default;
         
-        // Установка ключа шифрования/дешифрования
-        virtual void setKey(const ByteArray& key) = 0;
+        virtual void setKey(const Bytes& key) = 0;
         
-        // Шифрование блока данных
-        virtual ByteArray encryptBlock(const ByteArray& block) = 0;
+        virtual Bytes encryptBlock(const Bytes& block) = 0;
         
-        // Дешифрование блока данных
-        virtual ByteArray decryptBlock(const ByteArray& block) = 0;
+        virtual Bytes decryptBlock(const Bytes& block) = 0;
     };
 }

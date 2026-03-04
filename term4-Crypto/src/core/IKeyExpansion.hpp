@@ -7,7 +7,6 @@ namespace crypto {
     public:
         virtual ~IKeyExpansion() = default;
         
-        // Генерация раундовых ключей из входного ключа
-        virtual std::vector<ByteArray> generateRoundKeys(const ByteArray& key) = 0;
+        virtual std::vector<Bytes> generateRoundKeys(const Bytes& key) = 0;
     };
 }

@@ -1,6 +1,7 @@
 #include "FeistelNetwork.hpp"
+#include "namespaces_crypto.hpp"
+#include <algorithm>
 #include <stdexcept>
-#include <cstdint>
 #include <cstring>
 
 namespace crypto {
@@ -14,82 +15,80 @@ namespace crypto {
             throw std::invalid_argument("Round function and key expansion must be provided");
         }
     }
+
+    void FeistelNetwork::set_round_keys(Bytes const &key)
+    {
+        m_round_keys = m_keyExpansion->generateRoundKeys(key);
+    }
     
-    ByteArray FeistelNetwork::encrypt(const ByteArray& block, const ByteArray& key) {
-        if (block.size() != 8) {
-            throw std::invalid_argument("Block size must be 8 bytes for DES");
-        }
-        
-        auto roundKeys = m_keyExpansion->generateRoundKeys(key);
-        if (roundKeys.size() < m_numRounds) {
+    Bytes FeistelNetwork::encrypt(const Bytes& block)
+    {
+        Bytes b = block;
+
+        if (m_round_keys.size() < m_numRounds) 
+        {
+            printf("%llu\n", m_round_keys.size());
             throw std::runtime_error("Insufficient round keys generated");
         }
         
-        uint32_t left = 0, right = 0;
+        size_t half_part_size = (b.size() / 2); 
+        Bytes L(b.begin(), b.begin() + half_part_size);
+        Bytes R(b.begin() + half_part_size, b.end());
         
-        for (int i = 0; i < 4; i++) {
-            left = (left << 8) | block[i];
+        for (size_t round = 0; round < m_numRounds; round++) 
+        {
+            auto FR = m_roundFunction->encryptRound(R, m_round_keys[round]);
+
+            auto old_L = L;
+            L = R;
+            Bytes new_R(half_part_size);
+            for (auto i = 0; i < L.size(); i++)
+            {
+                new_R[i] = old_L[i] ^ FR[i];
+            }
+            R = std::move(new_R);
         }
-        for (int i = 4; i < 8; i++) {
-            right = (right << 8) | block[i];
-        }
-        
-        for (size_t round = 0; round < m_numRounds; round++) {
-            uint32_t newRight = left ^ ((DESRoundFunction*)m_roundFunction.get())->f(right, roundKeys[round]);
-            left = right;
-            right = newRight;
-        }
-        
-        ByteArray result(8);
-        
-        for (int i = 3; i >= 0; i--) {
-            result[i] = right & 0xFF;
-            right >>= 8;
-        }
-        for (int i = 7; i >= 4; i--) {
-            result[i] = left & 0xFF;
-            left >>= 8;
-        }
-        
+        Bytes result;
+        result.reserve(b.size());
+        result.insert(result.end(), R.begin(), R.end());
+        result.insert(result.end(), L.begin(), L.end());
+
         return result;
     }
     
-    ByteArray FeistelNetwork::decrypt(const ByteArray& block, const ByteArray& key) {
-        if (block.size() != 8) {
-            throw std::invalid_argument("Block size must be 8 bytes for DES");
-        }
-        
-        auto roundKeys = m_keyExpansion->generateRoundKeys(key);
-        if (roundKeys.size() < m_numRounds) {
+    Bytes FeistelNetwork::decrypt(const Bytes& block) 
+    {
+        Bytes b = block;
+
+        if (m_round_keys.size() < m_numRounds) 
+        {
             throw std::runtime_error("Insufficient round keys generated");
         }
         
-        uint32_t left = 0, right = 0;
+        size_t half_part_size = (b.size() / 2); 
+        Bytes L(b.begin(), b.begin() + half_part_size);
+        Bytes R(b.begin() + half_part_size, b.end());
+        auto reversed_round_keys = m_round_keys;
+        std::reverse(reversed_round_keys.begin(), reversed_round_keys.end());
         
-        for (int i = 0; i < 4; i++) {
-            left = (left << 8) | block[i];
+        for (size_t round = 0; round < m_numRounds; round++) 
+        {
+            auto FR = m_roundFunction->encryptRound(R, reversed_round_keys[round]);
+
+            auto old_L = L;
+            L = R;
+            Bytes new_R(half_part_size);
+            for (auto i = 0; i < L.size(); i++)
+            {
+                new_R[i] = old_L[i] ^ FR[i];
+            }
+            R = std::move(new_R);
         }
-        for (int i = 4; i < 8; i++) {
-            right = (right << 8) | block[i];
-        }
-        
-        for (int round = m_numRounds - 1; round >= 0; round--) {
-            uint32_t newLeft = right ^ ((DESRoundFunction*)m_roundFunction.get())->f(left, roundKeys[round]);
-            right = left;
-            left = newLeft;
-        }
-        
-        ByteArray result(8);
-        
-        for (int i = 3; i >= 0; i--) {
-            result[i] = left & 0xFF;
-            left >>= 8;
-        }
-        for (int i = 7; i >= 4; i--) {
-            result[i] = right & 0xFF;
-            right >>= 8;
-        }
-        
+        Bytes result;
+        result.reserve(b.size());
+        result.insert(result.end(), R.begin(), R.end());
+        result.insert(result.end(), L.begin(), L.end());
+
         return result;
     }
 }

@@ -1,7 +1,8 @@
 #pragma once
 #include <vector>
 
-namespace crypto {
+namespace crypto 
+{
     using Byte = unsigned char;
-    using ByteArray = std::vector<Byte>;
+    using Bytes = std::vector<Byte>;
 }

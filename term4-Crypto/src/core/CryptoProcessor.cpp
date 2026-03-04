@@ -53,7 +53,6 @@ std::vector<uint8_t> CryptoProcessor::decryptData(const std::vector<uint8_t>& da
     std::vector<uint8_t> result;
     result.reserve(data.size());
     
-    // Дешифруем по блокам (8 байт)
     for (size_t i = 0; i < data.size(); i += 8) {
         std::vector<uint8_t> block(data.begin() + i, data.begin() + i + 8);
         std::vector<uint8_t> decrypted = cipher_->decryptBlock(block);
@@ -86,7 +85,6 @@ void CryptoProcessor::encryptFile(const std::string& inputPath,
                                   const std::string& outputPath) {
     std::vector<uint8_t> data = readFile(inputPath);
     
-    // Проверяем размер файла
     if (data.size() % 8 != 0) {
         throw std::runtime_error("File size must be multiple of 8 bytes for DES encryption");
     }
