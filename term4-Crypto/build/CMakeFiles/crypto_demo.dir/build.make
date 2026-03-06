@@ -72,52 +72,66 @@ include CMakeFiles/crypto_demo.dir/flags.make
 CMakeFiles/crypto_demo.dir/codegen:
 .PHONY : CMakeFiles/crypto_demo.dir/codegen
 
-CMakeFiles/crypto_demo.dir/src/core/CryptoProcessor.cpp.o: CMakeFiles/crypto_demo.dir/flags.make
-CMakeFiles/crypto_demo.dir/src/core/CryptoProcessor.cpp.o: /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/src/core/CryptoProcessor.cpp
-CMakeFiles/crypto_demo.dir/src/core/CryptoProcessor.cpp.o: CMakeFiles/crypto_demo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/crypto_demo.dir/src/core/CryptoProcessor.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/crypto_demo.dir/src/core/CryptoProcessor.cpp.o -MF CMakeFiles/crypto_demo.dir/src/core/CryptoProcessor.cpp.o.d -o CMakeFiles/crypto_demo.dir/src/core/CryptoProcessor.cpp.o -c /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/src/core/CryptoProcessor.cpp
+CMakeFiles/crypto_demo.dir/src/des/DESCipher.cpp.o: CMakeFiles/crypto_demo.dir/flags.make
+CMakeFiles/crypto_demo.dir/src/des/DESCipher.cpp.o: /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/src/des/DESCipher.cpp
+CMakeFiles/crypto_demo.dir/src/des/DESCipher.cpp.o: CMakeFiles/crypto_demo.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/crypto_demo.dir/src/des/DESCipher.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/crypto_demo.dir/src/des/DESCipher.cpp.o -MF CMakeFiles/crypto_demo.dir/src/des/DESCipher.cpp.o.d -o CMakeFiles/crypto_demo.dir/src/des/DESCipher.cpp.o -c /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/src/des/DESCipher.cpp
 
-CMakeFiles/crypto_demo.dir/src/core/CryptoProcessor.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/crypto_demo.dir/src/core/CryptoProcessor.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/src/core/CryptoProcessor.cpp > CMakeFiles/crypto_demo.dir/src/core/CryptoProcessor.cpp.i
+CMakeFiles/crypto_demo.dir/src/des/DESCipher.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/crypto_demo.dir/src/des/DESCipher.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/src/des/DESCipher.cpp > CMakeFiles/crypto_demo.dir/src/des/DESCipher.cpp.i
 
-CMakeFiles/crypto_demo.dir/src/core/CryptoProcessor.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/crypto_demo.dir/src/core/CryptoProcessor.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/src/core/CryptoProcessor.cpp -o CMakeFiles/crypto_demo.dir/src/core/CryptoProcessor.cpp.s
+CMakeFiles/crypto_demo.dir/src/des/DESCipher.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/crypto_demo.dir/src/des/DESCipher.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/src/des/DESCipher.cpp -o CMakeFiles/crypto_demo.dir/src/des/DESCipher.cpp.s
 
-CMakeFiles/crypto_demo.dir/src/core/DESCipher.cpp.o: CMakeFiles/crypto_demo.dir/flags.make
-CMakeFiles/crypto_demo.dir/src/core/DESCipher.cpp.o: /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/src/core/DESCipher.cpp
-CMakeFiles/crypto_demo.dir/src/core/DESCipher.cpp.o: CMakeFiles/crypto_demo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/crypto_demo.dir/src/core/DESCipher.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/crypto_demo.dir/src/core/DESCipher.cpp.o -MF CMakeFiles/crypto_demo.dir/src/core/DESCipher.cpp.o.d -o CMakeFiles/crypto_demo.dir/src/core/DESCipher.cpp.o -c /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/src/core/DESCipher.cpp
+CMakeFiles/crypto_demo.dir/src/des/des_tables.cpp.o: CMakeFiles/crypto_demo.dir/flags.make
+CMakeFiles/crypto_demo.dir/src/des/des_tables.cpp.o: /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/src/des/des_tables.cpp
+CMakeFiles/crypto_demo.dir/src/des/des_tables.cpp.o: CMakeFiles/crypto_demo.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/crypto_demo.dir/src/des/des_tables.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/crypto_demo.dir/src/des/des_tables.cpp.o -MF CMakeFiles/crypto_demo.dir/src/des/des_tables.cpp.o.d -o CMakeFiles/crypto_demo.dir/src/des/des_tables.cpp.o -c /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/src/des/des_tables.cpp
 
-CMakeFiles/crypto_demo.dir/src/core/DESCipher.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/crypto_demo.dir/src/core/DESCipher.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/src/core/DESCipher.cpp > CMakeFiles/crypto_demo.dir/src/core/DESCipher.cpp.i
+CMakeFiles/crypto_demo.dir/src/des/des_tables.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/crypto_demo.dir/src/des/des_tables.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/src/des/des_tables.cpp > CMakeFiles/crypto_demo.dir/src/des/des_tables.cpp.i
 
-CMakeFiles/crypto_demo.dir/src/core/DESCipher.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/crypto_demo.dir/src/core/DESCipher.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/src/core/DESCipher.cpp -o CMakeFiles/crypto_demo.dir/src/core/DESCipher.cpp.s
+CMakeFiles/crypto_demo.dir/src/des/des_tables.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/crypto_demo.dir/src/des/des_tables.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/src/des/des_tables.cpp -o CMakeFiles/crypto_demo.dir/src/des/des_tables.cpp.s
 
-CMakeFiles/crypto_demo.dir/src/core/FeistelCipher.cpp.o: CMakeFiles/crypto_demo.dir/flags.make
-CMakeFiles/crypto_demo.dir/src/core/FeistelCipher.cpp.o: /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/src/core/FeistelCipher.cpp
-CMakeFiles/crypto_demo.dir/src/core/FeistelCipher.cpp.o: CMakeFiles/crypto_demo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/crypto_demo.dir/src/core/FeistelCipher.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/crypto_demo.dir/src/core/FeistelCipher.cpp.o -MF CMakeFiles/crypto_demo.dir/src/core/FeistelCipher.cpp.o.d -o CMakeFiles/crypto_demo.dir/src/core/FeistelCipher.cpp.o -c /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/src/core/FeistelCipher.cpp
+CMakeFiles/crypto_demo.dir/src/crypto_core/FeistelCipher.cpp.o: CMakeFiles/crypto_demo.dir/flags.make
+CMakeFiles/crypto_demo.dir/src/crypto_core/FeistelCipher.cpp.o: /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/src/crypto_core/FeistelCipher.cpp
+CMakeFiles/crypto_demo.dir/src/crypto_core/FeistelCipher.cpp.o: CMakeFiles/crypto_demo.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/crypto_demo.dir/src/crypto_core/FeistelCipher.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/crypto_demo.dir/src/crypto_core/FeistelCipher.cpp.o -MF CMakeFiles/crypto_demo.dir/src/crypto_core/FeistelCipher.cpp.o.d -o CMakeFiles/crypto_demo.dir/src/crypto_core/FeistelCipher.cpp.o -c /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/src/crypto_core/FeistelCipher.cpp
 
-CMakeFiles/crypto_demo.dir/src/core/FeistelCipher.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/crypto_demo.dir/src/core/FeistelCipher.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/src/core/FeistelCipher.cpp > CMakeFiles/crypto_demo.dir/src/core/FeistelCipher.cpp.i
+CMakeFiles/crypto_demo.dir/src/crypto_core/FeistelCipher.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/crypto_demo.dir/src/crypto_core/FeistelCipher.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/src/crypto_core/FeistelCipher.cpp > CMakeFiles/crypto_demo.dir/src/crypto_core/FeistelCipher.cpp.i
 
-CMakeFiles/crypto_demo.dir/src/core/FeistelCipher.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/crypto_demo.dir/src/core/FeistelCipher.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/src/core/FeistelCipher.cpp -o CMakeFiles/crypto_demo.dir/src/core/FeistelCipher.cpp.s
+CMakeFiles/crypto_demo.dir/src/crypto_core/FeistelCipher.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/crypto_demo.dir/src/crypto_core/FeistelCipher.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/src/crypto_core/FeistelCipher.cpp -o CMakeFiles/crypto_demo.dir/src/crypto_core/FeistelCipher.cpp.s
+
+CMakeFiles/crypto_demo.dir/src/crypto_core/FeistelNetwork.cpp.o: CMakeFiles/crypto_demo.dir/flags.make
+CMakeFiles/crypto_demo.dir/src/crypto_core/FeistelNetwork.cpp.o: /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/src/crypto_core/FeistelNetwork.cpp
+CMakeFiles/crypto_demo.dir/src/crypto_core/FeistelNetwork.cpp.o: CMakeFiles/crypto_demo.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/crypto_demo.dir/src/crypto_core/FeistelNetwork.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/crypto_demo.dir/src/crypto_core/FeistelNetwork.cpp.o -MF CMakeFiles/crypto_demo.dir/src/crypto_core/FeistelNetwork.cpp.o.d -o CMakeFiles/crypto_demo.dir/src/crypto_core/FeistelNetwork.cpp.o -c /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/src/crypto_core/FeistelNetwork.cpp
+
+CMakeFiles/crypto_demo.dir/src/crypto_core/FeistelNetwork.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/crypto_demo.dir/src/crypto_core/FeistelNetwork.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/src/crypto_core/FeistelNetwork.cpp > CMakeFiles/crypto_demo.dir/src/crypto_core/FeistelNetwork.cpp.i
+
+CMakeFiles/crypto_demo.dir/src/crypto_core/FeistelNetwork.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/crypto_demo.dir/src/crypto_core/FeistelNetwork.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/src/crypto_core/FeistelNetwork.cpp -o CMakeFiles/crypto_demo.dir/src/crypto_core/FeistelNetwork.cpp.s
 
 CMakeFiles/crypto_demo.dir/src/bits/Pbox_permutation.cpp.o: CMakeFiles/crypto_demo.dir/flags.make
 CMakeFiles/crypto_demo.dir/src/bits/Pbox_permutation.cpp.o: /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/src/bits/Pbox_permutation.cpp
 CMakeFiles/crypto_demo.dir/src/bits/Pbox_permutation.cpp.o: CMakeFiles/crypto_demo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/crypto_demo.dir/src/bits/Pbox_permutation.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/crypto_demo.dir/src/bits/Pbox_permutation.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/crypto_demo.dir/src/bits/Pbox_permutation.cpp.o -MF CMakeFiles/crypto_demo.dir/src/bits/Pbox_permutation.cpp.o.d -o CMakeFiles/crypto_demo.dir/src/bits/Pbox_permutation.cpp.o -c /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/src/bits/Pbox_permutation.cpp
 
 CMakeFiles/crypto_demo.dir/src/bits/Pbox_permutation.cpp.i: cmake_force
@@ -131,7 +145,7 @@ CMakeFiles/crypto_demo.dir/src/bits/Pbox_permutation.cpp.s: cmake_force
 CMakeFiles/crypto_demo.dir/src/bits/Sbox_substitution.cpp.o: CMakeFiles/crypto_demo.dir/flags.make
 CMakeFiles/crypto_demo.dir/src/bits/Sbox_substitution.cpp.o: /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/src/bits/Sbox_substitution.cpp
 CMakeFiles/crypto_demo.dir/src/bits/Sbox_substitution.cpp.o: CMakeFiles/crypto_demo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/crypto_demo.dir/src/bits/Sbox_substitution.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/crypto_demo.dir/src/bits/Sbox_substitution.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/crypto_demo.dir/src/bits/Sbox_substitution.cpp.o -MF CMakeFiles/crypto_demo.dir/src/bits/Sbox_substitution.cpp.o.d -o CMakeFiles/crypto_demo.dir/src/bits/Sbox_substitution.cpp.o -c /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/src/bits/Sbox_substitution.cpp
 
 CMakeFiles/crypto_demo.dir/src/bits/Sbox_substitution.cpp.i: cmake_force
@@ -141,20 +155,6 @@ CMakeFiles/crypto_demo.dir/src/bits/Sbox_substitution.cpp.i: cmake_force
 CMakeFiles/crypto_demo.dir/src/bits/Sbox_substitution.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/crypto_demo.dir/src/bits/Sbox_substitution.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/src/bits/Sbox_substitution.cpp -o CMakeFiles/crypto_demo.dir/src/bits/Sbox_substitution.cpp.s
-
-CMakeFiles/crypto_demo.dir/src/core/FeistelNetwork.cpp.o: CMakeFiles/crypto_demo.dir/flags.make
-CMakeFiles/crypto_demo.dir/src/core/FeistelNetwork.cpp.o: /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/src/core/FeistelNetwork.cpp
-CMakeFiles/crypto_demo.dir/src/core/FeistelNetwork.cpp.o: CMakeFiles/crypto_demo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/crypto_demo.dir/src/core/FeistelNetwork.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/crypto_demo.dir/src/core/FeistelNetwork.cpp.o -MF CMakeFiles/crypto_demo.dir/src/core/FeistelNetwork.cpp.o.d -o CMakeFiles/crypto_demo.dir/src/core/FeistelNetwork.cpp.o -c /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/src/core/FeistelNetwork.cpp
-
-CMakeFiles/crypto_demo.dir/src/core/FeistelNetwork.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/crypto_demo.dir/src/core/FeistelNetwork.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/src/core/FeistelNetwork.cpp > CMakeFiles/crypto_demo.dir/src/core/FeistelNetwork.cpp.i
-
-CMakeFiles/crypto_demo.dir/src/core/FeistelNetwork.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/crypto_demo.dir/src/core/FeistelNetwork.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/src/core/FeistelNetwork.cpp -o CMakeFiles/crypto_demo.dir/src/core/FeistelNetwork.cpp.s
 
 CMakeFiles/crypto_demo.dir/main.cpp.o: CMakeFiles/crypto_demo.dir/flags.make
 CMakeFiles/crypto_demo.dir/main.cpp.o: /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/main.cpp
@@ -170,46 +170,30 @@ CMakeFiles/crypto_demo.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/crypto_demo.dir/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/main.cpp -o CMakeFiles/crypto_demo.dir/main.cpp.s
 
-CMakeFiles/crypto_demo.dir/src/core/des_tables.cpp.o: CMakeFiles/crypto_demo.dir/flags.make
-CMakeFiles/crypto_demo.dir/src/core/des_tables.cpp.o: /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/src/core/des_tables.cpp
-CMakeFiles/crypto_demo.dir/src/core/des_tables.cpp.o: CMakeFiles/crypto_demo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/crypto_demo.dir/src/core/des_tables.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/crypto_demo.dir/src/core/des_tables.cpp.o -MF CMakeFiles/crypto_demo.dir/src/core/des_tables.cpp.o.d -o CMakeFiles/crypto_demo.dir/src/core/des_tables.cpp.o -c /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/src/core/des_tables.cpp
-
-CMakeFiles/crypto_demo.dir/src/core/des_tables.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/crypto_demo.dir/src/core/des_tables.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/src/core/des_tables.cpp > CMakeFiles/crypto_demo.dir/src/core/des_tables.cpp.i
-
-CMakeFiles/crypto_demo.dir/src/core/des_tables.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/crypto_demo.dir/src/core/des_tables.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/src/core/des_tables.cpp -o CMakeFiles/crypto_demo.dir/src/core/des_tables.cpp.s
-
 # Object files for target crypto_demo
 crypto_demo_OBJECTS = \
-"CMakeFiles/crypto_demo.dir/src/core/CryptoProcessor.cpp.o" \
-"CMakeFiles/crypto_demo.dir/src/core/DESCipher.cpp.o" \
-"CMakeFiles/crypto_demo.dir/src/core/FeistelCipher.cpp.o" \
+"CMakeFiles/crypto_demo.dir/src/des/DESCipher.cpp.o" \
+"CMakeFiles/crypto_demo.dir/src/des/des_tables.cpp.o" \
+"CMakeFiles/crypto_demo.dir/src/crypto_core/FeistelCipher.cpp.o" \
+"CMakeFiles/crypto_demo.dir/src/crypto_core/FeistelNetwork.cpp.o" \
 "CMakeFiles/crypto_demo.dir/src/bits/Pbox_permutation.cpp.o" \
 "CMakeFiles/crypto_demo.dir/src/bits/Sbox_substitution.cpp.o" \
-"CMakeFiles/crypto_demo.dir/src/core/FeistelNetwork.cpp.o" \
-"CMakeFiles/crypto_demo.dir/main.cpp.o" \
-"CMakeFiles/crypto_demo.dir/src/core/des_tables.cpp.o"
+"CMakeFiles/crypto_demo.dir/main.cpp.o"
 
 # External object files for target crypto_demo
 crypto_demo_EXTERNAL_OBJECTS =
 
-crypto_demo: CMakeFiles/crypto_demo.dir/src/core/CryptoProcessor.cpp.o
-crypto_demo: CMakeFiles/crypto_demo.dir/src/core/DESCipher.cpp.o
-crypto_demo: CMakeFiles/crypto_demo.dir/src/core/FeistelCipher.cpp.o
+crypto_demo: CMakeFiles/crypto_demo.dir/src/des/DESCipher.cpp.o
+crypto_demo: CMakeFiles/crypto_demo.dir/src/des/des_tables.cpp.o
+crypto_demo: CMakeFiles/crypto_demo.dir/src/crypto_core/FeistelCipher.cpp.o
+crypto_demo: CMakeFiles/crypto_demo.dir/src/crypto_core/FeistelNetwork.cpp.o
 crypto_demo: CMakeFiles/crypto_demo.dir/src/bits/Pbox_permutation.cpp.o
 crypto_demo: CMakeFiles/crypto_demo.dir/src/bits/Sbox_substitution.cpp.o
-crypto_demo: CMakeFiles/crypto_demo.dir/src/core/FeistelNetwork.cpp.o
 crypto_demo: CMakeFiles/crypto_demo.dir/main.cpp.o
-crypto_demo: CMakeFiles/crypto_demo.dir/src/core/des_tables.cpp.o
 crypto_demo: CMakeFiles/crypto_demo.dir/build.make
 crypto_demo: CMakeFiles/crypto_demo.dir/compiler_depend.ts
 crypto_demo: CMakeFiles/crypto_demo.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable crypto_demo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable crypto_demo"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/crypto_demo.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

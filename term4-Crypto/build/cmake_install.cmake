@@ -47,6 +47,16 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/_deps/googletest-build/cmake_install.cmake")
 endif()
 
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/src/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/tests/cmake_install.cmake")
+endif()
+
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)

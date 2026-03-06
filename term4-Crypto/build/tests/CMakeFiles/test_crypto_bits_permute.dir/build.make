@@ -96,6 +96,7 @@ test_crypto_bits_permute_EXTERNAL_OBJECTS =
 tests/test_crypto_bits_permute: tests/CMakeFiles/test_crypto_bits_permute.dir/test_pbox_permutation.cpp.o
 tests/test_crypto_bits_permute: tests/CMakeFiles/test_crypto_bits_permute.dir/build.make
 tests/test_crypto_bits_permute: tests/CMakeFiles/test_crypto_bits_permute.dir/compiler_depend.ts
+tests/test_crypto_bits_permute: src/libcrypto_lib.a
 tests/test_crypto_bits_permute: lib/libgtest.a
 tests/test_crypto_bits_permute: lib/libgtest_main.a
 tests/test_crypto_bits_permute: lib/libgtest.a

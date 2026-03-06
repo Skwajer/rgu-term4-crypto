@@ -236,6 +236,45 @@ gtest_main/fast:
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
+#=============================================================================
+# Target rules for targets named crypto_lib
+
+# Build rule for target.
+crypto_lib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 crypto_lib
+.PHONY : crypto_lib
+
+# fast build rule for target.
+crypto_lib/fast:
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/crypto_lib.dir/build.make src/CMakeFiles/crypto_lib.dir/build
+.PHONY : crypto_lib/fast
+
+#=============================================================================
+# Target rules for targets named test_crypto_bits_permute
+
+# Build rule for target.
+test_crypto_bits_permute: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_crypto_bits_permute
+.PHONY : test_crypto_bits_permute
+
+# fast build rule for target.
+test_crypto_bits_permute/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_crypto_bits_permute.dir/build.make tests/CMakeFiles/test_crypto_bits_permute.dir/build
+.PHONY : test_crypto_bits_permute/fast
+
+#=============================================================================
+# Target rules for targets named test_crypto_bits_sbox
+
+# Build rule for target.
+test_crypto_bits_sbox: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_crypto_bits_sbox
+.PHONY : test_crypto_bits_sbox
+
+# fast build rule for target.
+test_crypto_bits_sbox/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_crypto_bits_sbox.dir/build.make tests/CMakeFiles/test_crypto_bits_sbox.dir/build
+.PHONY : test_crypto_bits_sbox/fast
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -308,125 +347,101 @@ src/bits/Sbox_substitution.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_demo.dir/build.make CMakeFiles/crypto_demo.dir/src/bits/Sbox_substitution.cpp.s
 .PHONY : src/bits/Sbox_substitution.cpp.s
 
-src/core/CryptoProcessor.o: src/core/CryptoProcessor.cpp.o
-.PHONY : src/core/CryptoProcessor.o
+src/crypto_core/FeistelCipher.o: src/crypto_core/FeistelCipher.cpp.o
+.PHONY : src/crypto_core/FeistelCipher.o
 
 # target to build an object file
-src/core/CryptoProcessor.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_demo.dir/build.make CMakeFiles/crypto_demo.dir/src/core/CryptoProcessor.cpp.o
-.PHONY : src/core/CryptoProcessor.cpp.o
+src/crypto_core/FeistelCipher.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_demo.dir/build.make CMakeFiles/crypto_demo.dir/src/crypto_core/FeistelCipher.cpp.o
+.PHONY : src/crypto_core/FeistelCipher.cpp.o
 
-src/core/CryptoProcessor.i: src/core/CryptoProcessor.cpp.i
-.PHONY : src/core/CryptoProcessor.i
+src/crypto_core/FeistelCipher.i: src/crypto_core/FeistelCipher.cpp.i
+.PHONY : src/crypto_core/FeistelCipher.i
 
 # target to preprocess a source file
-src/core/CryptoProcessor.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_demo.dir/build.make CMakeFiles/crypto_demo.dir/src/core/CryptoProcessor.cpp.i
-.PHONY : src/core/CryptoProcessor.cpp.i
+src/crypto_core/FeistelCipher.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_demo.dir/build.make CMakeFiles/crypto_demo.dir/src/crypto_core/FeistelCipher.cpp.i
+.PHONY : src/crypto_core/FeistelCipher.cpp.i
 
-src/core/CryptoProcessor.s: src/core/CryptoProcessor.cpp.s
-.PHONY : src/core/CryptoProcessor.s
+src/crypto_core/FeistelCipher.s: src/crypto_core/FeistelCipher.cpp.s
+.PHONY : src/crypto_core/FeistelCipher.s
 
 # target to generate assembly for a file
-src/core/CryptoProcessor.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_demo.dir/build.make CMakeFiles/crypto_demo.dir/src/core/CryptoProcessor.cpp.s
-.PHONY : src/core/CryptoProcessor.cpp.s
+src/crypto_core/FeistelCipher.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_demo.dir/build.make CMakeFiles/crypto_demo.dir/src/crypto_core/FeistelCipher.cpp.s
+.PHONY : src/crypto_core/FeistelCipher.cpp.s
 
-src/core/DESCipher.o: src/core/DESCipher.cpp.o
-.PHONY : src/core/DESCipher.o
+src/crypto_core/FeistelNetwork.o: src/crypto_core/FeistelNetwork.cpp.o
+.PHONY : src/crypto_core/FeistelNetwork.o
 
 # target to build an object file
-src/core/DESCipher.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_demo.dir/build.make CMakeFiles/crypto_demo.dir/src/core/DESCipher.cpp.o
-.PHONY : src/core/DESCipher.cpp.o
+src/crypto_core/FeistelNetwork.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_demo.dir/build.make CMakeFiles/crypto_demo.dir/src/crypto_core/FeistelNetwork.cpp.o
+.PHONY : src/crypto_core/FeistelNetwork.cpp.o
 
-src/core/DESCipher.i: src/core/DESCipher.cpp.i
-.PHONY : src/core/DESCipher.i
+src/crypto_core/FeistelNetwork.i: src/crypto_core/FeistelNetwork.cpp.i
+.PHONY : src/crypto_core/FeistelNetwork.i
 
 # target to preprocess a source file
-src/core/DESCipher.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_demo.dir/build.make CMakeFiles/crypto_demo.dir/src/core/DESCipher.cpp.i
-.PHONY : src/core/DESCipher.cpp.i
+src/crypto_core/FeistelNetwork.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_demo.dir/build.make CMakeFiles/crypto_demo.dir/src/crypto_core/FeistelNetwork.cpp.i
+.PHONY : src/crypto_core/FeistelNetwork.cpp.i
 
-src/core/DESCipher.s: src/core/DESCipher.cpp.s
-.PHONY : src/core/DESCipher.s
+src/crypto_core/FeistelNetwork.s: src/crypto_core/FeistelNetwork.cpp.s
+.PHONY : src/crypto_core/FeistelNetwork.s
 
 # target to generate assembly for a file
-src/core/DESCipher.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_demo.dir/build.make CMakeFiles/crypto_demo.dir/src/core/DESCipher.cpp.s
-.PHONY : src/core/DESCipher.cpp.s
+src/crypto_core/FeistelNetwork.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_demo.dir/build.make CMakeFiles/crypto_demo.dir/src/crypto_core/FeistelNetwork.cpp.s
+.PHONY : src/crypto_core/FeistelNetwork.cpp.s
 
-src/core/FeistelCipher.o: src/core/FeistelCipher.cpp.o
-.PHONY : src/core/FeistelCipher.o
+src/des/DESCipher.o: src/des/DESCipher.cpp.o
+.PHONY : src/des/DESCipher.o
 
 # target to build an object file
-src/core/FeistelCipher.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_demo.dir/build.make CMakeFiles/crypto_demo.dir/src/core/FeistelCipher.cpp.o
-.PHONY : src/core/FeistelCipher.cpp.o
+src/des/DESCipher.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_demo.dir/build.make CMakeFiles/crypto_demo.dir/src/des/DESCipher.cpp.o
+.PHONY : src/des/DESCipher.cpp.o
 
-src/core/FeistelCipher.i: src/core/FeistelCipher.cpp.i
-.PHONY : src/core/FeistelCipher.i
+src/des/DESCipher.i: src/des/DESCipher.cpp.i
+.PHONY : src/des/DESCipher.i
 
 # target to preprocess a source file
-src/core/FeistelCipher.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_demo.dir/build.make CMakeFiles/crypto_demo.dir/src/core/FeistelCipher.cpp.i
-.PHONY : src/core/FeistelCipher.cpp.i
+src/des/DESCipher.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_demo.dir/build.make CMakeFiles/crypto_demo.dir/src/des/DESCipher.cpp.i
+.PHONY : src/des/DESCipher.cpp.i
 
-src/core/FeistelCipher.s: src/core/FeistelCipher.cpp.s
-.PHONY : src/core/FeistelCipher.s
+src/des/DESCipher.s: src/des/DESCipher.cpp.s
+.PHONY : src/des/DESCipher.s
 
 # target to generate assembly for a file
-src/core/FeistelCipher.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_demo.dir/build.make CMakeFiles/crypto_demo.dir/src/core/FeistelCipher.cpp.s
-.PHONY : src/core/FeistelCipher.cpp.s
+src/des/DESCipher.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_demo.dir/build.make CMakeFiles/crypto_demo.dir/src/des/DESCipher.cpp.s
+.PHONY : src/des/DESCipher.cpp.s
 
-src/core/FeistelNetwork.o: src/core/FeistelNetwork.cpp.o
-.PHONY : src/core/FeistelNetwork.o
+src/des/des_tables.o: src/des/des_tables.cpp.o
+.PHONY : src/des/des_tables.o
 
 # target to build an object file
-src/core/FeistelNetwork.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_demo.dir/build.make CMakeFiles/crypto_demo.dir/src/core/FeistelNetwork.cpp.o
-.PHONY : src/core/FeistelNetwork.cpp.o
+src/des/des_tables.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_demo.dir/build.make CMakeFiles/crypto_demo.dir/src/des/des_tables.cpp.o
+.PHONY : src/des/des_tables.cpp.o
 
-src/core/FeistelNetwork.i: src/core/FeistelNetwork.cpp.i
-.PHONY : src/core/FeistelNetwork.i
-
-# target to preprocess a source file
-src/core/FeistelNetwork.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_demo.dir/build.make CMakeFiles/crypto_demo.dir/src/core/FeistelNetwork.cpp.i
-.PHONY : src/core/FeistelNetwork.cpp.i
-
-src/core/FeistelNetwork.s: src/core/FeistelNetwork.cpp.s
-.PHONY : src/core/FeistelNetwork.s
-
-# target to generate assembly for a file
-src/core/FeistelNetwork.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_demo.dir/build.make CMakeFiles/crypto_demo.dir/src/core/FeistelNetwork.cpp.s
-.PHONY : src/core/FeistelNetwork.cpp.s
-
-src/core/des_tables.o: src/core/des_tables.cpp.o
-.PHONY : src/core/des_tables.o
-
-# target to build an object file
-src/core/des_tables.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_demo.dir/build.make CMakeFiles/crypto_demo.dir/src/core/des_tables.cpp.o
-.PHONY : src/core/des_tables.cpp.o
-
-src/core/des_tables.i: src/core/des_tables.cpp.i
-.PHONY : src/core/des_tables.i
+src/des/des_tables.i: src/des/des_tables.cpp.i
+.PHONY : src/des/des_tables.i
 
 # target to preprocess a source file
-src/core/des_tables.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_demo.dir/build.make CMakeFiles/crypto_demo.dir/src/core/des_tables.cpp.i
-.PHONY : src/core/des_tables.cpp.i
+src/des/des_tables.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_demo.dir/build.make CMakeFiles/crypto_demo.dir/src/des/des_tables.cpp.i
+.PHONY : src/des/des_tables.cpp.i
 
-src/core/des_tables.s: src/core/des_tables.cpp.s
-.PHONY : src/core/des_tables.s
+src/des/des_tables.s: src/des/des_tables.cpp.s
+.PHONY : src/des/des_tables.s
 
 # target to generate assembly for a file
-src/core/des_tables.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_demo.dir/build.make CMakeFiles/crypto_demo.dir/src/core/des_tables.cpp.s
-.PHONY : src/core/des_tables.cpp.s
+src/des/des_tables.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_demo.dir/build.make CMakeFiles/crypto_demo.dir/src/des/des_tables.cpp.s
+.PHONY : src/des/des_tables.cpp.s
 
 # Help Target
 help:
@@ -442,10 +457,13 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... crypto_demo"
+	@echo "... crypto_lib"
 	@echo "... gmock"
 	@echo "... gmock_main"
 	@echo "... gtest"
 	@echo "... gtest_main"
+	@echo "... test_crypto_bits_permute"
+	@echo "... test_crypto_bits_sbox"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
@@ -455,21 +473,18 @@ help:
 	@echo "... src/bits/Sbox_substitution.o"
 	@echo "... src/bits/Sbox_substitution.i"
 	@echo "... src/bits/Sbox_substitution.s"
-	@echo "... src/core/CryptoProcessor.o"
-	@echo "... src/core/CryptoProcessor.i"
-	@echo "... src/core/CryptoProcessor.s"
-	@echo "... src/core/DESCipher.o"
-	@echo "... src/core/DESCipher.i"
-	@echo "... src/core/DESCipher.s"
-	@echo "... src/core/FeistelCipher.o"
-	@echo "... src/core/FeistelCipher.i"
-	@echo "... src/core/FeistelCipher.s"
-	@echo "... src/core/FeistelNetwork.o"
-	@echo "... src/core/FeistelNetwork.i"
-	@echo "... src/core/FeistelNetwork.s"
-	@echo "... src/core/des_tables.o"
-	@echo "... src/core/des_tables.i"
-	@echo "... src/core/des_tables.s"
+	@echo "... src/crypto_core/FeistelCipher.o"
+	@echo "... src/crypto_core/FeistelCipher.i"
+	@echo "... src/crypto_core/FeistelCipher.s"
+	@echo "... src/crypto_core/FeistelNetwork.o"
+	@echo "... src/crypto_core/FeistelNetwork.i"
+	@echo "... src/crypto_core/FeistelNetwork.s"
+	@echo "... src/des/DESCipher.o"
+	@echo "... src/des/DESCipher.i"
+	@echo "... src/des/DESCipher.s"
+	@echo "... src/des/des_tables.o"
+	@echo "... src/des/des_tables.i"
+	@echo "... src/des/des_tables.s"
 .PHONY : help
 
 

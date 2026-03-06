@@ -3,7 +3,7 @@
 #include <stdint.h>
 #include <vector>
 #include "des_tables.cpp"
-#include "namespaces_crypto.hpp"
+#include "../crypto_core/namespaces_crypto.hpp"
 #include "../bits/Pbox_permutation.hpp"
 #include "../bits/Sbox_substitution.hpp"
 
@@ -128,6 +128,11 @@ std::vector<uint8_t> rotate_left(const std::vector<uint8_t> &bits,
         if (block.size() != 8) return;
         
         block = bit_Pbox_permutation(block, FP, BIG_END, ONE);
+    }
+
+    size_t DESCipher::block_size() const
+    {
+        return 8;
     }
 
 }

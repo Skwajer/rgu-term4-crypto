@@ -11,5 +11,7 @@ namespace crypto {
         virtual Bytes encryptBlock(const Bytes& block) = 0;
         
         virtual Bytes decryptBlock(const Bytes& block) = 0;
+
+        virtual size_t block_size() const = 0;
     };
 }

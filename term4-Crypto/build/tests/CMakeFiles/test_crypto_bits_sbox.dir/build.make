@@ -96,6 +96,7 @@ test_crypto_bits_sbox_EXTERNAL_OBJECTS =
 tests/test_crypto_bits_sbox: tests/CMakeFiles/test_crypto_bits_sbox.dir/test_sbox_substitution.cpp.o
 tests/test_crypto_bits_sbox: tests/CMakeFiles/test_crypto_bits_sbox.dir/build.make
 tests/test_crypto_bits_sbox: tests/CMakeFiles/test_crypto_bits_sbox.dir/compiler_depend.ts
+tests/test_crypto_bits_sbox: src/libcrypto_lib.a
 tests/test_crypto_bits_sbox: lib/libgtest.a
 tests/test_crypto_bits_sbox: lib/libgtest_main.a
 tests/test_crypto_bits_sbox: lib/libgtest.a

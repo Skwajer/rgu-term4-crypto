@@ -20,6 +20,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "_deps/googletest-src/googletest/cmake/gtest.pc.in"
   "_deps/googletest-src/googletest/cmake/gtest_main.pc.in"
   "_deps/googletest-src/googletest/cmake/internal_utils.cmake"
+  "/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/src/CMakeLists.txt"
+  "/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/tests/CMakeLists.txt"
   "/usr/share/cmake/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in"
   "/usr/share/cmake/Modules/CMakeCInformation.cmake"
   "/usr/share/cmake/Modules/CMakeCXXInformation.cmake"
@@ -86,6 +88,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "_deps/googletest-build/googletest/generated/gtest.pc"
   "_deps/googletest-build/googletest/generated/gtest_main.pc"
   "_deps/googletest-build/googletest/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "tests/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -95,4 +99,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/DependInfo.cmake"
   "_deps/googletest-build/googletest/CMakeFiles/gtest.dir/DependInfo.cmake"
   "_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake"
+  "src/CMakeFiles/crypto_lib.dir/DependInfo.cmake"
+  "tests/CMakeFiles/test_crypto_bits_permute.dir/DependInfo.cmake"
+  "tests/CMakeFiles/test_crypto_bits_sbox.dir/DependInfo.cmake"
   )

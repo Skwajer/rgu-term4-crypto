@@ -1,1 +1,1 @@
-/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/test_crypto_bits_sbox.dir/link.d CMakeFiles/test_crypto_bits_sbox.dir/test_sbox_substitution.cpp.o -o test_crypto_bits_sbox  -lcrypto_lib ../lib/libgtest.a ../lib/libgtest_main.a ../lib/libgtest.a
+/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/test_crypto_bits_sbox.dir/link.d CMakeFiles/test_crypto_bits_sbox.dir/test_sbox_substitution.cpp.o -o test_crypto_bits_sbox  ../src/libcrypto_lib.a ../lib/libgtest.a ../lib/libgtest_main.a ../lib/libgtest.a
