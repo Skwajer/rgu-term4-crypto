@@ -6,10 +6,11 @@ namespace crypto
   class CipherMode
   {
   public:
+      virtual ~CipherMode() = default;
       virtual void encrypt(ISymmetricCipher &cipher, const Bytes &input,
-      Bytes &output, size_t threads);
+      Bytes &output, size_t threads) = 0;
       virtual void decrypt(ISymmetricCipher &cipher, const Bytes &input,
-                Bytes &output, size_t threads);
+                Bytes &output, size_t threads) = 0;
   };
 
 
@@ -50,7 +51,7 @@ namespace crypto
                 Bytes &output, size_t threads) override;
 
   private:
-    Bytes validate_iv(size_t bs) const;
+    void validate_iv(size_t bs) const;
     Bytes m_iv;
   };
 

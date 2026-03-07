@@ -396,3 +396,25 @@ tests/CMakeFiles/test_crypto_bits_permute.dir/test_pbox_permutation.cpp.o
  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdint.h
  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/syslimits.h
 
+tests/test_crypto_bits_permute
+ /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/lib/libgtest.a
+ /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/lib/libgtest_main.a
+ /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/src/libcrypto_lib.a
+ /usr/lib/Scrt1.o
+ /usr/lib/crti.o
+ /usr/lib/crtn.o
+ /usr/lib/libc.so
+ /usr/lib/libgcc_s.so
+ /usr/lib/libgcc_s.so.1
+ /usr/lib/libm.so
+ /usr/lib/libstdc++.so
+ /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o
+ /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o
+ /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/libgcc.a
+ /usr/lib/ld-linux-x86-64.so.2
+ /usr/lib/libc.so.6
+ /usr/lib/libc_nonshared.a
+ /usr/lib/libm.so.6
+ /usr/lib/libmvec.so.1
+ /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/tests/CMakeFiles/test_crypto_bits_permute.dir/test_pbox_permutation.cpp.o
+

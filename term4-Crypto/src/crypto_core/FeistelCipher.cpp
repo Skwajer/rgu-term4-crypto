@@ -14,13 +14,12 @@ namespace crypto
     void FeistelCipher::setKey(const Bytes& key) 
     {
         m_currentKey = key;
+        m_feistelNetwork->set_round_keys(m_currentKey);
     }
     
     Bytes FeistelCipher::encryptBlock(const Bytes& block) 
     {
         Bytes working = block;
-        m_feistelNetwork->set_round_keys(m_currentKey);
-
         preEncrypt(working);
         working = m_feistelNetwork->encrypt(working);
         postEncrypt(working);
@@ -30,7 +29,6 @@ namespace crypto
     Bytes FeistelCipher::decryptBlock(const Bytes& block) 
     {
         Bytes working = block;
-        m_feistelNetwork->set_round_keys(m_currentKey);
         
         preEncrypt(working);
         working = m_feistelNetwork->decrypt(working);

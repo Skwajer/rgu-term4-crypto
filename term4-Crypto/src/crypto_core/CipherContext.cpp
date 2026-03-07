@@ -2,6 +2,7 @@
 #include <future>
 #include <memory>
 #include <stdexcept>
+#include <iostream>
 
 
 namespace crypto
@@ -10,21 +11,32 @@ namespace crypto
     CipherContext::CipherContext(std::unique_ptr<ISymmetricCipher> cipher,
          CipherMd cipher_mode, PaddingMode padding, Bytes init_vector, ...)
     {
+        if (!cipher) {
+        throw std::invalid_argument("CipherContext: cipher cannot be null");
+    }
         m_cipher = std::move(cipher);
+        m_init_vector = init_vector;
         configure_cipher_mode(cipher_mode);
         configure_padding(padding);
-        m_init_vector = init_vector;
     }
 
     void CipherContext::encrypt(Bytes const &text, Bytes &result, size_t threads)
     {
+        if (!m_cipher_mode || !m_padding) 
+        {
+            throw std::runtime_error("CipherContext not properly initialized");
+        }
         auto block_size = m_cipher->block_size();
         auto padded = m_padding->apply(text, block_size);
-        m_cipher_mode->decrypt(*m_cipher, padded, result, threads);
+        m_cipher_mode->encrypt(*m_cipher, padded, result, threads);
     }
 
     void CipherContext::decrypt(Bytes const &cipher, Bytes &result, size_t threads)
     {
+        if (!m_cipher_mode || !m_padding) 
+        {
+            throw std::runtime_error("CipherContext not properly initialized");
+        }
         auto block_size = m_cipher->block_size();
         m_cipher_mode->decrypt(*m_cipher, cipher, result, threads);
         result = m_padding->remove(result, block_size);
@@ -60,10 +72,12 @@ namespace crypto
         }
         
         std::vector<uint8_t> buffer((std::istreambuf_iterator<char>(inputFile)),
-                                     std::istreambuf_iterator<char>());
-        
+                                 std::istreambuf_iterator<char>());
+    
+    
         std::vector<uint8_t> result;
         auto block_size = m_cipher->block_size();
+        
         if (encrypt) 
         {
             auto padded = m_padding->apply(buffer, block_size);
@@ -71,9 +85,11 @@ namespace crypto
         } else 
         {
             m_cipher_mode->decrypt(*m_cipher, buffer, result, threads);
+            
+            
             result = m_padding->remove(result, block_size);
         }
-    
+
         outputFile.write(reinterpret_cast<const char*>(result.data()), result.size());
     }
 
@@ -89,13 +105,13 @@ namespace crypto
 
             case CBC_md:
             {
-                m_cipher_mode = std::make_unique<CBC>();
+                m_cipher_mode = std::make_unique<CBC>(m_init_vector);
                 break;
             }
 
             case PCBC_md:
             {
-                m_cipher_mode = std::make_unique<PCBC>();
+                m_cipher_mode = std::make_unique<PCBC>(m_init_vector);
                 break;
             }
             

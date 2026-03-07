@@ -199,6 +199,82 @@ test_crypto_bits_sbox/fast:
 	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_crypto_bits_sbox.dir/build.make tests/CMakeFiles/test_crypto_bits_sbox.dir/build
 .PHONY : test_crypto_bits_sbox/fast
 
+# Convenience name for target.
+tests/CMakeFiles/test_padding.dir/rule:
+	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_padding.dir/rule
+.PHONY : tests/CMakeFiles/test_padding.dir/rule
+
+# Convenience name for target.
+test_padding: tests/CMakeFiles/test_padding.dir/rule
+.PHONY : test_padding
+
+# fast build rule for target.
+test_padding/fast:
+	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_padding.dir/build.make tests/CMakeFiles/test_padding.dir/build
+.PHONY : test_padding/fast
+
+# Convenience name for target.
+tests/CMakeFiles/test_CipherContext.dir/rule:
+	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_CipherContext.dir/rule
+.PHONY : tests/CMakeFiles/test_CipherContext.dir/rule
+
+# Convenience name for target.
+test_CipherContext: tests/CMakeFiles/test_CipherContext.dir/rule
+.PHONY : test_CipherContext
+
+# fast build rule for target.
+test_CipherContext/fast:
+	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_CipherContext.dir/build.make tests/CMakeFiles/test_CipherContext.dir/build
+.PHONY : test_CipherContext/fast
+
+test_CipherContext.o: test_CipherContext.cpp.o
+.PHONY : test_CipherContext.o
+
+# target to build an object file
+test_CipherContext.cpp.o:
+	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_CipherContext.dir/build.make tests/CMakeFiles/test_CipherContext.dir/test_CipherContext.cpp.o
+.PHONY : test_CipherContext.cpp.o
+
+test_CipherContext.i: test_CipherContext.cpp.i
+.PHONY : test_CipherContext.i
+
+# target to preprocess a source file
+test_CipherContext.cpp.i:
+	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_CipherContext.dir/build.make tests/CMakeFiles/test_CipherContext.dir/test_CipherContext.cpp.i
+.PHONY : test_CipherContext.cpp.i
+
+test_CipherContext.s: test_CipherContext.cpp.s
+.PHONY : test_CipherContext.s
+
+# target to generate assembly for a file
+test_CipherContext.cpp.s:
+	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_CipherContext.dir/build.make tests/CMakeFiles/test_CipherContext.dir/test_CipherContext.cpp.s
+.PHONY : test_CipherContext.cpp.s
+
+test_padding.o: test_padding.cpp.o
+.PHONY : test_padding.o
+
+# target to build an object file
+test_padding.cpp.o:
+	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_padding.dir/build.make tests/CMakeFiles/test_padding.dir/test_padding.cpp.o
+.PHONY : test_padding.cpp.o
+
+test_padding.i: test_padding.cpp.i
+.PHONY : test_padding.i
+
+# target to preprocess a source file
+test_padding.cpp.i:
+	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_padding.dir/build.make tests/CMakeFiles/test_padding.dir/test_padding.cpp.i
+.PHONY : test_padding.cpp.i
+
+test_padding.s: test_padding.cpp.s
+.PHONY : test_padding.s
+
+# target to generate assembly for a file
+test_padding.cpp.s:
+	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_padding.dir/build.make tests/CMakeFiles/test_padding.dir/test_padding.cpp.s
+.PHONY : test_padding.cpp.s
+
 test_pbox_permutation.o: test_pbox_permutation.cpp.o
 .PHONY : test_pbox_permutation.o
 
@@ -260,8 +336,16 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... test_CipherContext"
 	@echo "... test_crypto_bits_permute"
 	@echo "... test_crypto_bits_sbox"
+	@echo "... test_padding"
+	@echo "... test_CipherContext.o"
+	@echo "... test_CipherContext.i"
+	@echo "... test_CipherContext.s"
+	@echo "... test_padding.o"
+	@echo "... test_padding.i"
+	@echo "... test_padding.s"
 	@echo "... test_pbox_permutation.o"
 	@echo "... test_pbox_permutation.i"
 	@echo "... test_pbox_permutation.s"

@@ -395,6 +395,53 @@ tests/CMakeFiles/test_crypto_bits_permute.dir/test_pbox_permutation.cpp.o: /home
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdint.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/syslimits.h
 
+tests/test_crypto_bits_permute: lib/libgtest.a \
+  lib/libgtest_main.a \
+  src/libcrypto_lib.a \
+  /usr/lib/Scrt1.o \
+  /usr/lib/crti.o \
+  /usr/lib/crtn.o \
+  /usr/lib/libc.so \
+  /usr/lib/libgcc_s.so \
+  /usr/lib/libgcc_s.so.1 \
+  /usr/lib/libm.so \
+  /usr/lib/libstdc++.so \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/libgcc.a \
+  /usr/lib/ld-linux-x86-64.so.2 \
+  /usr/lib/libc.so.6 \
+  /usr/lib/libc_nonshared.a \
+  /usr/lib/libm.so.6 \
+  /usr/lib/libmvec.so.1 \
+  tests/CMakeFiles/test_crypto_bits_permute.dir/test_pbox_permutation.cpp.o
+
+
+tests/CMakeFiles/test_crypto_bits_permute.dir/test_pbox_permutation.cpp.o:
+
+/usr/lib/libmvec.so.1:
+
+/usr/lib/libm.so.6:
+
+/usr/lib/libc.so.6:
+
+/usr/lib/ld-linux-x86-64.so.2:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/libgcc.a:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o:
+
+/usr/lib/libm.so:
+
+/usr/lib/libgcc_s.so.1:
+
+/usr/lib/Scrt1.o:
+
+src/libcrypto_lib.a:
+
+lib/libgtest.a:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/syslimits.h:
 
@@ -431,6 +478,8 @@ tests/CMakeFiles/test_crypto_bits_permute.dir/test_pbox_permutation.cpp.o: /home
 /usr/include/sched.h:
 
 /usr/include/regex.h:
+
+/usr/lib/libstdc++.so:
 
 /usr/include/locale.h:
 
@@ -528,7 +577,11 @@ tests/CMakeFiles/test_crypto_bits_permute.dir/test_pbox_permutation.cpp.o: /home
 
 /usr/include/c++/15.2.1/cstdint:
 
+/usr/lib/libgcc_s.so:
+
 /usr/include/c++/15.2.1/cstddef:
+
+/usr/lib/libc_nonshared.a:
 
 /usr/include/c++/15.2.1/condition_variable:
 
@@ -587,6 +640,8 @@ tests/CMakeFiles/test_crypto_bits_permute.dir/test_pbox_permutation.cpp.o: /home
 /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/cxxabi_tweaks.h:
 
 /usr/include/c++/15.2.1/bits/sstream.tcc:
+
+lib/libgtest_main.a:
 
 /usr/include/bits/types/__fpos64_t.h:
 
@@ -694,6 +749,8 @@ _deps/googletest-src/googletest/include/gtest/internal/custom/gtest-printers.h:
 
 /usr/include/c++/15.2.1/bits/stl_algobase.h:
 
+/usr/lib/libc.so:
+
 /usr/include/bits/pthreadtypes.h:
 
 /usr/include/bits/pthreadtypes-arch.h:
@@ -781,6 +838,8 @@ _deps/googletest-src/googletest/include/gtest/internal/gtest-internal.h:
 _deps/googletest-src/googletest/include/gtest/gtest-printers.h:
 
 /usr/include/c++/15.2.1/bits/stl_iterator.h:
+
+/usr/lib/crti.o:
 
 _deps/googletest-src/googletest/include/gtest/gtest-test-part.h:
 
@@ -1043,6 +1102,8 @@ _deps/googletest-src/googletest/include/gtest/internal/gtest-string.h:
 /usr/include/c++/15.2.1/vector:
 
 /usr/include/c++/15.2.1/bits/exception_defines.h:
+
+/usr/lib/crtn.o:
 
 /usr/include/c++/15.2.1/bits/functional_hash.h:
 

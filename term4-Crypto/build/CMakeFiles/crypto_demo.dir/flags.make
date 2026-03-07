@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/src -I/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/src/crypto_core1 -I/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/src/bits
+CXX_INCLUDES = -I/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/src -I/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/src/crypto_core -I/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/src/bits -I/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/src/padding -I/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/src/mode -I/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/src/des
 
 CXX_FLAGS = -std=c++23
 

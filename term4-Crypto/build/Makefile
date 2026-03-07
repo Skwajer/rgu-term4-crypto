@@ -275,6 +275,32 @@ test_crypto_bits_sbox/fast:
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_crypto_bits_sbox.dir/build.make tests/CMakeFiles/test_crypto_bits_sbox.dir/build
 .PHONY : test_crypto_bits_sbox/fast
 
+#=============================================================================
+# Target rules for targets named test_padding
+
+# Build rule for target.
+test_padding: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_padding
+.PHONY : test_padding
+
+# fast build rule for target.
+test_padding/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_padding.dir/build.make tests/CMakeFiles/test_padding.dir/build
+.PHONY : test_padding/fast
+
+#=============================================================================
+# Target rules for targets named test_CipherContext
+
+# Build rule for target.
+test_CipherContext: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_CipherContext
+.PHONY : test_CipherContext
+
+# fast build rule for target.
+test_CipherContext/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_CipherContext.dir/build.make tests/CMakeFiles/test_CipherContext.dir/build
+.PHONY : test_CipherContext/fast
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -346,6 +372,30 @@ src/bits/Sbox_substitution.s: src/bits/Sbox_substitution.cpp.s
 src/bits/Sbox_substitution.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_demo.dir/build.make CMakeFiles/crypto_demo.dir/src/bits/Sbox_substitution.cpp.s
 .PHONY : src/bits/Sbox_substitution.cpp.s
+
+src/crypto_core/CipherContext.o: src/crypto_core/CipherContext.cpp.o
+.PHONY : src/crypto_core/CipherContext.o
+
+# target to build an object file
+src/crypto_core/CipherContext.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_demo.dir/build.make CMakeFiles/crypto_demo.dir/src/crypto_core/CipherContext.cpp.o
+.PHONY : src/crypto_core/CipherContext.cpp.o
+
+src/crypto_core/CipherContext.i: src/crypto_core/CipherContext.cpp.i
+.PHONY : src/crypto_core/CipherContext.i
+
+# target to preprocess a source file
+src/crypto_core/CipherContext.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_demo.dir/build.make CMakeFiles/crypto_demo.dir/src/crypto_core/CipherContext.cpp.i
+.PHONY : src/crypto_core/CipherContext.cpp.i
+
+src/crypto_core/CipherContext.s: src/crypto_core/CipherContext.cpp.s
+.PHONY : src/crypto_core/CipherContext.s
+
+# target to generate assembly for a file
+src/crypto_core/CipherContext.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_demo.dir/build.make CMakeFiles/crypto_demo.dir/src/crypto_core/CipherContext.cpp.s
+.PHONY : src/crypto_core/CipherContext.cpp.s
 
 src/crypto_core/FeistelCipher.o: src/crypto_core/FeistelCipher.cpp.o
 .PHONY : src/crypto_core/FeistelCipher.o
@@ -443,6 +493,54 @@ src/des/des_tables.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_demo.dir/build.make CMakeFiles/crypto_demo.dir/src/des/des_tables.cpp.s
 .PHONY : src/des/des_tables.cpp.s
 
+src/mode/modes.o: src/mode/modes.cpp.o
+.PHONY : src/mode/modes.o
+
+# target to build an object file
+src/mode/modes.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_demo.dir/build.make CMakeFiles/crypto_demo.dir/src/mode/modes.cpp.o
+.PHONY : src/mode/modes.cpp.o
+
+src/mode/modes.i: src/mode/modes.cpp.i
+.PHONY : src/mode/modes.i
+
+# target to preprocess a source file
+src/mode/modes.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_demo.dir/build.make CMakeFiles/crypto_demo.dir/src/mode/modes.cpp.i
+.PHONY : src/mode/modes.cpp.i
+
+src/mode/modes.s: src/mode/modes.cpp.s
+.PHONY : src/mode/modes.s
+
+# target to generate assembly for a file
+src/mode/modes.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_demo.dir/build.make CMakeFiles/crypto_demo.dir/src/mode/modes.cpp.s
+.PHONY : src/mode/modes.cpp.s
+
+src/padding/padding.o: src/padding/padding.cpp.o
+.PHONY : src/padding/padding.o
+
+# target to build an object file
+src/padding/padding.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_demo.dir/build.make CMakeFiles/crypto_demo.dir/src/padding/padding.cpp.o
+.PHONY : src/padding/padding.cpp.o
+
+src/padding/padding.i: src/padding/padding.cpp.i
+.PHONY : src/padding/padding.i
+
+# target to preprocess a source file
+src/padding/padding.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_demo.dir/build.make CMakeFiles/crypto_demo.dir/src/padding/padding.cpp.i
+.PHONY : src/padding/padding.cpp.i
+
+src/padding/padding.s: src/padding/padding.cpp.s
+.PHONY : src/padding/padding.s
+
+# target to generate assembly for a file
+src/padding/padding.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_demo.dir/build.make CMakeFiles/crypto_demo.dir/src/padding/padding.cpp.s
+.PHONY : src/padding/padding.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -462,8 +560,10 @@ help:
 	@echo "... gmock_main"
 	@echo "... gtest"
 	@echo "... gtest_main"
+	@echo "... test_CipherContext"
 	@echo "... test_crypto_bits_permute"
 	@echo "... test_crypto_bits_sbox"
+	@echo "... test_padding"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
@@ -473,6 +573,9 @@ help:
 	@echo "... src/bits/Sbox_substitution.o"
 	@echo "... src/bits/Sbox_substitution.i"
 	@echo "... src/bits/Sbox_substitution.s"
+	@echo "... src/crypto_core/CipherContext.o"
+	@echo "... src/crypto_core/CipherContext.i"
+	@echo "... src/crypto_core/CipherContext.s"
 	@echo "... src/crypto_core/FeistelCipher.o"
 	@echo "... src/crypto_core/FeistelCipher.i"
 	@echo "... src/crypto_core/FeistelCipher.s"
@@ -485,6 +588,12 @@ help:
 	@echo "... src/des/des_tables.o"
 	@echo "... src/des/des_tables.i"
 	@echo "... src/des/des_tables.s"
+	@echo "... src/mode/modes.o"
+	@echo "... src/mode/modes.i"
+	@echo "... src/mode/modes.s"
+	@echo "... src/padding/padding.o"
+	@echo "... src/padding/padding.i"
+	@echo "... src/padding/padding.s"
 .PHONY : help
 
 

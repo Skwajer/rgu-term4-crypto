@@ -3,6 +3,7 @@
 #include <algorithm>
 #include <stdexcept>
 #include <cstring>
+#include <iostream>
 
 namespace crypto {
     FeistelNetwork::FeistelNetwork(std::unique_ptr<IFeistelRound> roundFunc,
@@ -27,7 +28,6 @@ namespace crypto {
 
         if (m_round_keys.size() < m_numRounds) 
         {
-            printf("%llu\n", m_round_keys.size());
             throw std::runtime_error("Insufficient round keys generated");
         }
         

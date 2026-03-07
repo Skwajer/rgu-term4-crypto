@@ -31,6 +31,9 @@ set(SOURCES
     src/bits/Pbox_permutation.cpp
     src/bits/Sbox_substitution.cpp
 
+    src/padding/padding.cpp
+    src/mode/modes.cpp
+
     main.cpp
 )
 
@@ -39,8 +42,11 @@ add_executable(crypto_demo ${SOURCES})
 
 target_include_directories(crypto_demo PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/src
-    ${CMAKE_CURRENT_SOURCE_DIR}/src/crypto_core1
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/crypto_core
     ${CMAKE_CURRENT_SOURCE_DIR}/src/bits
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/padding
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/mode
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/des
 )
 
 add_subdirectory(tests)

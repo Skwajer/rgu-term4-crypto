@@ -16,7 +16,7 @@ namespace crypto
         auto blocks_per_thread = total_blocks / total_threads;
         auto remaining_blocks = total_blocks % total_threads;
 
-        size_t current_block;
+        size_t current_block = 0;
         for (auto t = 0; t < total_threads; t++)
         {
             auto blocks_of_current_thread = blocks_per_thread + (t < remaining_blocks ? 1 : 0);
@@ -42,7 +42,7 @@ namespace crypto
 
 
     // ===== ECB =====
-static void process(ISymmetricCipher &cipher, const Bytes &input,
+void ECB::process(ISymmetricCipher &cipher, const Bytes &input,
                     Bytes &output, size_t threads, bool encrypting)
 {
     auto block_size = cipher.block_size();
@@ -52,6 +52,8 @@ static void process(ISymmetricCipher &cipher, const Bytes &input,
         throw std::invalid_argument("ECB: input data must be padded to cipher block size");
     }
     auto total_blocks = total_input_bytes / block_size;
+    output.clear();
+    output.resize(input.size());
     
     auto threads_ranges = split_blocks_between_threads(total_blocks, threads);
     std::vector<std::thread> workers;
@@ -100,9 +102,13 @@ CBC::CBC(Bytes iv)
 
 void CBC::validate_iv(size_t block_size) const
 {
-    if (m_iv.empty() || (m_iv.size() % block_size) != 0)
+    if (m_iv.empty())
     {
-        throw std::invalid_argument("init_vector cannot be empty or multiple of block");
+        throw std::invalid_argument("init_vector cannot be empty");
+    }
+    if ((m_iv.size() % block_size) != 0)
+    {
+        throw  std::invalid_argument("init_vector cannot be empty or multiple of block");
     }
 }
 
@@ -116,6 +122,8 @@ void CBC::encrypt(ISymmetricCipher &cipher, const Bytes &input,
         throw std::invalid_argument("CBC: input data must be padded to cipher block size");
     }
     auto total_blocks = total_input_bytes / block_size;
+    output.clear();
+    output.resize(input.size());
 
     validate_iv(block_size);
     Bytes first_block(input.begin(), input.begin() + block_size);
@@ -142,7 +150,8 @@ void CBC::decrypt(ISymmetricCipher &cipher, const Bytes &input,
     }
     auto total_blocks = total_input_bytes / block_size;
     validate_iv(block_size);
-
+    output.clear();
+    output.resize(input.size());
     auto threads_ranges = split_blocks_between_threads(total_blocks - 1, threads);
     std::vector<std::thread> workers;
 
@@ -155,11 +164,9 @@ void CBC::decrypt(ISymmetricCipher &cipher, const Bytes &input,
     {
         workers.emplace_back([&, start, end] ()
         {
-            for (auto current_block = start; current_block < end; current_block++)
+            for (auto relative_block = start; relative_block < end; relative_block++)
             {
-                size_t block_start = start + 1;  // +1 because first block is already done
-                size_t block_end = end + 1;
-
+                auto current_block = relative_block + 1;
                 size_t prev_cipherBlock_id = current_block - 1;
                 Bytes prev_cipherBlock(input.begin() + prev_cipherBlock_id*block_size, input.begin() + block_size * (prev_cipherBlock_id + 1));
                 Bytes block(input.begin() + current_block*block_size, input.begin() + current_block*block_size + block_size);
@@ -178,6 +185,14 @@ void CBC::decrypt(ISymmetricCipher &cipher, const Bytes &input,
 
     // ===== PCBC =====
 
+void PCBC::validate_iv(size_t bs) const
+{
+    if (m_iv.empty() || ((m_iv.size() % bs) != 0))
+    {
+        throw std::invalid_argument("init_vector cannot be empty or multiple of block");
+    }
+}
+
 PCBC::PCBC(Bytes iv)
 {
     m_iv = std::move(iv);
@@ -194,6 +209,7 @@ void PCBC::encrypt(ISymmetricCipher& cipher, const Bytes& input,
     validate_iv(block_size);
     auto prev_contibution = m_iv;
     const size_t n_blocks = input.size() / block_size;
+    output.clear();
     output.resize(input.size());
 
     for (size_t b = 0; b < n_blocks; ++b) 
@@ -215,6 +231,7 @@ void PCBC::decrypt(ISymmetricCipher& cipher, const Bytes& input,
     validate_iv(block_size);
     auto prev_contibution = m_iv;
     const size_t n_blocks = input.size() / block_size;
+    output.clear();
     output.resize(input.size());
 
     for (size_t b = 0; b < n_blocks; ++b) 
