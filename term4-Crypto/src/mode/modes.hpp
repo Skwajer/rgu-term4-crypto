@@ -36,7 +36,7 @@ namespace crypto
                 Bytes &output, size_t threads) override;
 
   private:
-    Bytes get_iv(size_t bs) const;
+    void validate_iv(size_t bs) const;
     Bytes m_iv;
   };
 
@@ -50,7 +50,7 @@ namespace crypto
                 Bytes &output, size_t threads) override;
 
   private:
-    Bytes get_iv(size_t bs) const;
+    Bytes validate_iv(size_t bs) const;
     Bytes m_iv;
   };
 
