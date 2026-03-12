@@ -301,6 +301,19 @@ test_CipherContext/fast:
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_CipherContext.dir/build.make tests/CMakeFiles/test_CipherContext.dir/build
 .PHONY : test_CipherContext/fast
 
+#=============================================================================
+# Target rules for targets named test_CipherContextlab4
+
+# Build rule for target.
+test_CipherContextlab4: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_CipherContextlab4
+.PHONY : test_CipherContextlab4
+
+# fast build rule for target.
+test_CipherContextlab4/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_CipherContextlab4.dir/build.make tests/CMakeFiles/test_CipherContextlab4.dir/build
+.PHONY : test_CipherContextlab4/fast
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -561,6 +574,7 @@ help:
 	@echo "... gtest"
 	@echo "... gtest_main"
 	@echo "... test_CipherContext"
+	@echo "... test_CipherContextlab4"
 	@echo "... test_crypto_bits_permute"
 	@echo "... test_crypto_bits_sbox"
 	@echo "... test_padding"

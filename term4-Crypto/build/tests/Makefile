@@ -227,12 +227,27 @@ test_CipherContext/fast:
 	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_CipherContext.dir/build.make tests/CMakeFiles/test_CipherContext.dir/build
 .PHONY : test_CipherContext/fast
 
+# Convenience name for target.
+tests/CMakeFiles/test_CipherContextlab4.dir/rule:
+	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_CipherContextlab4.dir/rule
+.PHONY : tests/CMakeFiles/test_CipherContextlab4.dir/rule
+
+# Convenience name for target.
+test_CipherContextlab4: tests/CMakeFiles/test_CipherContextlab4.dir/rule
+.PHONY : test_CipherContextlab4
+
+# fast build rule for target.
+test_CipherContextlab4/fast:
+	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_CipherContextlab4.dir/build.make tests/CMakeFiles/test_CipherContextlab4.dir/build
+.PHONY : test_CipherContextlab4/fast
+
 test_CipherContext.o: test_CipherContext.cpp.o
 .PHONY : test_CipherContext.o
 
 # target to build an object file
 test_CipherContext.cpp.o:
 	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_CipherContext.dir/build.make tests/CMakeFiles/test_CipherContext.dir/test_CipherContext.cpp.o
+	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_CipherContextlab4.dir/build.make tests/CMakeFiles/test_CipherContextlab4.dir/test_CipherContext.cpp.o
 .PHONY : test_CipherContext.cpp.o
 
 test_CipherContext.i: test_CipherContext.cpp.i
@@ -241,6 +256,7 @@ test_CipherContext.i: test_CipherContext.cpp.i
 # target to preprocess a source file
 test_CipherContext.cpp.i:
 	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_CipherContext.dir/build.make tests/CMakeFiles/test_CipherContext.dir/test_CipherContext.cpp.i
+	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_CipherContextlab4.dir/build.make tests/CMakeFiles/test_CipherContextlab4.dir/test_CipherContext.cpp.i
 .PHONY : test_CipherContext.cpp.i
 
 test_CipherContext.s: test_CipherContext.cpp.s
@@ -249,6 +265,7 @@ test_CipherContext.s: test_CipherContext.cpp.s
 # target to generate assembly for a file
 test_CipherContext.cpp.s:
 	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_CipherContext.dir/build.make tests/CMakeFiles/test_CipherContext.dir/test_CipherContext.cpp.s
+	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_CipherContextlab4.dir/build.make tests/CMakeFiles/test_CipherContextlab4.dir/test_CipherContext.cpp.s
 .PHONY : test_CipherContext.cpp.s
 
 test_padding.o: test_padding.cpp.o
@@ -337,6 +354,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... test_CipherContext"
+	@echo "... test_CipherContextlab4"
 	@echo "... test_crypto_bits_permute"
 	@echo "... test_crypto_bits_sbox"
 	@echo "... test_padding"

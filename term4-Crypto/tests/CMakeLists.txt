@@ -38,8 +38,20 @@ target_link_libraries(test_CipherContext
     gtest_main
 )
 
+add_executable(test_CipherContextlab4
+    test_CipherContext.cpp)
+
+target_link_libraries(test_CipherContextlab4
+    PRIVATE crypto_lib
+    gtest
+    gtest_main
+)
+
+
 add_test(NAME test_crypto_bits_permute COMMAND test_crypto_bits_permute)
 add_test(NAME test_crypto_bits_substitute COMMAND test_crypto_bits_substitute)
 add_test(NAME test_crypto_paddings COMMAND test_padding)
 add_test(NAME test_CipherContext COMMAND test_CipherContext)
+add_test(NAME test_CipherContextlab4 COMMAND test_CipherContextlab4)
+
 

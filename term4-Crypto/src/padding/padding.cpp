@@ -1,4 +1,6 @@
 #include "padding.hpp"
+#include <ctime>
+#include <random>
 #include <stdexcept>
 
 namespace crypto 
@@ -70,4 +72,66 @@ namespace crypto
         }
         return Bytes(data.begin(), data.end() - padded_zeros_count);
     }
+
+    Bytes PKCS7Padding::apply(const Bytes &data, size_t block_size) const
+    {
+        validate_block_size(block_size);
+        auto remainder = data.size() % block_size;
+        if (remainder == 0)
+        {
+            return data;
+        }
+        size_t total_remaining_bytes = block_size - remainder;
+
+        Bytes result = data;
+        result.insert(result.end(), total_remaining_bytes, static_cast<Byte>(total_remaining_bytes));
+        return result;
+
+    }
+
+    Bytes PKCS7Padding::remove(const Bytes &data, size_t block_size) const
+    {
+        validate_block_size(block_size);
+        validate_data(data, block_size);
+        auto padded_bytes_count = data.back();
+        if (padded_bytes_count > block_size)
+        {
+            throw std::invalid_argument("data was padded incorrectly according to PKCS7 or not padded at all: the last byte is not the number of bytes padded");
+        }
+        for (auto i = data.size() - padded_bytes_count; i < data.size() - 1; i++)
+        {
+            if (data[i] != static_cast<Byte>(padded_bytes_count)) {throw std::invalid_argument("data was padded incorrectly according to PKCS7 or not padded at all");}
+        }
+        return Bytes(data.begin(), data.end() - padded_bytes_count);
+
+    }
+
+    Bytes ISO10126Padding::apply(const Bytes &data, size_t block_size) const
+    {
+        validate_block_size(block_size);
+        std::mt19937 rng(std::random_device{}());
+        std::uniform_int_distribution<int> dist(0, 255);
+
+        auto remainder = data.size() % block_size;
+        auto total_remaining_bytes = block_size - remainder;
+        total_remaining_bytes = (total_remaining_bytes == 0 ? block_size : total_remaining_bytes);
+        auto result = data;
+        result.insert(result.end(), total_remaining_bytes - 1, dist(rng));
+        result.emplace_back(static_cast<Byte>(total_remaining_bytes));
+        return result;
+    }
+
+    Bytes ISO10126Padding::remove(const Bytes &data, size_t block_size) const
+    {
+        validate_block_size(block_size);
+        validate_data(data, block_size);
+        auto padded_bytes_count = data.back();
+        if (padded_bytes_count > block_size)
+        {
+            throw std::invalid_argument("data was padded incorrectly according to PKCS7 or not padded at all: the last byte is not the number of bytes padded");
+        }
+        return Bytes(data.begin(), data.end() - padded_bytes_count);
+
+    }
+
 }
