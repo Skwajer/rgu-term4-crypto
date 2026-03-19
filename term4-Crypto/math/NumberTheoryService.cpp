@@ -1,21 +1,29 @@
 #include "NumberTheoryService.hpp"
 #include <cstddef>
 
-BigInt NumberTheoryService::pow_mod(BigInt a, BigInt degree, BigInt mod)
+BigInt NumberTheoryService::pow_mod(BigInt base, BigInt exp, BigInt mod)
 {
+    if (mod == 1) return 0;
+    
     BigInt result = 1;
-    a %= mod;
-
-    while (degree > 0)
-    {
-        if (degree & 1)
-        {
-            result = (result * a) % mod;
-            degree--;
+    base = base % mod;
+    
+    
+    int iteration = 0;
+    while (exp > 0) {
+        iteration++;
+        
+        if (exp & 1) {
+            result = (result * base) % mod;
         }
-        result =  (result * result) % mod;
-        a >>= 1;
+        
+        exp >>= 1;
+        
+        if (exp > 0) { 
+            base = (base * base) % mod;
+        }
     }
+    
     return result;
 }
 

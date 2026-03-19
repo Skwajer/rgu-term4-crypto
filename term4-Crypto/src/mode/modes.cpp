@@ -366,7 +366,8 @@ CTR::CTR(Bytes nonce) : m_nonce(std::move(nonce)) {}
     if (!nonce.empty())
       std::copy(nonce.begin(), nonce.end(), block.begin());
 
-    for (int i = 7; i >= 0; --i) {
+    for (int i = 7; i >= 0; --i) 
+    {
       block[bs - 8 + i] = static_cast<uint8_t>(counter & 0xFF);
       counter >>= 8;
     }

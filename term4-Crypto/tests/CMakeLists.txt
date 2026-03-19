@@ -47,7 +47,18 @@ target_link_libraries(test_CipherContextlab4
     gtest_main
 )
 
+add_executable(test_FermatPrimality
+    test_Fermat_primality.cpp
+    ../math/NumberTheoryService.cpp
+    ../math/fermat_primality_test/FermatPrimalityTest.cpp
+    ../math/TemplateProbabilisticPrimalityTest.cpp)
 
+target_link_libraries(test_FermatPrimality
+    gtest
+    gtest_main
+)
+
+add_test(NAME test_FermatPrimality COMMAND test_FermatPrimality)
 add_test(NAME test_crypto_bits_permute COMMAND test_crypto_bits_permute)
 add_test(NAME test_crypto_bits_substitute COMMAND test_crypto_bits_substitute)
 add_test(NAME test_crypto_paddings COMMAND test_padding)

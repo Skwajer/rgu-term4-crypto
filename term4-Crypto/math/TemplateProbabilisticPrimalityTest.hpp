@@ -3,23 +3,19 @@
 #include <cstddef>
 
 
-class TemplateProbSimplicityTest : IProbSimplicityTest
+class TemplateProbSimplicityTest : public IProbSimplicityTest
 {
 public:
-    virtual ~TemplateProbSimplicityTest() = default;
+    virtual ~TemplateProbSimplicityTest();
+public:
     bool is_prime(BigInt const &n, double target_prob) override;
 
 public:
-    size_t calculate_iters(double target_prob);
+    virtual size_t calculate_iters(double target_prob);
 
-protected:
+public:
     virtual bool perform_single_iteration(BigInt const &n) = 0;
 
 private:
-    bool isPerfectSquare(BigInt const &n) 
-    {
-        if (n < 2) return false;
-        BigInt sqrtN = static_cast<BigInt>(boost::multiprecision::sqrt(n));
-        return (sqrtN * sqrtN == n);
-    }
+    bool isPerfectSquare(BigInt const &n);
 };

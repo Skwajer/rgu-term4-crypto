@@ -1,4 +1,5 @@
-//#ifndef SERVICE_HPP
+#ifndef NUMBER_THEORY_SERVICE_HPP
+#define NUMBER_THEORY_SERVICE_HPP
 
 #include <boost/multiprecision/cpp_int.hpp>
 #include <boost/multiprecision/cpp_bin_float.hpp>
@@ -21,3 +22,4 @@ public:
       static BigInt Euler_func_Fourier(BigInt const &n);
       
 };
+#endif

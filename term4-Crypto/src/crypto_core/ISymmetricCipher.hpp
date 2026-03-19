@@ -1,8 +1,10 @@
 #pragma once
 #include "namespaces_crypto.hpp"
 
-namespace crypto {
-    class ISymmetricCipher {
+namespace crypto 
+{
+    class ISymmetricCipher 
+    {
     public:
         virtual ~ISymmetricCipher() = default;
         

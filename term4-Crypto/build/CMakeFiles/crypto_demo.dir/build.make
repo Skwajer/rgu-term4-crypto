@@ -198,10 +198,52 @@ CMakeFiles/crypto_demo.dir/src/mode/modes.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/crypto_demo.dir/src/mode/modes.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/src/mode/modes.cpp -o CMakeFiles/crypto_demo.dir/src/mode/modes.cpp.s
 
+CMakeFiles/crypto_demo.dir/math/NumberTheoryService.cpp.o: CMakeFiles/crypto_demo.dir/flags.make
+CMakeFiles/crypto_demo.dir/math/NumberTheoryService.cpp.o: /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/math/NumberTheoryService.cpp
+CMakeFiles/crypto_demo.dir/math/NumberTheoryService.cpp.o: CMakeFiles/crypto_demo.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/crypto_demo.dir/math/NumberTheoryService.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/crypto_demo.dir/math/NumberTheoryService.cpp.o -MF CMakeFiles/crypto_demo.dir/math/NumberTheoryService.cpp.o.d -o CMakeFiles/crypto_demo.dir/math/NumberTheoryService.cpp.o -c /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/math/NumberTheoryService.cpp
+
+CMakeFiles/crypto_demo.dir/math/NumberTheoryService.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/crypto_demo.dir/math/NumberTheoryService.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/math/NumberTheoryService.cpp > CMakeFiles/crypto_demo.dir/math/NumberTheoryService.cpp.i
+
+CMakeFiles/crypto_demo.dir/math/NumberTheoryService.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/crypto_demo.dir/math/NumberTheoryService.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/math/NumberTheoryService.cpp -o CMakeFiles/crypto_demo.dir/math/NumberTheoryService.cpp.s
+
+CMakeFiles/crypto_demo.dir/math/fermat_primality_test/FermatPrimalityTest.cpp.o: CMakeFiles/crypto_demo.dir/flags.make
+CMakeFiles/crypto_demo.dir/math/fermat_primality_test/FermatPrimalityTest.cpp.o: /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/math/fermat_primality_test/FermatPrimalityTest.cpp
+CMakeFiles/crypto_demo.dir/math/fermat_primality_test/FermatPrimalityTest.cpp.o: CMakeFiles/crypto_demo.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/crypto_demo.dir/math/fermat_primality_test/FermatPrimalityTest.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/crypto_demo.dir/math/fermat_primality_test/FermatPrimalityTest.cpp.o -MF CMakeFiles/crypto_demo.dir/math/fermat_primality_test/FermatPrimalityTest.cpp.o.d -o CMakeFiles/crypto_demo.dir/math/fermat_primality_test/FermatPrimalityTest.cpp.o -c /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/math/fermat_primality_test/FermatPrimalityTest.cpp
+
+CMakeFiles/crypto_demo.dir/math/fermat_primality_test/FermatPrimalityTest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/crypto_demo.dir/math/fermat_primality_test/FermatPrimalityTest.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/math/fermat_primality_test/FermatPrimalityTest.cpp > CMakeFiles/crypto_demo.dir/math/fermat_primality_test/FermatPrimalityTest.cpp.i
+
+CMakeFiles/crypto_demo.dir/math/fermat_primality_test/FermatPrimalityTest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/crypto_demo.dir/math/fermat_primality_test/FermatPrimalityTest.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/math/fermat_primality_test/FermatPrimalityTest.cpp -o CMakeFiles/crypto_demo.dir/math/fermat_primality_test/FermatPrimalityTest.cpp.s
+
+CMakeFiles/crypto_demo.dir/math/TemplateProbabilisticPrimalityTest.cpp.o: CMakeFiles/crypto_demo.dir/flags.make
+CMakeFiles/crypto_demo.dir/math/TemplateProbabilisticPrimalityTest.cpp.o: /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/math/TemplateProbabilisticPrimalityTest.cpp
+CMakeFiles/crypto_demo.dir/math/TemplateProbabilisticPrimalityTest.cpp.o: CMakeFiles/crypto_demo.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/crypto_demo.dir/math/TemplateProbabilisticPrimalityTest.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/crypto_demo.dir/math/TemplateProbabilisticPrimalityTest.cpp.o -MF CMakeFiles/crypto_demo.dir/math/TemplateProbabilisticPrimalityTest.cpp.o.d -o CMakeFiles/crypto_demo.dir/math/TemplateProbabilisticPrimalityTest.cpp.o -c /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/math/TemplateProbabilisticPrimalityTest.cpp
+
+CMakeFiles/crypto_demo.dir/math/TemplateProbabilisticPrimalityTest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/crypto_demo.dir/math/TemplateProbabilisticPrimalityTest.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/math/TemplateProbabilisticPrimalityTest.cpp > CMakeFiles/crypto_demo.dir/math/TemplateProbabilisticPrimalityTest.cpp.i
+
+CMakeFiles/crypto_demo.dir/math/TemplateProbabilisticPrimalityTest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/crypto_demo.dir/math/TemplateProbabilisticPrimalityTest.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/math/TemplateProbabilisticPrimalityTest.cpp -o CMakeFiles/crypto_demo.dir/math/TemplateProbabilisticPrimalityTest.cpp.s
+
 CMakeFiles/crypto_demo.dir/main.cpp.o: CMakeFiles/crypto_demo.dir/flags.make
 CMakeFiles/crypto_demo.dir/main.cpp.o: /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/main.cpp
 CMakeFiles/crypto_demo.dir/main.cpp.o: CMakeFiles/crypto_demo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/crypto_demo.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/crypto_demo.dir/main.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/crypto_demo.dir/main.cpp.o -MF CMakeFiles/crypto_demo.dir/main.cpp.o.d -o CMakeFiles/crypto_demo.dir/main.cpp.o -c /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/main.cpp
 
 CMakeFiles/crypto_demo.dir/main.cpp.i: cmake_force
@@ -223,6 +265,9 @@ crypto_demo_OBJECTS = \
 "CMakeFiles/crypto_demo.dir/src/bits/Sbox_substitution.cpp.o" \
 "CMakeFiles/crypto_demo.dir/src/padding/padding.cpp.o" \
 "CMakeFiles/crypto_demo.dir/src/mode/modes.cpp.o" \
+"CMakeFiles/crypto_demo.dir/math/NumberTheoryService.cpp.o" \
+"CMakeFiles/crypto_demo.dir/math/fermat_primality_test/FermatPrimalityTest.cpp.o" \
+"CMakeFiles/crypto_demo.dir/math/TemplateProbabilisticPrimalityTest.cpp.o" \
 "CMakeFiles/crypto_demo.dir/main.cpp.o"
 
 # External object files for target crypto_demo
@@ -237,11 +282,14 @@ crypto_demo: CMakeFiles/crypto_demo.dir/src/bits/Pbox_permutation.cpp.o
 crypto_demo: CMakeFiles/crypto_demo.dir/src/bits/Sbox_substitution.cpp.o
 crypto_demo: CMakeFiles/crypto_demo.dir/src/padding/padding.cpp.o
 crypto_demo: CMakeFiles/crypto_demo.dir/src/mode/modes.cpp.o
+crypto_demo: CMakeFiles/crypto_demo.dir/math/NumberTheoryService.cpp.o
+crypto_demo: CMakeFiles/crypto_demo.dir/math/fermat_primality_test/FermatPrimalityTest.cpp.o
+crypto_demo: CMakeFiles/crypto_demo.dir/math/TemplateProbabilisticPrimalityTest.cpp.o
 crypto_demo: CMakeFiles/crypto_demo.dir/main.cpp.o
 crypto_demo: CMakeFiles/crypto_demo.dir/build.make
 crypto_demo: CMakeFiles/crypto_demo.dir/compiler_depend.ts
 crypto_demo: CMakeFiles/crypto_demo.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable crypto_demo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable crypto_demo"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/crypto_demo.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

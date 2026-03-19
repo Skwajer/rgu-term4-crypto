@@ -241,6 +241,92 @@ test_CipherContextlab4/fast:
 	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_CipherContextlab4.dir/build.make tests/CMakeFiles/test_CipherContextlab4.dir/build
 .PHONY : test_CipherContextlab4/fast
 
+# Convenience name for target.
+tests/CMakeFiles/test_FermatPrimality.dir/rule:
+	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_FermatPrimality.dir/rule
+.PHONY : tests/CMakeFiles/test_FermatPrimality.dir/rule
+
+# Convenience name for target.
+test_FermatPrimality: tests/CMakeFiles/test_FermatPrimality.dir/rule
+.PHONY : test_FermatPrimality
+
+# fast build rule for target.
+test_FermatPrimality/fast:
+	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_FermatPrimality.dir/build.make tests/CMakeFiles/test_FermatPrimality.dir/build
+.PHONY : test_FermatPrimality/fast
+
+__/math/NumberTheoryService.o: __/math/NumberTheoryService.cpp.o
+.PHONY : __/math/NumberTheoryService.o
+
+# target to build an object file
+__/math/NumberTheoryService.cpp.o:
+	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_FermatPrimality.dir/build.make tests/CMakeFiles/test_FermatPrimality.dir/__/math/NumberTheoryService.cpp.o
+.PHONY : __/math/NumberTheoryService.cpp.o
+
+__/math/NumberTheoryService.i: __/math/NumberTheoryService.cpp.i
+.PHONY : __/math/NumberTheoryService.i
+
+# target to preprocess a source file
+__/math/NumberTheoryService.cpp.i:
+	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_FermatPrimality.dir/build.make tests/CMakeFiles/test_FermatPrimality.dir/__/math/NumberTheoryService.cpp.i
+.PHONY : __/math/NumberTheoryService.cpp.i
+
+__/math/NumberTheoryService.s: __/math/NumberTheoryService.cpp.s
+.PHONY : __/math/NumberTheoryService.s
+
+# target to generate assembly for a file
+__/math/NumberTheoryService.cpp.s:
+	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_FermatPrimality.dir/build.make tests/CMakeFiles/test_FermatPrimality.dir/__/math/NumberTheoryService.cpp.s
+.PHONY : __/math/NumberTheoryService.cpp.s
+
+__/math/TemplateProbabilisticPrimalityTest.o: __/math/TemplateProbabilisticPrimalityTest.cpp.o
+.PHONY : __/math/TemplateProbabilisticPrimalityTest.o
+
+# target to build an object file
+__/math/TemplateProbabilisticPrimalityTest.cpp.o:
+	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_FermatPrimality.dir/build.make tests/CMakeFiles/test_FermatPrimality.dir/__/math/TemplateProbabilisticPrimalityTest.cpp.o
+.PHONY : __/math/TemplateProbabilisticPrimalityTest.cpp.o
+
+__/math/TemplateProbabilisticPrimalityTest.i: __/math/TemplateProbabilisticPrimalityTest.cpp.i
+.PHONY : __/math/TemplateProbabilisticPrimalityTest.i
+
+# target to preprocess a source file
+__/math/TemplateProbabilisticPrimalityTest.cpp.i:
+	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_FermatPrimality.dir/build.make tests/CMakeFiles/test_FermatPrimality.dir/__/math/TemplateProbabilisticPrimalityTest.cpp.i
+.PHONY : __/math/TemplateProbabilisticPrimalityTest.cpp.i
+
+__/math/TemplateProbabilisticPrimalityTest.s: __/math/TemplateProbabilisticPrimalityTest.cpp.s
+.PHONY : __/math/TemplateProbabilisticPrimalityTest.s
+
+# target to generate assembly for a file
+__/math/TemplateProbabilisticPrimalityTest.cpp.s:
+	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_FermatPrimality.dir/build.make tests/CMakeFiles/test_FermatPrimality.dir/__/math/TemplateProbabilisticPrimalityTest.cpp.s
+.PHONY : __/math/TemplateProbabilisticPrimalityTest.cpp.s
+
+__/math/fermat_primality_test/FermatPrimalityTest.o: __/math/fermat_primality_test/FermatPrimalityTest.cpp.o
+.PHONY : __/math/fermat_primality_test/FermatPrimalityTest.o
+
+# target to build an object file
+__/math/fermat_primality_test/FermatPrimalityTest.cpp.o:
+	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_FermatPrimality.dir/build.make tests/CMakeFiles/test_FermatPrimality.dir/__/math/fermat_primality_test/FermatPrimalityTest.cpp.o
+.PHONY : __/math/fermat_primality_test/FermatPrimalityTest.cpp.o
+
+__/math/fermat_primality_test/FermatPrimalityTest.i: __/math/fermat_primality_test/FermatPrimalityTest.cpp.i
+.PHONY : __/math/fermat_primality_test/FermatPrimalityTest.i
+
+# target to preprocess a source file
+__/math/fermat_primality_test/FermatPrimalityTest.cpp.i:
+	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_FermatPrimality.dir/build.make tests/CMakeFiles/test_FermatPrimality.dir/__/math/fermat_primality_test/FermatPrimalityTest.cpp.i
+.PHONY : __/math/fermat_primality_test/FermatPrimalityTest.cpp.i
+
+__/math/fermat_primality_test/FermatPrimalityTest.s: __/math/fermat_primality_test/FermatPrimalityTest.cpp.s
+.PHONY : __/math/fermat_primality_test/FermatPrimalityTest.s
+
+# target to generate assembly for a file
+__/math/fermat_primality_test/FermatPrimalityTest.cpp.s:
+	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_FermatPrimality.dir/build.make tests/CMakeFiles/test_FermatPrimality.dir/__/math/fermat_primality_test/FermatPrimalityTest.cpp.s
+.PHONY : __/math/fermat_primality_test/FermatPrimalityTest.cpp.s
+
 test_CipherContext.o: test_CipherContext.cpp.o
 .PHONY : test_CipherContext.o
 
@@ -267,6 +353,30 @@ test_CipherContext.cpp.s:
 	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_CipherContext.dir/build.make tests/CMakeFiles/test_CipherContext.dir/test_CipherContext.cpp.s
 	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_CipherContextlab4.dir/build.make tests/CMakeFiles/test_CipherContextlab4.dir/test_CipherContext.cpp.s
 .PHONY : test_CipherContext.cpp.s
+
+test_Fermat_primality.o: test_Fermat_primality.cpp.o
+.PHONY : test_Fermat_primality.o
+
+# target to build an object file
+test_Fermat_primality.cpp.o:
+	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_FermatPrimality.dir/build.make tests/CMakeFiles/test_FermatPrimality.dir/test_Fermat_primality.cpp.o
+.PHONY : test_Fermat_primality.cpp.o
+
+test_Fermat_primality.i: test_Fermat_primality.cpp.i
+.PHONY : test_Fermat_primality.i
+
+# target to preprocess a source file
+test_Fermat_primality.cpp.i:
+	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_FermatPrimality.dir/build.make tests/CMakeFiles/test_FermatPrimality.dir/test_Fermat_primality.cpp.i
+.PHONY : test_Fermat_primality.cpp.i
+
+test_Fermat_primality.s: test_Fermat_primality.cpp.s
+.PHONY : test_Fermat_primality.s
+
+# target to generate assembly for a file
+test_Fermat_primality.cpp.s:
+	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_FermatPrimality.dir/build.make tests/CMakeFiles/test_FermatPrimality.dir/test_Fermat_primality.cpp.s
+.PHONY : test_Fermat_primality.cpp.s
 
 test_padding.o: test_padding.cpp.o
 .PHONY : test_padding.o
@@ -355,12 +465,25 @@ help:
 	@echo "... test"
 	@echo "... test_CipherContext"
 	@echo "... test_CipherContextlab4"
+	@echo "... test_FermatPrimality"
 	@echo "... test_crypto_bits_permute"
 	@echo "... test_crypto_bits_sbox"
 	@echo "... test_padding"
+	@echo "... __/math/NumberTheoryService.o"
+	@echo "... __/math/NumberTheoryService.i"
+	@echo "... __/math/NumberTheoryService.s"
+	@echo "... __/math/TemplateProbabilisticPrimalityTest.o"
+	@echo "... __/math/TemplateProbabilisticPrimalityTest.i"
+	@echo "... __/math/TemplateProbabilisticPrimalityTest.s"
+	@echo "... __/math/fermat_primality_test/FermatPrimalityTest.o"
+	@echo "... __/math/fermat_primality_test/FermatPrimalityTest.i"
+	@echo "... __/math/fermat_primality_test/FermatPrimalityTest.s"
 	@echo "... test_CipherContext.o"
 	@echo "... test_CipherContext.i"
 	@echo "... test_CipherContext.s"
+	@echo "... test_Fermat_primality.o"
+	@echo "... test_Fermat_primality.i"
+	@echo "... test_Fermat_primality.s"
 	@echo "... test_padding.o"
 	@echo "... test_padding.i"
 	@echo "... test_padding.s"
