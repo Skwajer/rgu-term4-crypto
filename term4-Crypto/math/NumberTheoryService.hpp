@@ -12,7 +12,7 @@ class NumberTheoryService
 {
 public:
       static BigInt computeLegendreSymbol(BigInt const &a, BigInt const &p);
-      static BigInt computeJacobiSymbol(BigInt const &a, std::vector<BigInt> const &P_miltiplies);
+      static BigInt computeJacobiSymbol(BigInt a, BigInt n);
       static BigInt gcd(BigInt a, BigInt b);
       static BigInt egcd(BigInt const &a, BigInt const &b, BigInt &x, BigInt &y);
       static BigInt pow_mod(BigInt a, BigInt degree, BigInt mod);

@@ -1,5 +1,7 @@
 #include "NumberTheoryService.hpp"
+#include <boost/multiprecision/detail/default_ops.hpp>
 #include <cstddef>
+#include <stdexcept>
 
 BigInt NumberTheoryService::pow_mod(BigInt base, BigInt exp, BigInt mod)
 {
@@ -44,12 +46,40 @@ BigInt NumberTheoryService::computeLegendreSymbol(BigInt const &a, BigInt const 
     }
 }
 
-BigInt NumberTheoryService::computeJacobiSymbol(BigInt const &a, std::vector<BigInt> const &P_miltiplies)
+BigInt NumberTheoryService::computeJacobiSymbol(BigInt a, BigInt n)
 {
-    BigInt result = 1;
-    for (size_t i = 0; i < P_miltiplies.size(); i++)
+    if (n < 0 || n % 2 == 0)
     {
-        result *= a / P_miltiplies[i];
+        throw std::invalid_argument("n must be positive and odd");
+    }
+    if (gcd(a, n) != 1)
+    {
+        return 0;
+    }
+    BigInt result = 1;
+    a = a % n;
+    while (a != 0)
+    {
+        BigInt t = 0;
+        while (a % 2 == 0)
+        {
+            t += 1;
+            a = a / 2;
+            if (t % 2 == 1)
+            {
+                BigInt b = n % 8;
+                if (b == 5 || b == 3)
+                {
+                    result = -result;
+                }
+            }
+        }
+        if ((a % 4 == 3) && (n % 4 == 3))
+        {
+            result = -result;
+        }
+        std::swap(a, n);
+        a = a % n;
     }
     return result;
 }
