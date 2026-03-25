@@ -58,6 +58,44 @@ target_link_libraries(test_FermatPrimality
     gtest_main
 )
 
+add_executable(test_SolovayStrassenPrimality
+    test_Solovay_Strassen_primality_test.cpp
+    ../math/NumberTheoryService.cpp
+    ../math/Solovay_Strassen_primality_test/SolovayStrassenPrimalityTest.cpp
+    ../math/TemplateProbabilisticPrimalityTest.cpp)
+
+target_link_libraries(test_SolovayStrassenPrimality
+    gtest
+    gtest_main
+)
+
+add_executable(test_MillerRabinPrimality
+    test_Miller_Rabin_primality_test.cpp
+    ../math/NumberTheoryService.cpp
+    ../math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.cpp
+    ../math/TemplateProbabilisticPrimalityTest.cpp)
+
+target_link_libraries(test_MillerRabinPrimality
+    gtest
+    gtest_main
+)
+
+add_executable(test_RSA
+    test_RSA.cpp
+    ../src/crypto_core/rsa/RSA.cpp
+    ../src/crypto_core/rsa/RsaKeyGeneration.cpp
+    ../math/NumberTheoryService.cpp
+    ../math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.cpp
+    ../math/TemplateProbabilisticPrimalityTest.cpp)
+
+target_link_libraries(test_RSA
+    gtest
+    gtest_main
+)
+
+add_test(NAME test_RSA COMMAND test_RSA)
+add_test(NAME test_MillerRabinPrimality COMMAND test_MillerRabinPrimality)
+add_test(NAME test_SolovayStrassenPrimality COMMAND test_SolovayStrassenPrimality)
 add_test(NAME test_FermatPrimality COMMAND test_FermatPrimality)
 add_test(NAME test_crypto_bits_permute COMMAND test_crypto_bits_permute)
 add_test(NAME test_crypto_bits_substitute COMMAND test_crypto_bits_substitute)

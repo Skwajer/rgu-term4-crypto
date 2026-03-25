@@ -240,10 +240,52 @@ CMakeFiles/crypto_demo.dir/math/TemplateProbabilisticPrimalityTest.cpp.s: cmake_
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/crypto_demo.dir/math/TemplateProbabilisticPrimalityTest.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/math/TemplateProbabilisticPrimalityTest.cpp -o CMakeFiles/crypto_demo.dir/math/TemplateProbabilisticPrimalityTest.cpp.s
 
+CMakeFiles/crypto_demo.dir/math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.cpp.o: CMakeFiles/crypto_demo.dir/flags.make
+CMakeFiles/crypto_demo.dir/math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.cpp.o: /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.cpp
+CMakeFiles/crypto_demo.dir/math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.cpp.o: CMakeFiles/crypto_demo.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/crypto_demo.dir/math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/crypto_demo.dir/math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.cpp.o -MF CMakeFiles/crypto_demo.dir/math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.cpp.o.d -o CMakeFiles/crypto_demo.dir/math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.cpp.o -c /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.cpp
+
+CMakeFiles/crypto_demo.dir/math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/crypto_demo.dir/math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.cpp > CMakeFiles/crypto_demo.dir/math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.cpp.i
+
+CMakeFiles/crypto_demo.dir/math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/crypto_demo.dir/math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.cpp -o CMakeFiles/crypto_demo.dir/math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.cpp.s
+
+CMakeFiles/crypto_demo.dir/math/Solovay_Strassen_primality_test/SolovayStrassenPrimalityTest.cpp.o: CMakeFiles/crypto_demo.dir/flags.make
+CMakeFiles/crypto_demo.dir/math/Solovay_Strassen_primality_test/SolovayStrassenPrimalityTest.cpp.o: /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/math/Solovay_Strassen_primality_test/SolovayStrassenPrimalityTest.cpp
+CMakeFiles/crypto_demo.dir/math/Solovay_Strassen_primality_test/SolovayStrassenPrimalityTest.cpp.o: CMakeFiles/crypto_demo.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/crypto_demo.dir/math/Solovay_Strassen_primality_test/SolovayStrassenPrimalityTest.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/crypto_demo.dir/math/Solovay_Strassen_primality_test/SolovayStrassenPrimalityTest.cpp.o -MF CMakeFiles/crypto_demo.dir/math/Solovay_Strassen_primality_test/SolovayStrassenPrimalityTest.cpp.o.d -o CMakeFiles/crypto_demo.dir/math/Solovay_Strassen_primality_test/SolovayStrassenPrimalityTest.cpp.o -c /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/math/Solovay_Strassen_primality_test/SolovayStrassenPrimalityTest.cpp
+
+CMakeFiles/crypto_demo.dir/math/Solovay_Strassen_primality_test/SolovayStrassenPrimalityTest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/crypto_demo.dir/math/Solovay_Strassen_primality_test/SolovayStrassenPrimalityTest.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/math/Solovay_Strassen_primality_test/SolovayStrassenPrimalityTest.cpp > CMakeFiles/crypto_demo.dir/math/Solovay_Strassen_primality_test/SolovayStrassenPrimalityTest.cpp.i
+
+CMakeFiles/crypto_demo.dir/math/Solovay_Strassen_primality_test/SolovayStrassenPrimalityTest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/crypto_demo.dir/math/Solovay_Strassen_primality_test/SolovayStrassenPrimalityTest.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/math/Solovay_Strassen_primality_test/SolovayStrassenPrimalityTest.cpp -o CMakeFiles/crypto_demo.dir/math/Solovay_Strassen_primality_test/SolovayStrassenPrimalityTest.cpp.s
+
+CMakeFiles/crypto_demo.dir/src/crypto_core/rsa/RSA.cpp.o: CMakeFiles/crypto_demo.dir/flags.make
+CMakeFiles/crypto_demo.dir/src/crypto_core/rsa/RSA.cpp.o: /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/src/crypto_core/rsa/RSA.cpp
+CMakeFiles/crypto_demo.dir/src/crypto_core/rsa/RSA.cpp.o: CMakeFiles/crypto_demo.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/crypto_demo.dir/src/crypto_core/rsa/RSA.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/crypto_demo.dir/src/crypto_core/rsa/RSA.cpp.o -MF CMakeFiles/crypto_demo.dir/src/crypto_core/rsa/RSA.cpp.o.d -o CMakeFiles/crypto_demo.dir/src/crypto_core/rsa/RSA.cpp.o -c /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/src/crypto_core/rsa/RSA.cpp
+
+CMakeFiles/crypto_demo.dir/src/crypto_core/rsa/RSA.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/crypto_demo.dir/src/crypto_core/rsa/RSA.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/src/crypto_core/rsa/RSA.cpp > CMakeFiles/crypto_demo.dir/src/crypto_core/rsa/RSA.cpp.i
+
+CMakeFiles/crypto_demo.dir/src/crypto_core/rsa/RSA.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/crypto_demo.dir/src/crypto_core/rsa/RSA.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/src/crypto_core/rsa/RSA.cpp -o CMakeFiles/crypto_demo.dir/src/crypto_core/rsa/RSA.cpp.s
+
 CMakeFiles/crypto_demo.dir/main.cpp.o: CMakeFiles/crypto_demo.dir/flags.make
 CMakeFiles/crypto_demo.dir/main.cpp.o: /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/main.cpp
 CMakeFiles/crypto_demo.dir/main.cpp.o: CMakeFiles/crypto_demo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/crypto_demo.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/crypto_demo.dir/main.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/crypto_demo.dir/main.cpp.o -MF CMakeFiles/crypto_demo.dir/main.cpp.o.d -o CMakeFiles/crypto_demo.dir/main.cpp.o -c /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/main.cpp
 
 CMakeFiles/crypto_demo.dir/main.cpp.i: cmake_force
@@ -268,6 +310,9 @@ crypto_demo_OBJECTS = \
 "CMakeFiles/crypto_demo.dir/math/NumberTheoryService.cpp.o" \
 "CMakeFiles/crypto_demo.dir/math/fermat_primality_test/FermatPrimalityTest.cpp.o" \
 "CMakeFiles/crypto_demo.dir/math/TemplateProbabilisticPrimalityTest.cpp.o" \
+"CMakeFiles/crypto_demo.dir/math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.cpp.o" \
+"CMakeFiles/crypto_demo.dir/math/Solovay_Strassen_primality_test/SolovayStrassenPrimalityTest.cpp.o" \
+"CMakeFiles/crypto_demo.dir/src/crypto_core/rsa/RSA.cpp.o" \
 "CMakeFiles/crypto_demo.dir/main.cpp.o"
 
 # External object files for target crypto_demo
@@ -285,11 +330,14 @@ crypto_demo: CMakeFiles/crypto_demo.dir/src/mode/modes.cpp.o
 crypto_demo: CMakeFiles/crypto_demo.dir/math/NumberTheoryService.cpp.o
 crypto_demo: CMakeFiles/crypto_demo.dir/math/fermat_primality_test/FermatPrimalityTest.cpp.o
 crypto_demo: CMakeFiles/crypto_demo.dir/math/TemplateProbabilisticPrimalityTest.cpp.o
+crypto_demo: CMakeFiles/crypto_demo.dir/math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.cpp.o
+crypto_demo: CMakeFiles/crypto_demo.dir/math/Solovay_Strassen_primality_test/SolovayStrassenPrimalityTest.cpp.o
+crypto_demo: CMakeFiles/crypto_demo.dir/src/crypto_core/rsa/RSA.cpp.o
 crypto_demo: CMakeFiles/crypto_demo.dir/main.cpp.o
 crypto_demo: CMakeFiles/crypto_demo.dir/build.make
 crypto_demo: CMakeFiles/crypto_demo.dir/compiler_depend.ts
 crypto_demo: CMakeFiles/crypto_demo.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable crypto_demo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable crypto_demo"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/crypto_demo.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

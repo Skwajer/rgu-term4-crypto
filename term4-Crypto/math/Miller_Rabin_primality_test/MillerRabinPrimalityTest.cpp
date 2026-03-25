@@ -1,5 +1,6 @@
 #include "MillerRabinPrimalityTest.hpp"
 #include <boost/random/random_device.hpp>
+#include <cstddef>
 #include <ctime>
 #include <random>
 
@@ -21,7 +22,6 @@ bool MillerRabinPrimalityTest::perform_single_iteration(BigInt const &n)
     static boost::random::mt19937_64 rng(std::random_device{}());
     
     BigInt a;
-    
     size_t n_bits = boost::multiprecision::msb(n) + 1;
     
     do 
@@ -40,6 +40,20 @@ bool MillerRabinPrimalityTest::perform_single_iteration(BigInt const &n)
         
     } while (a < 2 || a > n - 2);
     
-    BigInt result = NumberTheoryService::pow_mod(a, n-1, n);
-    return result == 1;
+    BigInt t = n - 1;
+    size_t s = 0;
+    while(t % 2 == 0)
+    {
+        s++;
+        t /= 2;
+    }
+    BigInt x = NumberTheoryService::pow_mod(a, t, n);
+    if ((x == 1) || (x == n - 1)) {return true;}
+    for (size_t i = 0; i < s - 1; i++)
+    {
+        x = (x * x) % n;
+        if (x == 1) continue;
+        if (x == n - 1) return true;
+    }
+    return false;
 }

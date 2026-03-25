@@ -327,6 +327,45 @@ test_FermatPrimality/fast:
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_FermatPrimality.dir/build.make tests/CMakeFiles/test_FermatPrimality.dir/build
 .PHONY : test_FermatPrimality/fast
 
+#=============================================================================
+# Target rules for targets named test_SolovayStrassenPrimality
+
+# Build rule for target.
+test_SolovayStrassenPrimality: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_SolovayStrassenPrimality
+.PHONY : test_SolovayStrassenPrimality
+
+# fast build rule for target.
+test_SolovayStrassenPrimality/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_SolovayStrassenPrimality.dir/build.make tests/CMakeFiles/test_SolovayStrassenPrimality.dir/build
+.PHONY : test_SolovayStrassenPrimality/fast
+
+#=============================================================================
+# Target rules for targets named test_MillerRabinPrimality
+
+# Build rule for target.
+test_MillerRabinPrimality: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_MillerRabinPrimality
+.PHONY : test_MillerRabinPrimality
+
+# fast build rule for target.
+test_MillerRabinPrimality/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_MillerRabinPrimality.dir/build.make tests/CMakeFiles/test_MillerRabinPrimality.dir/build
+.PHONY : test_MillerRabinPrimality/fast
+
+#=============================================================================
+# Target rules for targets named test_RSA
+
+# Build rule for target.
+test_RSA: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_RSA
+.PHONY : test_RSA
+
+# fast build rule for target.
+test_RSA/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_RSA.dir/build.make tests/CMakeFiles/test_RSA.dir/build
+.PHONY : test_RSA/fast
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -351,6 +390,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_demo.dir/build.make CMakeFiles/crypto_demo.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.o: math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.cpp.o
+.PHONY : math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.o
+
+# target to build an object file
+math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_demo.dir/build.make CMakeFiles/crypto_demo.dir/math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.cpp.o
+.PHONY : math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.cpp.o
+
+math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.i: math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.cpp.i
+.PHONY : math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.i
+
+# target to preprocess a source file
+math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_demo.dir/build.make CMakeFiles/crypto_demo.dir/math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.cpp.i
+.PHONY : math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.cpp.i
+
+math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.s: math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.cpp.s
+.PHONY : math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.s
+
+# target to generate assembly for a file
+math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_demo.dir/build.make CMakeFiles/crypto_demo.dir/math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.cpp.s
+.PHONY : math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.cpp.s
+
 math/NumberTheoryService.o: math/NumberTheoryService.cpp.o
 .PHONY : math/NumberTheoryService.o
 
@@ -374,6 +437,30 @@ math/NumberTheoryService.s: math/NumberTheoryService.cpp.s
 math/NumberTheoryService.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_demo.dir/build.make CMakeFiles/crypto_demo.dir/math/NumberTheoryService.cpp.s
 .PHONY : math/NumberTheoryService.cpp.s
+
+math/Solovay_Strassen_primality_test/SolovayStrassenPrimalityTest.o: math/Solovay_Strassen_primality_test/SolovayStrassenPrimalityTest.cpp.o
+.PHONY : math/Solovay_Strassen_primality_test/SolovayStrassenPrimalityTest.o
+
+# target to build an object file
+math/Solovay_Strassen_primality_test/SolovayStrassenPrimalityTest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_demo.dir/build.make CMakeFiles/crypto_demo.dir/math/Solovay_Strassen_primality_test/SolovayStrassenPrimalityTest.cpp.o
+.PHONY : math/Solovay_Strassen_primality_test/SolovayStrassenPrimalityTest.cpp.o
+
+math/Solovay_Strassen_primality_test/SolovayStrassenPrimalityTest.i: math/Solovay_Strassen_primality_test/SolovayStrassenPrimalityTest.cpp.i
+.PHONY : math/Solovay_Strassen_primality_test/SolovayStrassenPrimalityTest.i
+
+# target to preprocess a source file
+math/Solovay_Strassen_primality_test/SolovayStrassenPrimalityTest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_demo.dir/build.make CMakeFiles/crypto_demo.dir/math/Solovay_Strassen_primality_test/SolovayStrassenPrimalityTest.cpp.i
+.PHONY : math/Solovay_Strassen_primality_test/SolovayStrassenPrimalityTest.cpp.i
+
+math/Solovay_Strassen_primality_test/SolovayStrassenPrimalityTest.s: math/Solovay_Strassen_primality_test/SolovayStrassenPrimalityTest.cpp.s
+.PHONY : math/Solovay_Strassen_primality_test/SolovayStrassenPrimalityTest.s
+
+# target to generate assembly for a file
+math/Solovay_Strassen_primality_test/SolovayStrassenPrimalityTest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_demo.dir/build.make CMakeFiles/crypto_demo.dir/math/Solovay_Strassen_primality_test/SolovayStrassenPrimalityTest.cpp.s
+.PHONY : math/Solovay_Strassen_primality_test/SolovayStrassenPrimalityTest.cpp.s
 
 math/TemplateProbabilisticPrimalityTest.o: math/TemplateProbabilisticPrimalityTest.cpp.o
 .PHONY : math/TemplateProbabilisticPrimalityTest.o
@@ -543,6 +630,30 @@ src/crypto_core/FeistelNetwork.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_demo.dir/build.make CMakeFiles/crypto_demo.dir/src/crypto_core/FeistelNetwork.cpp.s
 .PHONY : src/crypto_core/FeistelNetwork.cpp.s
 
+src/crypto_core/rsa/RSA.o: src/crypto_core/rsa/RSA.cpp.o
+.PHONY : src/crypto_core/rsa/RSA.o
+
+# target to build an object file
+src/crypto_core/rsa/RSA.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_demo.dir/build.make CMakeFiles/crypto_demo.dir/src/crypto_core/rsa/RSA.cpp.o
+.PHONY : src/crypto_core/rsa/RSA.cpp.o
+
+src/crypto_core/rsa/RSA.i: src/crypto_core/rsa/RSA.cpp.i
+.PHONY : src/crypto_core/rsa/RSA.i
+
+# target to preprocess a source file
+src/crypto_core/rsa/RSA.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_demo.dir/build.make CMakeFiles/crypto_demo.dir/src/crypto_core/rsa/RSA.cpp.i
+.PHONY : src/crypto_core/rsa/RSA.cpp.i
+
+src/crypto_core/rsa/RSA.s: src/crypto_core/rsa/RSA.cpp.s
+.PHONY : src/crypto_core/rsa/RSA.s
+
+# target to generate assembly for a file
+src/crypto_core/rsa/RSA.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_demo.dir/build.make CMakeFiles/crypto_demo.dir/src/crypto_core/rsa/RSA.cpp.s
+.PHONY : src/crypto_core/rsa/RSA.cpp.s
+
 src/des/DESCipher.o: src/des/DESCipher.cpp.o
 .PHONY : src/des/DESCipher.o
 
@@ -661,15 +772,24 @@ help:
 	@echo "... test_CipherContext"
 	@echo "... test_CipherContextlab4"
 	@echo "... test_FermatPrimality"
+	@echo "... test_MillerRabinPrimality"
+	@echo "... test_RSA"
+	@echo "... test_SolovayStrassenPrimality"
 	@echo "... test_crypto_bits_permute"
 	@echo "... test_crypto_bits_sbox"
 	@echo "... test_padding"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.o"
+	@echo "... math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.i"
+	@echo "... math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.s"
 	@echo "... math/NumberTheoryService.o"
 	@echo "... math/NumberTheoryService.i"
 	@echo "... math/NumberTheoryService.s"
+	@echo "... math/Solovay_Strassen_primality_test/SolovayStrassenPrimalityTest.o"
+	@echo "... math/Solovay_Strassen_primality_test/SolovayStrassenPrimalityTest.i"
+	@echo "... math/Solovay_Strassen_primality_test/SolovayStrassenPrimalityTest.s"
 	@echo "... math/TemplateProbabilisticPrimalityTest.o"
 	@echo "... math/TemplateProbabilisticPrimalityTest.i"
 	@echo "... math/TemplateProbabilisticPrimalityTest.s"
@@ -691,6 +811,9 @@ help:
 	@echo "... src/crypto_core/FeistelNetwork.o"
 	@echo "... src/crypto_core/FeistelNetwork.i"
 	@echo "... src/crypto_core/FeistelNetwork.s"
+	@echo "... src/crypto_core/rsa/RSA.o"
+	@echo "... src/crypto_core/rsa/RSA.i"
+	@echo "... src/crypto_core/rsa/RSA.s"
 	@echo "... src/des/DESCipher.o"
 	@echo "... src/des/DESCipher.i"
 	@echo "... src/des/DESCipher.s"

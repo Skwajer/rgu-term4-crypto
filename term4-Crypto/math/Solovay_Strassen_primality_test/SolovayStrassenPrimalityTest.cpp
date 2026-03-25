@@ -42,9 +42,15 @@ bool SolovayStrassenPrimalityTest::perform_single_iteration(BigInt const &n)
     } while (a < 2 || a > n - 2);
     
     BigInt gcd = NumberTheoryService::gcd(a, n);
-    if (gcd != 1) {return false;}
-    BigInt JacobiSymb = NumberTheoryService::computeJacobiSymbol(a, n); 
-    if (NumberTheoryService::pow_mod(a, (n-1)/2, n) != JacobiSymb)
+    if (gcd > 1) {return false;}
+    BigInt Jac = NumberTheoryService::computeJacobiSymbol(a, n); 
+    if (Jac == BigInt(-1))
+    {
+        Jac = n-1;
+    }
+    BigInt deg = (n-1)/2;
+    BigInt a_pow = NumberTheoryService::pow_mod(a, deg, n);
+    if (a_pow != Jac)
     {
         return false;
     }

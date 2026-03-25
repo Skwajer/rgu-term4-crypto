@@ -48,39 +48,47 @@ BigInt NumberTheoryService::computeLegendreSymbol(BigInt const &a, BigInt const 
 
 BigInt NumberTheoryService::computeJacobiSymbol(BigInt a, BigInt n)
 {
-    if (n < 0 || n % 2 == 0)
+    if (n <= 0 || n % 2 == 0)
     {
         throw std::invalid_argument("n must be positive and odd");
     }
+
     if (gcd(a, n) != 1)
     {
         return 0;
     }
+
     BigInt result = 1;
-    a = a % n;
+    a = (a % n + n) % n;
+
     while (a != 0)
     {
         BigInt t = 0;
+
         while (a % 2 == 0)
         {
+            a /= 2;
             t += 1;
-            a = a / 2;
-            if (t % 2 == 1)
+        }
+
+        if (t % 2 == 1)
+        {
+            BigInt b = n % 8;
+            if (b == 3 || b == 5)
             {
-                BigInt b = n % 8;
-                if (b == 5 || b == 3)
-                {
-                    result = -result;
-                }
+                result = -result;
             }
         }
+
         if ((a % 4 == 3) && (n % 4 == 3))
         {
             result = -result;
         }
+
         std::swap(a, n);
-        a = a % n;
+        a %= n;
     }
+
     return result;
 }
 
@@ -93,7 +101,7 @@ BigInt NumberTheoryService::gcd(BigInt a, BigInt b)
     return gcd(b, a % b);
 }
 
-BigInt NumberTheoryService::egcd(BigInt const &a, BigInt const &b, BigInt &x, BigInt &y)
+BigInt NumberTheoryService::egcd(BigInt a, BigInt b, BigInt &x, BigInt &y)
 {
     if (b == 0)
     {
@@ -101,10 +109,13 @@ BigInt NumberTheoryService::egcd(BigInt const &a, BigInt const &b, BigInt &x, Bi
         y = 0;
         return a;
     }
-    BigInt gcd = egcd(b, a % b, x, y);
-    BigInt x_prev = x;
-    x = y;
-    y = x_prev - (a/b) * y;
+
+    BigInt x1, y1;
+    BigInt gcd = egcd(b, a % b, x1, y1);
+
+    x = y1;
+    y = x1 - (a / b) * y1;
+
     return gcd;
 }
 
@@ -116,7 +127,7 @@ BigInt NumberTheoryService::get_inv(BigInt const &a, BigInt const &n)
     {
         throw std::runtime_error("inverse not exist");
     }
-    return x;
+    return ((x % n) + n) % n;
 }
 
 BigInt NumberTheoryService::Euler_func_definition(BigInt const &n)

@@ -11,14 +11,12 @@ enable_testing()
 
 include(FetchContent)
 
-# Google Test
 FetchContent_Declare(
     googletest
     URL https://github.com/google/googletest/archive/refs/tags/v1.14.0.zip
     DOWNLOAD_EXTRACT_TIMESTAMP TRUE
 )
 
-# Boost - ТОЛЬКО ЗАГОЛОВОЧНЫЕ ФАЙЛЫ, без сборки
 FetchContent_Declare(
     BoostHeaders
     URL https://github.com/boostorg/boost/releases/download/boost-1.84.0/boost-1.84.0.tar.gz
@@ -28,17 +26,14 @@ FetchContent_Declare(
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 set(FETCHCONTENT_QUIET OFF)
 
-# Скачиваем Google Test
 message(STATUS "Downloading Google Test...")
 FetchContent_MakeAvailable(googletest)
 
-# Скачиваем Boost (только заголовочные файлы, без сборки)
 message(STATUS "Downloading Boost headers...")
 FetchContent_GetProperties(BoostHeaders)
 if(NOT BoostHeaders_POPULATED)
     FetchContent_Populate(BoostHeaders)
     
-    # Указываем путь к заголовочным файлам Boost
     set(BOOST_INCLUDE_DIR ${boostheaders_SOURCE_DIR})
     message(STATUS "Boost headers downloaded to: ${BOOST_INCLUDE_DIR}")
 endif()
@@ -58,6 +53,9 @@ set(SOURCES
     math/NumberTheoryService.cpp
     math/fermat_primality_test/FermatPrimalityTest.cpp
     math/TemplateProbabilisticPrimalityTest.cpp
+    math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.cpp
+    math/Solovay_Strassen_primality_test/SolovayStrassenPrimalityTest.cpp
+    src/crypto_core/rsa/RSA.cpp
     main.cpp
 )
 
@@ -71,13 +69,12 @@ target_include_directories(crypto_demo PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/src/mode
     ${CMAKE_CURRENT_SOURCE_DIR}/src/des
     ${CMAKE_CURRENT_SOURCE_DIR}/math
-    ${BOOST_INCLUDE_DIR}  # Путь к заголовочным файлам Boost
+    ${BOOST_INCLUDE_DIR}
 )
 
-# Для header-only библиотек Boost
 target_compile_definitions(crypto_demo PRIVATE
-    BOOST_ALL_NO_LIB  # Отключаем автоматический поиск библиотек
-    BOOST_MP_STANDALONE  # Multiprecision в standalone режиме
+    BOOST_ALL_NO_LIB
+    BOOST_MP_STANDALONE
 )
 
 add_subdirectory(tests)

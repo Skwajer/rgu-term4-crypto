@@ -11,10 +11,9 @@ public:
     FermatPrimalityTest() = default;
     ~FermatPrimalityTest() override = default;
 
-//public:
-    //bool is_prime(BigInt const &n, double target_prob) override;
-
 private:
     bool perform_single_iteration(BigInt const &n) override;
+    size_t calculate_iters(double target_prob) override;
+
     boost::random::mt19937 m_rng;
 };
