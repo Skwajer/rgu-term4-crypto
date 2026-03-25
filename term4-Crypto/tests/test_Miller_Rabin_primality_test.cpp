@@ -75,3 +75,17 @@ TEST_F(MillerRabinPrimalityTestTest, PrimeRSA4) {
     BigInt n("693342667110830181197325401899700641361965863127336680673013");
     EXPECT_TRUE(test->is_prime(n, 0.999));
 }
+
+TEST_F(MillerRabinPrimalityTestTest, CarmichaelNumbers)
+{
+    BigInt n1("561");
+    BigInt n2("41041");
+    BigInt n3("825265");
+    BigInt n4("321197185");
+    BigInt n9("9746347772161");
+    EXPECT_FALSE(test->is_prime(n1, 0.999));
+    EXPECT_FALSE(test->is_prime(n2, 0.999));
+    EXPECT_FALSE(test->is_prime(n3, 0.999));
+    EXPECT_FALSE(test->is_prime(n4, 0.999));
+    EXPECT_FALSE(test->is_prime(n9, 0.999));
+}
