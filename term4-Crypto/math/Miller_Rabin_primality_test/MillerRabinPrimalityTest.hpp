@@ -1,3 +1,4 @@
+#pragma once
 #include "../NumberTheoryService.hpp"
 #include "../TemplateProbabilisticPrimalityTest.hpp"
 #include <boost/random.hpp>

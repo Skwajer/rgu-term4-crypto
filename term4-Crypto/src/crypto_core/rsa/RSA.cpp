@@ -8,7 +8,7 @@ Bytes RSA::encrypt(Bytes const &data, public_key const &pub_key)
     BigInt m = bytes_to_bigint(data);
     std::cout << "m = " << m << std::endl;
     if (m >= pub_key.N)
-        throw std::invalid_argument("too large");
+        throw std::invalid_argument("plain text too large");
 
     BigInt c = NumberTheoryService::pow_mod(m, pub_key.e, pub_key.N);
     size_t n_bytes = (boost::multiprecision::msb(pub_key.N) + 1 + 7) / 8;

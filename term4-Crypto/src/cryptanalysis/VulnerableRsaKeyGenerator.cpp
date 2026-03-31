@@ -1,7 +1,7 @@
-#include "RsaKeyGeneration.hpp"
-#include <boost/multiprecision/detail/default_ops.hpp>
+#include "VulnerableRsaKeyGenerator.hpp"
+#include "../../math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.hpp"
 
-BigInt KeyGeneration::generate_candidate(size_t bits)
+BigInt VulnerableRsaKeyGenerator::generate_candidate(size_t bits)
 {
     static boost::random::mt19937_64 rng(std::random_device{}());
 
@@ -27,7 +27,7 @@ BigInt KeyGeneration::generate_candidate(size_t bits)
     return n;
 }
 
-BigInt KeyGeneration::generate_prime(size_t bits_count, double target_prob)
+BigInt VulnerableRsaKeyGenerator::generate_prime(size_t bits_count, double target_prob)
 {
     if (target_prob <= 0 || target_prob >= 1)
     {
@@ -51,13 +51,24 @@ BigInt KeyGeneration::generate_prime(size_t bits_count, double target_prob)
     return p;
 }
 
-bool KeyGeneration::is_vulnerable_to_Wieners_attack(const BigInt& d, const BigInt& n)
+BigInt find_next_prime(BigInt prime, double target_prob)
+{
+    BigInt next_prime = prime + 2;
+    auto primality_test = std::make_unique<MillerRabinPrimalityTest>();
+    while (!(primality_test->is_prime(next_prime, target_prob)))
+    {
+        next_prime += 2;
+    }
+    return next_prime;
+}
+
+bool VulnerableRsaKeyGenerator::is_vulnerable_to_Wieners_attack(const BigInt& d, const BigInt& n)
 {
     BigInt root4 = boost::multiprecision::sqrt(boost::multiprecision::sqrt(n));
     return d < (root4 / 3);
 }
 
-BigInt KeyGeneration::choose_public_exponent(const BigInt& phi_n)
+BigInt VulnerableRsaKeyGenerator::choose_public_exponent(const BigInt& phi_n)
 {
     static const int exponents[] = {65537, 257, 17, 5, 3};
 
@@ -74,7 +85,37 @@ BigInt KeyGeneration::choose_public_exponent(const BigInt& phi_n)
     throw std::runtime_error("Failed to find suitable public exponent");
 }
 
-rsaKeys KeyGeneration::generate(size_t bits_count, double target_prob)
+rsaVulnerableKeys VulnerableRsaKeyGenerator::generate_vulnerable_to_Fermas_attack(size_t bits_count, double target_prob)
+{
+    BigInt p;
+    BigInt q;
+    BigInt n;
+    BigInt phi_n;
+    BigInt e, d;
+
+    while (true)
+    {
+        p = generate_prime(bits_count / 2, target_prob);
+        q = find_next_prime(p, target_prob);
+
+        n = p * q;
+        phi_n = (p - 1) * (q - 1);
+
+        e = choose_public_exponent(phi_n);
+        d = NumberTheoryService::get_inv(e, phi_n);
+
+        if (is_vulnerable_to_Wieners_attack(d, n))
+        {
+            continue;
+        }
+
+        break;
+    }
+
+    return {{e, n}, {d, n}};
+}
+
+rsaVulnerableKeys VulnerableRsaKeyGenerator::generate_vulnerable_to_Winner_attack(size_t bits_count, double target_prob)
 {
     BigInt p;
     BigInt q;
@@ -96,11 +137,9 @@ rsaKeys KeyGeneration::generate(size_t bits_count, double target_prob)
         phi_n = (p - 1) * (q - 1);
 
         e = choose_public_exponent(phi_n);
-        std::cout << "gcd(e, phi_n) = " << NumberTheoryService::gcd(e, phi_n) << std::endl;
         d = NumberTheoryService::get_inv(e, phi_n);
-        std::cout << "d = " << d << std::endl;
 
-        if (is_vulnerable_to_Wieners_attack(d, n))
+        if (!is_vulnerable_to_Wieners_attack(d, n))
         {
             continue;
         }
