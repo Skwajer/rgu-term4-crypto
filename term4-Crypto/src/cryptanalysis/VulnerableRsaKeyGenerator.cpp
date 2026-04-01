@@ -1,6 +1,41 @@
 #include "VulnerableRsaKeyGenerator.hpp"
 #include "../../math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.hpp"
 
+BigInt generate_random_in_range(const BigInt& min, const BigInt& max) 
+{
+    static boost::random::mt19937_64 rng(std::random_device{}());
+    
+    if (min > max) {
+        throw std::invalid_argument("min must be <= max");
+    }
+    
+    BigInt range = max - min + 1;
+    size_t n_bits = boost::multiprecision::msb(range) + 1;
+    
+    BigInt result;
+    
+    do {
+        result = 0;
+        size_t words = (n_bits + 63) / 64;
+        
+        for (size_t i = 0; i < words; ++i) 
+        {
+            result <<= 64;
+            result |= rng();
+        }
+        
+        if (n_bits % 64 != 0) 
+        {
+            result &= (BigInt(1) << n_bits) - 1;
+        }
+        
+        result += min;
+        
+    } while (result > max);
+    
+    return result;
+}
+
 BigInt VulnerableRsaKeyGenerator::generate_candidate(size_t bits)
 {
     static boost::random::mt19937_64 rng(std::random_device{}());
@@ -115,37 +150,48 @@ rsaVulnerableKeys VulnerableRsaKeyGenerator::generate_vulnerable_to_Fermat_attac
     return {{e, n}, {d, n}};
 }
 
-rsaVulnerableKeys VulnerableRsaKeyGenerator::generate_vulnerable_to_Wieners_attack(size_t bits_count, double target_prob)
+rsaVulnerableKeys VulnerableRsaKeyGenerator::generate_vulnerable_to_Wieners_attack(
+    size_t bits_count, double target_prob)
 {
     BigInt p;
     BigInt q;
     BigInt n;
     BigInt phi_n;
     BigInt e, d;
-
+    
+    
     while (true)
     {
         p = generate_prime(bits_count / 2, target_prob);
         q = generate_prime(bits_count / 2, target_prob);
-
-        if (boost::multiprecision::abs(p - q) < (BigInt(1) << (bits_count / 4)))
+        
+        BigInt diff = p > q ? p - q : q - p;
+        if (diff < (BigInt(1) << (bits_count / 4))) 
         {
             continue;
         }
-
+        
         n = p * q;
         phi_n = (p - 1) * (q - 1);
-
-        e = choose_public_exponent(phi_n);
-        d = NumberTheoryService::get_inv(e, phi_n);
-
-        if (!is_vulnerable_to_Wieners_attack(d, n))
+        
+        BigInt n_sqrt = boost::multiprecision::sqrt(n);
+        BigInt n_quarter = boost::multiprecision::sqrt(n_sqrt);
+        BigInt d_bound = n_quarter / 3;
+        
+        do 
+        {
+            d = generate_random_in_range(2, d_bound);
+        } while (gcd(d, phi_n) != 1);
+        
+        e = NumberTheoryService::get_inv(d, phi_n);
+        
+        if (e < 2 || e >= phi_n) 
         {
             continue;
         }
-
+        
         break;
     }
-
+    
     return {{e, n}, {d, n}};
 }

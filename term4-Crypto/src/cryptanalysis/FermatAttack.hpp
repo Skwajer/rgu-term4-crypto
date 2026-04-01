@@ -1,7 +1,5 @@
 #pragma once
 #include "VulnerableRsaKeyGenerator.hpp"
-#include <boost/multiprecision/detail/default_ops.hpp>
-#include <boost/multiprecision/integer.hpp>
 #include <utility>
 
 static std::pair<BigInt, BigInt> FermatAttack_to_RsaKey(BigInt N)
