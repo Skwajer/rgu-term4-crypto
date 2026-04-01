@@ -93,6 +93,20 @@ target_link_libraries(test_RSA
     gtest_main
 )
 
+add_executable(test_FermatAttack
+    test_FermatAttack.cpp
+    ../src/cryptanalysis/VulnerableRsaKeyGenerator.cpp
+    ../math/NumberTheoryService.cpp
+    ../math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.cpp
+    ../math/TemplateProbabilisticPrimalityTest.cpp
+    )
+
+target_link_libraries(test_FermatAttack
+    gtest
+    gtest_main
+)
+
+add_test(NAME test_FermatAttack COMMAND test_FermatAttack)
 add_test(NAME test_RSA COMMAND test_RSA)
 add_test(NAME test_MillerRabinPrimality COMMAND test_MillerRabinPrimality)
 add_test(NAME test_SolovayStrassenPrimality COMMAND test_SolovayStrassenPrimality)

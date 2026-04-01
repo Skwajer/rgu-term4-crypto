@@ -187,6 +187,7 @@ tests/all: tests/CMakeFiles/test_FermatPrimality.dir/all
 tests/all: tests/CMakeFiles/test_SolovayStrassenPrimality.dir/all
 tests/all: tests/CMakeFiles/test_MillerRabinPrimality.dir/all
 tests/all: tests/CMakeFiles/test_RSA.dir/all
+tests/all: tests/CMakeFiles/test_FermatAttack.dir/all
 .PHONY : tests/all
 
 # Recursive "codegen" directory target.
@@ -199,6 +200,7 @@ tests/codegen: tests/CMakeFiles/test_FermatPrimality.dir/codegen
 tests/codegen: tests/CMakeFiles/test_SolovayStrassenPrimality.dir/codegen
 tests/codegen: tests/CMakeFiles/test_MillerRabinPrimality.dir/codegen
 tests/codegen: tests/CMakeFiles/test_RSA.dir/codegen
+tests/codegen: tests/CMakeFiles/test_FermatAttack.dir/codegen
 .PHONY : tests/codegen
 
 # Recursive "preinstall" directory target.
@@ -215,6 +217,7 @@ tests/clean: tests/CMakeFiles/test_FermatPrimality.dir/clean
 tests/clean: tests/CMakeFiles/test_SolovayStrassenPrimality.dir/clean
 tests/clean: tests/CMakeFiles/test_MillerRabinPrimality.dir/clean
 tests/clean: tests/CMakeFiles/test_RSA.dir/clean
+tests/clean: tests/CMakeFiles/test_FermatAttack.dir/clean
 .PHONY : tests/clean
 
 #=============================================================================
@@ -224,12 +227,12 @@ tests/clean: tests/CMakeFiles/test_RSA.dir/clean
 CMakeFiles/crypto_demo.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_demo.dir/build.make CMakeFiles/crypto_demo.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_demo.dir/build.make CMakeFiles/crypto_demo.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17 "Built target crypto_demo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18 "Built target crypto_demo"
 .PHONY : CMakeFiles/crypto_demo.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/crypto_demo.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles 17
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles 18
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/crypto_demo.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles 0
 .PHONY : CMakeFiles/crypto_demo.dir/rule
@@ -241,7 +244,7 @@ crypto_demo: CMakeFiles/crypto_demo.dir/rule
 # codegen rule for target.
 CMakeFiles/crypto_demo.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_demo.dir/build.make CMakeFiles/crypto_demo.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17 "Finished codegen for target crypto_demo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18 "Finished codegen for target crypto_demo"
 .PHONY : CMakeFiles/crypto_demo.dir/codegen
 
 # clean rule for target.
@@ -256,7 +259,7 @@ CMakeFiles/crypto_demo.dir/clean:
 _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=28,29 "Built target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=29,30 "Built target gmock"
 .PHONY : _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/all
 
 # Build rule for subdir invocation for target.
@@ -273,7 +276,7 @@ gmock: _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/rule
 # codegen rule for target.
 _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=28,29 "Finished codegen for target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=29,30 "Finished codegen for target gmock"
 .PHONY : _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/codegen
 
 # clean rule for target.
@@ -289,7 +292,7 @@ _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all: _deps/googletes
 _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=30,31 "Built target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=31,32 "Built target gmock_main"
 .PHONY : _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -306,7 +309,7 @@ gmock_main: _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/rule
 # codegen rule for target.
 _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=30,31 "Finished codegen for target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=31,32 "Finished codegen for target gmock_main"
 .PHONY : _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/codegen
 
 # clean rule for target.
@@ -321,7 +324,7 @@ _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/clean:
 _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all:
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=32,33 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=33,34 "Built target gtest"
 .PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -338,7 +341,7 @@ gtest: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/rule
 # codegen rule for target.
 _deps/googletest-build/googletest/CMakeFiles/gtest.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=32,33 "Finished codegen for target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=33,34 "Finished codegen for target gtest"
 .PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest.dir/codegen
 
 # clean rule for target.
@@ -353,7 +356,7 @@ _deps/googletest-build/googletest/CMakeFiles/gtest.dir/clean:
 _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=34,35 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=35,36 "Built target gtest_main"
 .PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -370,7 +373,7 @@ gtest_main: _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/rule
 # codegen rule for target.
 _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=34,35 "Finished codegen for target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=35,36 "Finished codegen for target gtest_main"
 .PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/codegen
 
 # clean rule for target.
@@ -385,7 +388,7 @@ _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/clean:
 src/CMakeFiles/crypto_lib.dir/all:
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/crypto_lib.dir/build.make src/CMakeFiles/crypto_lib.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/crypto_lib.dir/build.make src/CMakeFiles/crypto_lib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=18,19,20,21,22,23,24,25,26,27 "Built target crypto_lib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=19,20,21,22,23,24,25,26,27,28 "Built target crypto_lib"
 .PHONY : src/CMakeFiles/crypto_lib.dir/all
 
 # Build rule for subdir invocation for target.
@@ -402,7 +405,7 @@ crypto_lib: src/CMakeFiles/crypto_lib.dir/rule
 # codegen rule for target.
 src/CMakeFiles/crypto_lib.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/crypto_lib.dir/build.make src/CMakeFiles/crypto_lib.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=18,19,20,21,22,23,24,25,26,27 "Finished codegen for target crypto_lib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=19,20,21,22,23,24,25,26,27,28 "Finished codegen for target crypto_lib"
 .PHONY : src/CMakeFiles/crypto_lib.dir/codegen
 
 # clean rule for target.
@@ -419,7 +422,7 @@ tests/CMakeFiles/test_crypto_bits_permute.dir/all: _deps/googletest-build/google
 tests/CMakeFiles/test_crypto_bits_permute.dir/all: src/CMakeFiles/crypto_lib.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_crypto_bits_permute.dir/build.make tests/CMakeFiles/test_crypto_bits_permute.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_crypto_bits_permute.dir/build.make tests/CMakeFiles/test_crypto_bits_permute.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=62,63 "Built target test_crypto_bits_permute"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=69,70 "Built target test_crypto_bits_permute"
 .PHONY : tests/CMakeFiles/test_crypto_bits_permute.dir/all
 
 # Build rule for subdir invocation for target.
@@ -436,7 +439,7 @@ test_crypto_bits_permute: tests/CMakeFiles/test_crypto_bits_permute.dir/rule
 # codegen rule for target.
 tests/CMakeFiles/test_crypto_bits_permute.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_crypto_bits_permute.dir/build.make tests/CMakeFiles/test_crypto_bits_permute.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=62,63 "Finished codegen for target test_crypto_bits_permute"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=69,70 "Finished codegen for target test_crypto_bits_permute"
 .PHONY : tests/CMakeFiles/test_crypto_bits_permute.dir/codegen
 
 # clean rule for target.
@@ -453,7 +456,7 @@ tests/CMakeFiles/test_crypto_bits_sbox.dir/all: _deps/googletest-build/googletes
 tests/CMakeFiles/test_crypto_bits_sbox.dir/all: src/CMakeFiles/crypto_lib.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_crypto_bits_sbox.dir/build.make tests/CMakeFiles/test_crypto_bits_sbox.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_crypto_bits_sbox.dir/build.make tests/CMakeFiles/test_crypto_bits_sbox.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=64,65 "Built target test_crypto_bits_sbox"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=71,72 "Built target test_crypto_bits_sbox"
 .PHONY : tests/CMakeFiles/test_crypto_bits_sbox.dir/all
 
 # Build rule for subdir invocation for target.
@@ -470,7 +473,7 @@ test_crypto_bits_sbox: tests/CMakeFiles/test_crypto_bits_sbox.dir/rule
 # codegen rule for target.
 tests/CMakeFiles/test_crypto_bits_sbox.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_crypto_bits_sbox.dir/build.make tests/CMakeFiles/test_crypto_bits_sbox.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=64,65 "Finished codegen for target test_crypto_bits_sbox"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=71,72 "Finished codegen for target test_crypto_bits_sbox"
 .PHONY : tests/CMakeFiles/test_crypto_bits_sbox.dir/codegen
 
 # clean rule for target.
@@ -487,7 +490,7 @@ tests/CMakeFiles/test_padding.dir/all: _deps/googletest-build/googletest/CMakeFi
 tests/CMakeFiles/test_padding.dir/all: src/CMakeFiles/crypto_lib.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_padding.dir/build.make tests/CMakeFiles/test_padding.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_padding.dir/build.make tests/CMakeFiles/test_padding.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=66,67 "Built target test_padding"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=73,74 "Built target test_padding"
 .PHONY : tests/CMakeFiles/test_padding.dir/all
 
 # Build rule for subdir invocation for target.
@@ -504,7 +507,7 @@ test_padding: tests/CMakeFiles/test_padding.dir/rule
 # codegen rule for target.
 tests/CMakeFiles/test_padding.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_padding.dir/build.make tests/CMakeFiles/test_padding.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=66,67 "Finished codegen for target test_padding"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=73,74 "Finished codegen for target test_padding"
 .PHONY : tests/CMakeFiles/test_padding.dir/codegen
 
 # clean rule for target.
@@ -521,7 +524,7 @@ tests/CMakeFiles/test_CipherContext.dir/all: _deps/googletest-build/googletest/C
 tests/CMakeFiles/test_CipherContext.dir/all: src/CMakeFiles/crypto_lib.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_CipherContext.dir/build.make tests/CMakeFiles/test_CipherContext.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_CipherContext.dir/build.make tests/CMakeFiles/test_CipherContext.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=36,37 "Built target test_CipherContext"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=37,38 "Built target test_CipherContext"
 .PHONY : tests/CMakeFiles/test_CipherContext.dir/all
 
 # Build rule for subdir invocation for target.
@@ -538,7 +541,7 @@ test_CipherContext: tests/CMakeFiles/test_CipherContext.dir/rule
 # codegen rule for target.
 tests/CMakeFiles/test_CipherContext.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_CipherContext.dir/build.make tests/CMakeFiles/test_CipherContext.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=36,37 "Finished codegen for target test_CipherContext"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=37,38 "Finished codegen for target test_CipherContext"
 .PHONY : tests/CMakeFiles/test_CipherContext.dir/codegen
 
 # clean rule for target.
@@ -555,7 +558,7 @@ tests/CMakeFiles/test_CipherContextlab4.dir/all: _deps/googletest-build/googlete
 tests/CMakeFiles/test_CipherContextlab4.dir/all: src/CMakeFiles/crypto_lib.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_CipherContextlab4.dir/build.make tests/CMakeFiles/test_CipherContextlab4.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_CipherContextlab4.dir/build.make tests/CMakeFiles/test_CipherContextlab4.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=38,39 "Built target test_CipherContextlab4"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=39,40 "Built target test_CipherContextlab4"
 .PHONY : tests/CMakeFiles/test_CipherContextlab4.dir/all
 
 # Build rule for subdir invocation for target.
@@ -572,7 +575,7 @@ test_CipherContextlab4: tests/CMakeFiles/test_CipherContextlab4.dir/rule
 # codegen rule for target.
 tests/CMakeFiles/test_CipherContextlab4.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_CipherContextlab4.dir/build.make tests/CMakeFiles/test_CipherContextlab4.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=38,39 "Finished codegen for target test_CipherContextlab4"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=39,40 "Finished codegen for target test_CipherContextlab4"
 .PHONY : tests/CMakeFiles/test_CipherContextlab4.dir/codegen
 
 # clean rule for target.
@@ -588,7 +591,7 @@ tests/CMakeFiles/test_FermatPrimality.dir/all: _deps/googletest-build/googletest
 tests/CMakeFiles/test_FermatPrimality.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_FermatPrimality.dir/build.make tests/CMakeFiles/test_FermatPrimality.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_FermatPrimality.dir/build.make tests/CMakeFiles/test_FermatPrimality.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=40,41,42,43,44 "Built target test_FermatPrimality"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=47,48,49,50,51 "Built target test_FermatPrimality"
 .PHONY : tests/CMakeFiles/test_FermatPrimality.dir/all
 
 # Build rule for subdir invocation for target.
@@ -605,7 +608,7 @@ test_FermatPrimality: tests/CMakeFiles/test_FermatPrimality.dir/rule
 # codegen rule for target.
 tests/CMakeFiles/test_FermatPrimality.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_FermatPrimality.dir/build.make tests/CMakeFiles/test_FermatPrimality.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=40,41,42,43,44 "Finished codegen for target test_FermatPrimality"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=47,48,49,50,51 "Finished codegen for target test_FermatPrimality"
 .PHONY : tests/CMakeFiles/test_FermatPrimality.dir/codegen
 
 # clean rule for target.
@@ -621,7 +624,7 @@ tests/CMakeFiles/test_SolovayStrassenPrimality.dir/all: _deps/googletest-build/g
 tests/CMakeFiles/test_SolovayStrassenPrimality.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_SolovayStrassenPrimality.dir/build.make tests/CMakeFiles/test_SolovayStrassenPrimality.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_SolovayStrassenPrimality.dir/build.make tests/CMakeFiles/test_SolovayStrassenPrimality.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=57,58,59,60,61 "Built target test_SolovayStrassenPrimality"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=64,65,66,67,68 "Built target test_SolovayStrassenPrimality"
 .PHONY : tests/CMakeFiles/test_SolovayStrassenPrimality.dir/all
 
 # Build rule for subdir invocation for target.
@@ -638,7 +641,7 @@ test_SolovayStrassenPrimality: tests/CMakeFiles/test_SolovayStrassenPrimality.di
 # codegen rule for target.
 tests/CMakeFiles/test_SolovayStrassenPrimality.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_SolovayStrassenPrimality.dir/build.make tests/CMakeFiles/test_SolovayStrassenPrimality.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=57,58,59,60,61 "Finished codegen for target test_SolovayStrassenPrimality"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=64,65,66,67,68 "Finished codegen for target test_SolovayStrassenPrimality"
 .PHONY : tests/CMakeFiles/test_SolovayStrassenPrimality.dir/codegen
 
 # clean rule for target.
@@ -654,7 +657,7 @@ tests/CMakeFiles/test_MillerRabinPrimality.dir/all: _deps/googletest-build/googl
 tests/CMakeFiles/test_MillerRabinPrimality.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_MillerRabinPrimality.dir/build.make tests/CMakeFiles/test_MillerRabinPrimality.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_MillerRabinPrimality.dir/build.make tests/CMakeFiles/test_MillerRabinPrimality.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=45,46,47,48,49 "Built target test_MillerRabinPrimality"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=52,53,54,55,56 "Built target test_MillerRabinPrimality"
 .PHONY : tests/CMakeFiles/test_MillerRabinPrimality.dir/all
 
 # Build rule for subdir invocation for target.
@@ -671,7 +674,7 @@ test_MillerRabinPrimality: tests/CMakeFiles/test_MillerRabinPrimality.dir/rule
 # codegen rule for target.
 tests/CMakeFiles/test_MillerRabinPrimality.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_MillerRabinPrimality.dir/build.make tests/CMakeFiles/test_MillerRabinPrimality.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=45,46,47,48,49 "Finished codegen for target test_MillerRabinPrimality"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=52,53,54,55,56 "Finished codegen for target test_MillerRabinPrimality"
 .PHONY : tests/CMakeFiles/test_MillerRabinPrimality.dir/codegen
 
 # clean rule for target.
@@ -687,7 +690,7 @@ tests/CMakeFiles/test_RSA.dir/all: _deps/googletest-build/googletest/CMakeFiles/
 tests/CMakeFiles/test_RSA.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_RSA.dir/build.make tests/CMakeFiles/test_RSA.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_RSA.dir/build.make tests/CMakeFiles/test_RSA.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=50,51,52,53,54,55,56 "Built target test_RSA"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=57,58,59,60,61,62,63 "Built target test_RSA"
 .PHONY : tests/CMakeFiles/test_RSA.dir/all
 
 # Build rule for subdir invocation for target.
@@ -704,13 +707,46 @@ test_RSA: tests/CMakeFiles/test_RSA.dir/rule
 # codegen rule for target.
 tests/CMakeFiles/test_RSA.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_RSA.dir/build.make tests/CMakeFiles/test_RSA.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=50,51,52,53,54,55,56 "Finished codegen for target test_RSA"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=57,58,59,60,61,62,63 "Finished codegen for target test_RSA"
 .PHONY : tests/CMakeFiles/test_RSA.dir/codegen
 
 # clean rule for target.
 tests/CMakeFiles/test_RSA.dir/clean:
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_RSA.dir/build.make tests/CMakeFiles/test_RSA.dir/clean
 .PHONY : tests/CMakeFiles/test_RSA.dir/clean
+
+#=============================================================================
+# Target rules for target tests/CMakeFiles/test_FermatAttack.dir
+
+# All Build rule for target.
+tests/CMakeFiles/test_FermatAttack.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
+tests/CMakeFiles/test_FermatAttack.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_FermatAttack.dir/build.make tests/CMakeFiles/test_FermatAttack.dir/depend
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_FermatAttack.dir/build.make tests/CMakeFiles/test_FermatAttack.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=41,42,43,44,45,46 "Built target test_FermatAttack"
+.PHONY : tests/CMakeFiles/test_FermatAttack.dir/all
+
+# Build rule for subdir invocation for target.
+tests/CMakeFiles/test_FermatAttack.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles 10
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_FermatAttack.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles 0
+.PHONY : tests/CMakeFiles/test_FermatAttack.dir/rule
+
+# Convenience name for target.
+test_FermatAttack: tests/CMakeFiles/test_FermatAttack.dir/rule
+.PHONY : test_FermatAttack
+
+# codegen rule for target.
+tests/CMakeFiles/test_FermatAttack.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_FermatAttack.dir/build.make tests/CMakeFiles/test_FermatAttack.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/CMakeFiles --progress-num=41,42,43,44,45,46 "Finished codegen for target test_FermatAttack"
+.PHONY : tests/CMakeFiles/test_FermatAttack.dir/codegen
+
+# clean rule for target.
+tests/CMakeFiles/test_FermatAttack.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_FermatAttack.dir/build.make tests/CMakeFiles/test_FermatAttack.dir/clean
+.PHONY : tests/CMakeFiles/test_FermatAttack.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

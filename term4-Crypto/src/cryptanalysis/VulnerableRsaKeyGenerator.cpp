@@ -51,7 +51,7 @@ BigInt VulnerableRsaKeyGenerator::generate_prime(size_t bits_count, double targe
     return p;
 }
 
-BigInt find_next_prime(BigInt prime, double target_prob)
+BigInt VulnerableRsaKeyGenerator::find_next_prime(BigInt prime, double target_prob)
 {
     BigInt next_prime = prime + 2;
     auto primality_test = std::make_unique<MillerRabinPrimalityTest>();
@@ -70,7 +70,7 @@ bool VulnerableRsaKeyGenerator::is_vulnerable_to_Wieners_attack(const BigInt& d,
 
 BigInt VulnerableRsaKeyGenerator::choose_public_exponent(const BigInt& phi_n)
 {
-    static const int exponents[] = {65537, 257, 17, 5, 3};
+    static const int exponents[] = {5, 3};
 
     for (int e_val : exponents)
     {
@@ -85,7 +85,7 @@ BigInt VulnerableRsaKeyGenerator::choose_public_exponent(const BigInt& phi_n)
     throw std::runtime_error("Failed to find suitable public exponent");
 }
 
-rsaVulnerableKeys VulnerableRsaKeyGenerator::generate_vulnerable_to_Fermas_attack(size_t bits_count, double target_prob)
+rsaVulnerableKeys VulnerableRsaKeyGenerator::generate_vulnerable_to_Fermat_attack(size_t bits_count, double target_prob)
 {
     BigInt p;
     BigInt q;
@@ -115,7 +115,7 @@ rsaVulnerableKeys VulnerableRsaKeyGenerator::generate_vulnerable_to_Fermas_attac
     return {{e, n}, {d, n}};
 }
 
-rsaVulnerableKeys VulnerableRsaKeyGenerator::generate_vulnerable_to_Winner_attack(size_t bits_count, double target_prob)
+rsaVulnerableKeys VulnerableRsaKeyGenerator::generate_vulnerable_to_Wieners_attack(size_t bits_count, double target_prob)
 {
     BigInt p;
     BigInt q;

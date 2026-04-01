@@ -366,6 +366,19 @@ test_RSA/fast:
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_RSA.dir/build.make tests/CMakeFiles/test_RSA.dir/build
 .PHONY : test_RSA/fast
 
+#=============================================================================
+# Target rules for targets named test_FermatAttack
+
+# Build rule for target.
+test_FermatAttack: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_FermatAttack
+.PHONY : test_FermatAttack
+
+# fast build rule for target.
+test_FermatAttack/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_FermatAttack.dir/build.make tests/CMakeFiles/test_FermatAttack.dir/build
+.PHONY : test_FermatAttack/fast
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -557,6 +570,30 @@ src/bits/Sbox_substitution.s: src/bits/Sbox_substitution.cpp.s
 src/bits/Sbox_substitution.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_demo.dir/build.make CMakeFiles/crypto_demo.dir/src/bits/Sbox_substitution.cpp.s
 .PHONY : src/bits/Sbox_substitution.cpp.s
+
+src/cryptanalysis/VulnerableRsaKeyGenerator.o: src/cryptanalysis/VulnerableRsaKeyGenerator.cpp.o
+.PHONY : src/cryptanalysis/VulnerableRsaKeyGenerator.o
+
+# target to build an object file
+src/cryptanalysis/VulnerableRsaKeyGenerator.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_demo.dir/build.make CMakeFiles/crypto_demo.dir/src/cryptanalysis/VulnerableRsaKeyGenerator.cpp.o
+.PHONY : src/cryptanalysis/VulnerableRsaKeyGenerator.cpp.o
+
+src/cryptanalysis/VulnerableRsaKeyGenerator.i: src/cryptanalysis/VulnerableRsaKeyGenerator.cpp.i
+.PHONY : src/cryptanalysis/VulnerableRsaKeyGenerator.i
+
+# target to preprocess a source file
+src/cryptanalysis/VulnerableRsaKeyGenerator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_demo.dir/build.make CMakeFiles/crypto_demo.dir/src/cryptanalysis/VulnerableRsaKeyGenerator.cpp.i
+.PHONY : src/cryptanalysis/VulnerableRsaKeyGenerator.cpp.i
+
+src/cryptanalysis/VulnerableRsaKeyGenerator.s: src/cryptanalysis/VulnerableRsaKeyGenerator.cpp.s
+.PHONY : src/cryptanalysis/VulnerableRsaKeyGenerator.s
+
+# target to generate assembly for a file
+src/cryptanalysis/VulnerableRsaKeyGenerator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_demo.dir/build.make CMakeFiles/crypto_demo.dir/src/cryptanalysis/VulnerableRsaKeyGenerator.cpp.s
+.PHONY : src/cryptanalysis/VulnerableRsaKeyGenerator.cpp.s
 
 src/crypto_core/CipherContext.o: src/crypto_core/CipherContext.cpp.o
 .PHONY : src/crypto_core/CipherContext.o
@@ -771,6 +808,7 @@ help:
 	@echo "... gtest_main"
 	@echo "... test_CipherContext"
 	@echo "... test_CipherContextlab4"
+	@echo "... test_FermatAttack"
 	@echo "... test_FermatPrimality"
 	@echo "... test_MillerRabinPrimality"
 	@echo "... test_RSA"
@@ -802,6 +840,9 @@ help:
 	@echo "... src/bits/Sbox_substitution.o"
 	@echo "... src/bits/Sbox_substitution.i"
 	@echo "... src/bits/Sbox_substitution.s"
+	@echo "... src/cryptanalysis/VulnerableRsaKeyGenerator.o"
+	@echo "... src/cryptanalysis/VulnerableRsaKeyGenerator.i"
+	@echo "... src/cryptanalysis/VulnerableRsaKeyGenerator.s"
 	@echo "... src/crypto_core/CipherContext.o"
 	@echo "... src/crypto_core/CipherContext.i"
 	@echo "... src/crypto_core/CipherContext.s"

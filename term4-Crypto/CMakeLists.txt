@@ -56,6 +56,7 @@ set(SOURCES
     math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.cpp
     math/Solovay_Strassen_primality_test/SolovayStrassenPrimalityTest.cpp
     src/crypto_core/rsa/RSA.cpp
+    src/cryptanalysis/VulnerableRsaKeyGenerator.cpp
     main.cpp
 )
 

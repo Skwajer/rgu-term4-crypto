@@ -48,6 +48,7 @@
 /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/tests/CMakeFiles/test_SolovayStrassenPrimality.dir
 /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/tests/CMakeFiles/test_MillerRabinPrimality.dir
 /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/tests/CMakeFiles/test_RSA.dir
+/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/tests/CMakeFiles/test_FermatAttack.dir
 /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/tests/CMakeFiles/test.dir
 /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/tests/CMakeFiles/edit_cache.dir
 /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/tests/CMakeFiles/rebuild_cache.dir

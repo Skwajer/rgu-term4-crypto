@@ -1,3 +1,4 @@
+#pragma once
 #include <boost/multiprecision/cpp_int.hpp>
 //#include <boost/multiprecision/cpp_bin_float.hpp>
 //#include <boost/multiprecision/fwd.hpp>
@@ -31,10 +32,10 @@ public:
     static BigInt generate_prime(
         size_t bits_count, double target_prob);
 
-    static rsaVulnerableKeys generate_vulnerable_to_Fermas_attack(
+    static rsaVulnerableKeys generate_vulnerable_to_Fermat_attack(
         size_t bits_count, double target_prob);
 
-    static rsaVulnerableKeys generate_vulnerable_to_Winner_attack(
+    static rsaVulnerableKeys generate_vulnerable_to_Wieners_attack(
         size_t bits_count, double target_prob);
 
 private:

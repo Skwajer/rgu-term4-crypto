@@ -110,4 +110,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "tests/CMakeFiles/test_SolovayStrassenPrimality.dir/DependInfo.cmake"
   "tests/CMakeFiles/test_MillerRabinPrimality.dir/DependInfo.cmake"
   "tests/CMakeFiles/test_RSA.dir/DependInfo.cmake"
+  "tests/CMakeFiles/test_FermatAttack.dir/DependInfo.cmake"
   )

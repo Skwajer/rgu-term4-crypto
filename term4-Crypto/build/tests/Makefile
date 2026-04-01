@@ -297,6 +297,20 @@ test_RSA/fast:
 	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_RSA.dir/build.make tests/CMakeFiles/test_RSA.dir/build
 .PHONY : test_RSA/fast
 
+# Convenience name for target.
+tests/CMakeFiles/test_FermatAttack.dir/rule:
+	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_FermatAttack.dir/rule
+.PHONY : tests/CMakeFiles/test_FermatAttack.dir/rule
+
+# Convenience name for target.
+test_FermatAttack: tests/CMakeFiles/test_FermatAttack.dir/rule
+.PHONY : test_FermatAttack
+
+# fast build rule for target.
+test_FermatAttack/fast:
+	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_FermatAttack.dir/build.make tests/CMakeFiles/test_FermatAttack.dir/build
+.PHONY : test_FermatAttack/fast
+
 __/math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.o: __/math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.cpp.o
 .PHONY : __/math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.o
 
@@ -304,6 +318,7 @@ __/math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.o: __/math/Miller_R
 __/math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.cpp.o:
 	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_MillerRabinPrimality.dir/build.make tests/CMakeFiles/test_MillerRabinPrimality.dir/__/math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.cpp.o
 	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_RSA.dir/build.make tests/CMakeFiles/test_RSA.dir/__/math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.cpp.o
+	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_FermatAttack.dir/build.make tests/CMakeFiles/test_FermatAttack.dir/__/math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.cpp.o
 .PHONY : __/math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.cpp.o
 
 __/math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.i: __/math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.cpp.i
@@ -313,6 +328,7 @@ __/math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.i: __/math/Miller_R
 __/math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.cpp.i:
 	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_MillerRabinPrimality.dir/build.make tests/CMakeFiles/test_MillerRabinPrimality.dir/__/math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.cpp.i
 	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_RSA.dir/build.make tests/CMakeFiles/test_RSA.dir/__/math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.cpp.i
+	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_FermatAttack.dir/build.make tests/CMakeFiles/test_FermatAttack.dir/__/math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.cpp.i
 .PHONY : __/math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.cpp.i
 
 __/math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.s: __/math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.cpp.s
@@ -322,6 +338,7 @@ __/math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.s: __/math/Miller_R
 __/math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.cpp.s:
 	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_MillerRabinPrimality.dir/build.make tests/CMakeFiles/test_MillerRabinPrimality.dir/__/math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.cpp.s
 	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_RSA.dir/build.make tests/CMakeFiles/test_RSA.dir/__/math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.cpp.s
+	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_FermatAttack.dir/build.make tests/CMakeFiles/test_FermatAttack.dir/__/math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.cpp.s
 .PHONY : __/math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.cpp.s
 
 __/math/NumberTheoryService.o: __/math/NumberTheoryService.cpp.o
@@ -333,6 +350,7 @@ __/math/NumberTheoryService.cpp.o:
 	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_SolovayStrassenPrimality.dir/build.make tests/CMakeFiles/test_SolovayStrassenPrimality.dir/__/math/NumberTheoryService.cpp.o
 	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_MillerRabinPrimality.dir/build.make tests/CMakeFiles/test_MillerRabinPrimality.dir/__/math/NumberTheoryService.cpp.o
 	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_RSA.dir/build.make tests/CMakeFiles/test_RSA.dir/__/math/NumberTheoryService.cpp.o
+	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_FermatAttack.dir/build.make tests/CMakeFiles/test_FermatAttack.dir/__/math/NumberTheoryService.cpp.o
 .PHONY : __/math/NumberTheoryService.cpp.o
 
 __/math/NumberTheoryService.i: __/math/NumberTheoryService.cpp.i
@@ -344,6 +362,7 @@ __/math/NumberTheoryService.cpp.i:
 	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_SolovayStrassenPrimality.dir/build.make tests/CMakeFiles/test_SolovayStrassenPrimality.dir/__/math/NumberTheoryService.cpp.i
 	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_MillerRabinPrimality.dir/build.make tests/CMakeFiles/test_MillerRabinPrimality.dir/__/math/NumberTheoryService.cpp.i
 	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_RSA.dir/build.make tests/CMakeFiles/test_RSA.dir/__/math/NumberTheoryService.cpp.i
+	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_FermatAttack.dir/build.make tests/CMakeFiles/test_FermatAttack.dir/__/math/NumberTheoryService.cpp.i
 .PHONY : __/math/NumberTheoryService.cpp.i
 
 __/math/NumberTheoryService.s: __/math/NumberTheoryService.cpp.s
@@ -355,6 +374,7 @@ __/math/NumberTheoryService.cpp.s:
 	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_SolovayStrassenPrimality.dir/build.make tests/CMakeFiles/test_SolovayStrassenPrimality.dir/__/math/NumberTheoryService.cpp.s
 	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_MillerRabinPrimality.dir/build.make tests/CMakeFiles/test_MillerRabinPrimality.dir/__/math/NumberTheoryService.cpp.s
 	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_RSA.dir/build.make tests/CMakeFiles/test_RSA.dir/__/math/NumberTheoryService.cpp.s
+	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_FermatAttack.dir/build.make tests/CMakeFiles/test_FermatAttack.dir/__/math/NumberTheoryService.cpp.s
 .PHONY : __/math/NumberTheoryService.cpp.s
 
 __/math/Solovay_Strassen_primality_test/SolovayStrassenPrimalityTest.o: __/math/Solovay_Strassen_primality_test/SolovayStrassenPrimalityTest.cpp.o
@@ -390,6 +410,7 @@ __/math/TemplateProbabilisticPrimalityTest.cpp.o:
 	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_SolovayStrassenPrimality.dir/build.make tests/CMakeFiles/test_SolovayStrassenPrimality.dir/__/math/TemplateProbabilisticPrimalityTest.cpp.o
 	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_MillerRabinPrimality.dir/build.make tests/CMakeFiles/test_MillerRabinPrimality.dir/__/math/TemplateProbabilisticPrimalityTest.cpp.o
 	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_RSA.dir/build.make tests/CMakeFiles/test_RSA.dir/__/math/TemplateProbabilisticPrimalityTest.cpp.o
+	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_FermatAttack.dir/build.make tests/CMakeFiles/test_FermatAttack.dir/__/math/TemplateProbabilisticPrimalityTest.cpp.o
 .PHONY : __/math/TemplateProbabilisticPrimalityTest.cpp.o
 
 __/math/TemplateProbabilisticPrimalityTest.i: __/math/TemplateProbabilisticPrimalityTest.cpp.i
@@ -401,6 +422,7 @@ __/math/TemplateProbabilisticPrimalityTest.cpp.i:
 	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_SolovayStrassenPrimality.dir/build.make tests/CMakeFiles/test_SolovayStrassenPrimality.dir/__/math/TemplateProbabilisticPrimalityTest.cpp.i
 	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_MillerRabinPrimality.dir/build.make tests/CMakeFiles/test_MillerRabinPrimality.dir/__/math/TemplateProbabilisticPrimalityTest.cpp.i
 	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_RSA.dir/build.make tests/CMakeFiles/test_RSA.dir/__/math/TemplateProbabilisticPrimalityTest.cpp.i
+	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_FermatAttack.dir/build.make tests/CMakeFiles/test_FermatAttack.dir/__/math/TemplateProbabilisticPrimalityTest.cpp.i
 .PHONY : __/math/TemplateProbabilisticPrimalityTest.cpp.i
 
 __/math/TemplateProbabilisticPrimalityTest.s: __/math/TemplateProbabilisticPrimalityTest.cpp.s
@@ -412,6 +434,7 @@ __/math/TemplateProbabilisticPrimalityTest.cpp.s:
 	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_SolovayStrassenPrimality.dir/build.make tests/CMakeFiles/test_SolovayStrassenPrimality.dir/__/math/TemplateProbabilisticPrimalityTest.cpp.s
 	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_MillerRabinPrimality.dir/build.make tests/CMakeFiles/test_MillerRabinPrimality.dir/__/math/TemplateProbabilisticPrimalityTest.cpp.s
 	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_RSA.dir/build.make tests/CMakeFiles/test_RSA.dir/__/math/TemplateProbabilisticPrimalityTest.cpp.s
+	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_FermatAttack.dir/build.make tests/CMakeFiles/test_FermatAttack.dir/__/math/TemplateProbabilisticPrimalityTest.cpp.s
 .PHONY : __/math/TemplateProbabilisticPrimalityTest.cpp.s
 
 __/math/fermat_primality_test/FermatPrimalityTest.o: __/math/fermat_primality_test/FermatPrimalityTest.cpp.o
@@ -437,6 +460,30 @@ __/math/fermat_primality_test/FermatPrimalityTest.s: __/math/fermat_primality_te
 __/math/fermat_primality_test/FermatPrimalityTest.cpp.s:
 	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_FermatPrimality.dir/build.make tests/CMakeFiles/test_FermatPrimality.dir/__/math/fermat_primality_test/FermatPrimalityTest.cpp.s
 .PHONY : __/math/fermat_primality_test/FermatPrimalityTest.cpp.s
+
+__/src/cryptanalysis/VulnerableRsaKeyGenerator.o: __/src/cryptanalysis/VulnerableRsaKeyGenerator.cpp.o
+.PHONY : __/src/cryptanalysis/VulnerableRsaKeyGenerator.o
+
+# target to build an object file
+__/src/cryptanalysis/VulnerableRsaKeyGenerator.cpp.o:
+	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_FermatAttack.dir/build.make tests/CMakeFiles/test_FermatAttack.dir/__/src/cryptanalysis/VulnerableRsaKeyGenerator.cpp.o
+.PHONY : __/src/cryptanalysis/VulnerableRsaKeyGenerator.cpp.o
+
+__/src/cryptanalysis/VulnerableRsaKeyGenerator.i: __/src/cryptanalysis/VulnerableRsaKeyGenerator.cpp.i
+.PHONY : __/src/cryptanalysis/VulnerableRsaKeyGenerator.i
+
+# target to preprocess a source file
+__/src/cryptanalysis/VulnerableRsaKeyGenerator.cpp.i:
+	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_FermatAttack.dir/build.make tests/CMakeFiles/test_FermatAttack.dir/__/src/cryptanalysis/VulnerableRsaKeyGenerator.cpp.i
+.PHONY : __/src/cryptanalysis/VulnerableRsaKeyGenerator.cpp.i
+
+__/src/cryptanalysis/VulnerableRsaKeyGenerator.s: __/src/cryptanalysis/VulnerableRsaKeyGenerator.cpp.s
+.PHONY : __/src/cryptanalysis/VulnerableRsaKeyGenerator.s
+
+# target to generate assembly for a file
+__/src/cryptanalysis/VulnerableRsaKeyGenerator.cpp.s:
+	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_FermatAttack.dir/build.make tests/CMakeFiles/test_FermatAttack.dir/__/src/cryptanalysis/VulnerableRsaKeyGenerator.cpp.s
+.PHONY : __/src/cryptanalysis/VulnerableRsaKeyGenerator.cpp.s
 
 __/src/crypto_core/rsa/RSA.o: __/src/crypto_core/rsa/RSA.cpp.o
 .PHONY : __/src/crypto_core/rsa/RSA.o
@@ -512,6 +559,30 @@ test_CipherContext.cpp.s:
 	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_CipherContext.dir/build.make tests/CMakeFiles/test_CipherContext.dir/test_CipherContext.cpp.s
 	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_CipherContextlab4.dir/build.make tests/CMakeFiles/test_CipherContextlab4.dir/test_CipherContext.cpp.s
 .PHONY : test_CipherContext.cpp.s
+
+test_FermatAttack.o: test_FermatAttack.cpp.o
+.PHONY : test_FermatAttack.o
+
+# target to build an object file
+test_FermatAttack.cpp.o:
+	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_FermatAttack.dir/build.make tests/CMakeFiles/test_FermatAttack.dir/test_FermatAttack.cpp.o
+.PHONY : test_FermatAttack.cpp.o
+
+test_FermatAttack.i: test_FermatAttack.cpp.i
+.PHONY : test_FermatAttack.i
+
+# target to preprocess a source file
+test_FermatAttack.cpp.i:
+	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_FermatAttack.dir/build.make tests/CMakeFiles/test_FermatAttack.dir/test_FermatAttack.cpp.i
+.PHONY : test_FermatAttack.cpp.i
+
+test_FermatAttack.s: test_FermatAttack.cpp.s
+.PHONY : test_FermatAttack.s
+
+# target to generate assembly for a file
+test_FermatAttack.cpp.s:
+	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_FermatAttack.dir/build.make tests/CMakeFiles/test_FermatAttack.dir/test_FermatAttack.cpp.s
+.PHONY : test_FermatAttack.cpp.s
 
 test_Fermat_primality.o: test_Fermat_primality.cpp.o
 .PHONY : test_Fermat_primality.o
@@ -696,6 +767,7 @@ help:
 	@echo "... test"
 	@echo "... test_CipherContext"
 	@echo "... test_CipherContextlab4"
+	@echo "... test_FermatAttack"
 	@echo "... test_FermatPrimality"
 	@echo "... test_MillerRabinPrimality"
 	@echo "... test_RSA"
@@ -718,6 +790,9 @@ help:
 	@echo "... __/math/fermat_primality_test/FermatPrimalityTest.o"
 	@echo "... __/math/fermat_primality_test/FermatPrimalityTest.i"
 	@echo "... __/math/fermat_primality_test/FermatPrimalityTest.s"
+	@echo "... __/src/cryptanalysis/VulnerableRsaKeyGenerator.o"
+	@echo "... __/src/cryptanalysis/VulnerableRsaKeyGenerator.i"
+	@echo "... __/src/cryptanalysis/VulnerableRsaKeyGenerator.s"
 	@echo "... __/src/crypto_core/rsa/RSA.o"
 	@echo "... __/src/crypto_core/rsa/RSA.i"
 	@echo "... __/src/crypto_core/rsa/RSA.s"
@@ -727,6 +802,9 @@ help:
 	@echo "... test_CipherContext.o"
 	@echo "... test_CipherContext.i"
 	@echo "... test_CipherContext.s"
+	@echo "... test_FermatAttack.o"
+	@echo "... test_FermatAttack.i"
+	@echo "... test_FermatAttack.s"
 	@echo "... test_Fermat_primality.o"
 	@echo "... test_Fermat_primality.i"
 	@echo "... test_Fermat_primality.s"
