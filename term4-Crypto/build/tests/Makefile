@@ -311,6 +311,20 @@ test_FermatAttack/fast:
 	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_FermatAttack.dir/build.make tests/CMakeFiles/test_FermatAttack.dir/build
 .PHONY : test_FermatAttack/fast
 
+# Convenience name for target.
+tests/CMakeFiles/test_Rijndael.dir/rule:
+	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_Rijndael.dir/rule
+.PHONY : tests/CMakeFiles/test_Rijndael.dir/rule
+
+# Convenience name for target.
+test_Rijndael: tests/CMakeFiles/test_Rijndael.dir/rule
+.PHONY : test_Rijndael
+
+# fast build rule for target.
+test_Rijndael/fast:
+	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_Rijndael.dir/build.make tests/CMakeFiles/test_Rijndael.dir/build
+.PHONY : test_Rijndael/fast
+
 __/math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.o: __/math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.cpp.o
 .PHONY : __/math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.o
 
@@ -461,6 +475,30 @@ __/math/fermat_primality_test/FermatPrimalityTest.cpp.s:
 	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_FermatPrimality.dir/build.make tests/CMakeFiles/test_FermatPrimality.dir/__/math/fermat_primality_test/FermatPrimalityTest.cpp.s
 .PHONY : __/math/fermat_primality_test/FermatPrimalityTest.cpp.s
 
+__/src/Rijndael/RijndaelCipher.o: __/src/Rijndael/RijndaelCipher.cpp.o
+.PHONY : __/src/Rijndael/RijndaelCipher.o
+
+# target to build an object file
+__/src/Rijndael/RijndaelCipher.cpp.o:
+	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_Rijndael.dir/build.make tests/CMakeFiles/test_Rijndael.dir/__/src/Rijndael/RijndaelCipher.cpp.o
+.PHONY : __/src/Rijndael/RijndaelCipher.cpp.o
+
+__/src/Rijndael/RijndaelCipher.i: __/src/Rijndael/RijndaelCipher.cpp.i
+.PHONY : __/src/Rijndael/RijndaelCipher.i
+
+# target to preprocess a source file
+__/src/Rijndael/RijndaelCipher.cpp.i:
+	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_Rijndael.dir/build.make tests/CMakeFiles/test_Rijndael.dir/__/src/Rijndael/RijndaelCipher.cpp.i
+.PHONY : __/src/Rijndael/RijndaelCipher.cpp.i
+
+__/src/Rijndael/RijndaelCipher.s: __/src/Rijndael/RijndaelCipher.cpp.s
+.PHONY : __/src/Rijndael/RijndaelCipher.s
+
+# target to generate assembly for a file
+__/src/Rijndael/RijndaelCipher.cpp.s:
+	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_Rijndael.dir/build.make tests/CMakeFiles/test_Rijndael.dir/__/src/Rijndael/RijndaelCipher.cpp.s
+.PHONY : __/src/Rijndael/RijndaelCipher.cpp.s
+
 __/src/cryptanalysis/VulnerableRsaKeyGenerator.o: __/src/cryptanalysis/VulnerableRsaKeyGenerator.cpp.o
 .PHONY : __/src/cryptanalysis/VulnerableRsaKeyGenerator.o
 
@@ -532,6 +570,30 @@ __/src/crypto_core/rsa/RsaKeyGeneration.s: __/src/crypto_core/rsa/RsaKeyGenerati
 __/src/crypto_core/rsa/RsaKeyGeneration.cpp.s:
 	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_RSA.dir/build.make tests/CMakeFiles/test_RSA.dir/__/src/crypto_core/rsa/RsaKeyGeneration.cpp.s
 .PHONY : __/src/crypto_core/rsa/RsaKeyGeneration.cpp.s
+
+__/src/mode/modes.o: __/src/mode/modes.cpp.o
+.PHONY : __/src/mode/modes.o
+
+# target to build an object file
+__/src/mode/modes.cpp.o:
+	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_Rijndael.dir/build.make tests/CMakeFiles/test_Rijndael.dir/__/src/mode/modes.cpp.o
+.PHONY : __/src/mode/modes.cpp.o
+
+__/src/mode/modes.i: __/src/mode/modes.cpp.i
+.PHONY : __/src/mode/modes.i
+
+# target to preprocess a source file
+__/src/mode/modes.cpp.i:
+	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_Rijndael.dir/build.make tests/CMakeFiles/test_Rijndael.dir/__/src/mode/modes.cpp.i
+.PHONY : __/src/mode/modes.cpp.i
+
+__/src/mode/modes.s: __/src/mode/modes.cpp.s
+.PHONY : __/src/mode/modes.s
+
+# target to generate assembly for a file
+__/src/mode/modes.cpp.s:
+	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_Rijndael.dir/build.make tests/CMakeFiles/test_Rijndael.dir/__/src/mode/modes.cpp.s
+.PHONY : __/src/mode/modes.cpp.s
 
 test_CipherContext.o: test_CipherContext.cpp.o
 .PHONY : test_CipherContext.o
@@ -656,6 +718,30 @@ test_RSA.cpp.s:
 	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_RSA.dir/build.make tests/CMakeFiles/test_RSA.dir/test_RSA.cpp.s
 .PHONY : test_RSA.cpp.s
 
+test_Rijndael.o: test_Rijndael.cpp.o
+.PHONY : test_Rijndael.o
+
+# target to build an object file
+test_Rijndael.cpp.o:
+	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_Rijndael.dir/build.make tests/CMakeFiles/test_Rijndael.dir/test_Rijndael.cpp.o
+.PHONY : test_Rijndael.cpp.o
+
+test_Rijndael.i: test_Rijndael.cpp.i
+.PHONY : test_Rijndael.i
+
+# target to preprocess a source file
+test_Rijndael.cpp.i:
+	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_Rijndael.dir/build.make tests/CMakeFiles/test_Rijndael.dir/test_Rijndael.cpp.i
+.PHONY : test_Rijndael.cpp.i
+
+test_Rijndael.s: test_Rijndael.cpp.s
+.PHONY : test_Rijndael.s
+
+# target to generate assembly for a file
+test_Rijndael.cpp.s:
+	cd /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_Rijndael.dir/build.make tests/CMakeFiles/test_Rijndael.dir/test_Rijndael.cpp.s
+.PHONY : test_Rijndael.cpp.s
+
 test_Solovay_Strassen_primality_test.o: test_Solovay_Strassen_primality_test.cpp.o
 .PHONY : test_Solovay_Strassen_primality_test.o
 
@@ -771,6 +857,7 @@ help:
 	@echo "... test_FermatPrimality"
 	@echo "... test_MillerRabinPrimality"
 	@echo "... test_RSA"
+	@echo "... test_Rijndael"
 	@echo "... test_SolovayStrassenPrimality"
 	@echo "... test_crypto_bits_permute"
 	@echo "... test_crypto_bits_sbox"
@@ -790,6 +877,9 @@ help:
 	@echo "... __/math/fermat_primality_test/FermatPrimalityTest.o"
 	@echo "... __/math/fermat_primality_test/FermatPrimalityTest.i"
 	@echo "... __/math/fermat_primality_test/FermatPrimalityTest.s"
+	@echo "... __/src/Rijndael/RijndaelCipher.o"
+	@echo "... __/src/Rijndael/RijndaelCipher.i"
+	@echo "... __/src/Rijndael/RijndaelCipher.s"
 	@echo "... __/src/cryptanalysis/VulnerableRsaKeyGenerator.o"
 	@echo "... __/src/cryptanalysis/VulnerableRsaKeyGenerator.i"
 	@echo "... __/src/cryptanalysis/VulnerableRsaKeyGenerator.s"
@@ -799,6 +889,9 @@ help:
 	@echo "... __/src/crypto_core/rsa/RsaKeyGeneration.o"
 	@echo "... __/src/crypto_core/rsa/RsaKeyGeneration.i"
 	@echo "... __/src/crypto_core/rsa/RsaKeyGeneration.s"
+	@echo "... __/src/mode/modes.o"
+	@echo "... __/src/mode/modes.i"
+	@echo "... __/src/mode/modes.s"
 	@echo "... test_CipherContext.o"
 	@echo "... test_CipherContext.i"
 	@echo "... test_CipherContext.s"
@@ -814,6 +907,9 @@ help:
 	@echo "... test_RSA.o"
 	@echo "... test_RSA.i"
 	@echo "... test_RSA.s"
+	@echo "... test_Rijndael.o"
+	@echo "... test_Rijndael.i"
+	@echo "... test_Rijndael.s"
 	@echo "... test_Solovay_Strassen_primality_test.o"
 	@echo "... test_Solovay_Strassen_primality_test.i"
 	@echo "... test_Solovay_Strassen_primality_test.s"
