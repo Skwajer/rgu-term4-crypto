@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/skwajer/dev/rgu-term4-crypto/term4-Crypto/src -isystem /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/_deps/googletest-src/googletest/include -isystem /home/skwajer/dev/rgu-term4-crypto/term4-Crypto/build/_deps/googletest-src/googletest
 
-CXX_FLAGS = -std=c++23
+CXX_FLAGS = -O3 -DNDEBUG -std=c++23
 
