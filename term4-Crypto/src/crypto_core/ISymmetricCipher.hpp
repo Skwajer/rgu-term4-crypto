@@ -1,4 +1,5 @@
-#pragma once
+#ifndef ISYMMETRICIPHER_HPP
+#define ISYMMETRICIPHER_HPP
 #include "namespaces_crypto.hpp"
 
 namespace crypto 
@@ -17,3 +18,4 @@ namespace crypto
         virtual size_t block_size() const = 0;
     };
 }
+#endif //ISYMMETRICIPHER_HPP

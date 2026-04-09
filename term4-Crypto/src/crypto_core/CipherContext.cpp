@@ -114,7 +114,25 @@ namespace crypto
                 m_cipher_mode = std::make_unique<PCBC>(m_init_vector);
                 break;
             }
-            
+
+            case CFB_md:
+            {
+                m_cipher_mode = std::make_unique<CFB>(m_init_vector);
+                break;
+            }
+
+            case OFB_md:
+            {
+                m_cipher_mode = std::make_unique<OFB>(m_init_vector);
+                break;
+            }
+
+            case CTR_md:
+            {
+                m_cipher_mode = std::make_unique<CTR>(m_init_vector);
+                break;
+            }
+
             default:
             {
                 throw std::invalid_argument("incorrect cipher mode");
@@ -135,6 +153,18 @@ namespace crypto
          case ANSIX923:
          {
             m_padding = std::make_unique<AnsiX923Padding>();
+            break;
+         }
+
+         case PKCS7:
+         {
+            m_padding = std::make_unique<PKCS7Padding>();
+            break;
+         }
+
+         case ISO10126:
+         {
+            m_padding = std::make_unique<ISO10126Padding>();
             break;
          }
          

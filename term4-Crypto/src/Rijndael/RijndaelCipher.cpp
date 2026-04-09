@@ -26,6 +26,7 @@ namespace crypto
         if (key_bits == 128) {m_rounds = 10;}
         else if (key_bits == 192) {m_rounds = 12;}
         else {m_rounds = 14;}
+        calculate_s_box(gf8_mod);
     }
 
     void RijndaelCipher::setKey(const Bytes& key)
@@ -38,10 +39,10 @@ namespace crypto
         return m_block_size;
     }
 
-    Byte RijndaelCipher::affineTransform(GF2n::u64 b)
+    Byte RijndaelCipher::affineTransform(GF2n::u64 b) const noexcept
     {
         unsigned char result = 0;
-        unsigned char c = 99;
+        constexpr uint8_t c = 99;
         for (int i = 0; i < 8; i++)
         {
             unsigned char bit = (b >> i) & 1;
@@ -55,7 +56,7 @@ namespace crypto
         return result;
     }
 
-    void RijndaelCipher::calculate_s_box(GF2n::u64 f)
+    void RijndaelCipher::calculate_s_box(GF2n::u64 f) noexcept
     {
         for (GF2n::u64 i = 0; i < 256; i++)
         {
@@ -69,7 +70,7 @@ namespace crypto
         }
     }
 
-    void RijndaelCipher::SubBytes(std::vector<Byte> &state)
+    void RijndaelCipher::SubBytes(std::vector<Byte> &state) noexcept
     {
         for (int i = 0; i < state.size(); i++)
         {
@@ -77,7 +78,7 @@ namespace crypto
         }
     }
 
-    void RijndaelCipher::ShiftRows(std::vector<Byte> &state)
+    void RijndaelCipher::ShiftRows(std::vector<Byte> &state) const noexcept
     {
         std::vector<Byte> result(state.size());
         auto Nb = m_block_size / 4;
@@ -110,7 +111,7 @@ namespace crypto
         state = result;
     }
 
-    void RijndaelCipher::MixColumns(std::vector<Byte> &state)
+    void RijndaelCipher::MixColumns(std::vector<Byte> &state) noexcept
     {
         
         auto Nb = m_block_size / 4;
@@ -149,6 +150,45 @@ namespace crypto
             result[1 * Nb + col] = b1;
             result[2 * Nb + col] = b2;
             result[3 * Nb + col] = b3;
+        }
+        state = result;
+    }
+
+    void RijndaelCipher::InvSubBytes(std::vector<Byte>& state)
+    {
+        for (size_t i = 0; i < state.size(); i++) 
+        {
+            state[i] = m_inv_s_box[state[i]];
+        }
+    }
+    
+    void RijndaelCipher::InvShiftRows(std::vector<Byte>& state)
+    {
+        std::vector<Byte> result(state.size());
+        auto Nb = m_block_size / 4;
+        int shifts[4];
+        
+        if (Nb == 8) {
+            shifts[0] = 0;
+            shifts[1] = 1;
+            shifts[2] = 3;
+            shifts[3] = 4;
+        } else {
+            shifts[0] = 0;
+            shifts[1] = 1;
+            shifts[2] = 2;
+            shifts[3] = 3;
+        }
+        
+        for (size_t row = 0; row < 4; row++) 
+        {
+            for (size_t col = 0; col < Nb; col++) 
+            {
+                size_t src_index = row * Nb + col;
+                size_t dest_col = (col + shifts[row]) % Nb;
+                size_t dest_index = row * Nb + dest_col;
+                result[dest_index] = state[src_index];
+            }
         }
         state = result;
     }
@@ -200,7 +240,7 @@ namespace crypto
         state = result;
     }
 
-    void RijndaelCipher::AddRoundKey(std::vector<Byte> &state, size_t round)
+    void RijndaelCipher::AddRoundKey(std::vector<Byte> &state, size_t round) noexcept
     {
         auto Nb = m_block_size / 4;
         size_t offset = round * Nb;
@@ -257,12 +297,12 @@ namespace crypto
         0x9A000000   // 15: 2^14
     };
     
-    const size_t max_rcon = sizeof(rcon) / sizeof(rcon[0]);
+    /*const size_t max_rcon = sizeof(rcon) / sizeof(rcon[0]);
     
     if (i < 1 || i > max_rcon) 
     {
         throw std::out_of_range("Rcon index out of range");
-    }
+    }*/
 
     return rcon[i - 1];
 }
@@ -283,15 +323,15 @@ namespace crypto
         for (size_t i = Nk; i < Nb * (m_rounds + 1); i++)
         {
             uint32_t temp = m_w[i - 1];
-            if (i % Nk == 0)
+            if (i % Nk == 0) [[unlikely]]
             {
                 temp = SubWord(RotWord(temp)) ^ Rcon(i / Nk);
             }
-            else if (Nk > 6 && (i % Nk == 4))
+            else if (Nk > 6 && (i % Nk == 4)) [[unlikely]]
             {
                 temp = SubWord(temp);
             }
-            m_w[i] = m_w[i - Nk] ^ temp;
+            m_w.push_back(m_w[i - Nk] ^ temp);
         }
     }
 

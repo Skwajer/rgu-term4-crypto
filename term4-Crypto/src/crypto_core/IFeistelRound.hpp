@@ -1,4 +1,5 @@
-#pragma once
+#ifndef IFEISTELROUND_HPP
+#define IFEISTELROUND_HPP
 #include "namespaces_crypto.hpp"
 
 namespace crypto {
@@ -9,3 +10,4 @@ namespace crypto {
         virtual Bytes encryptRound(const Bytes& block, const Bytes& roundKey) = 0;
     };
 }
+#endif //IFEISTELROUND_HPP

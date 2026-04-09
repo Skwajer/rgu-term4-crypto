@@ -1,3 +1,5 @@
+#ifndef PADDING_HPP
+#define PADDING_HPP
 #include "../crypto_core/namespaces_crypto.hpp"
 #include <random>
 #include <ctime>
@@ -26,17 +28,18 @@ class IPadding
     Bytes remove(const Bytes &data, size_t block_size) const override;
   };
 
-  class PKCS7Padding final : IPadding
+  class PKCS7Padding final : public IPadding
   {
     public:
     Bytes apply(const Bytes &data, size_t block_size) const override;
     Bytes remove(const Bytes &data, size_t block_size) const override;
   };
 
-  class ISO10126Padding final : IPadding
+  class ISO10126Padding final : public IPadding
   {
     public:
     Bytes apply(const Bytes &data, size_t block_size) const override;
     Bytes remove(const Bytes &data, size_t block_size) const override;
   };
 }
+#endif //PADDING_HPP

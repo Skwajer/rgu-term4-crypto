@@ -22,12 +22,12 @@ namespace crypto
         RijndaelCipher(GF2n::u64 gf8_mod, size_t block_bits = 128, size_t key_bits = 128);
 
     private:
-        Byte affineTransform(GF2n::u64 b);
-        void calculate_s_box(GF2n::u64 mod);
-        void SubBytes(std::vector<Byte> &state);
-        void ShiftRows(std::vector<Byte> &state);
-        void MixColumns(std::vector<Byte> &state);
-        void AddRoundKey(std::vector<Byte>& state, size_t round);
+        Byte affineTransform(GF2n::u64 b) const noexcept;
+        void calculate_s_box(GF2n::u64 mod) noexcept;
+        void SubBytes(std::vector<Byte> &state) noexcept;
+        void ShiftRows(std::vector<Byte> &state) const noexcept;
+        void MixColumns(std::vector<Byte> &state) noexcept;
+        void AddRoundKey(std::vector<Byte>& state, size_t round) noexcept;
 
     private:
         void InvSubBytes(std::vector<Byte> &state);

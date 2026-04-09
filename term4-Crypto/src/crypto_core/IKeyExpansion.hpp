@@ -1,4 +1,5 @@
-#pragma once
+#ifndef IKEYEXPANSION_HPP
+#define IKEYEXPANSION_HPP 
 #include "namespaces_crypto.hpp"
 #include <vector>
 
@@ -10,3 +11,4 @@ namespace crypto {
         virtual std::vector<Bytes> generateRoundKeys(const Bytes& key) = 0;
     };
 }
+#endif //IKEYEXPANSION_HPP

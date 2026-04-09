@@ -1,4 +1,5 @@
-#pragma once
+#ifndef FEISTELNETWORK_HPP
+#define FEISTELNETWORK_HPP
 #include "IFeistelRound.hpp"
 #include "IKeyExpansion.hpp"
 #include "namespaces_crypto.hpp"
@@ -28,3 +29,4 @@ namespace crypto
         Bytes decrypt(const Bytes& block);
     };
 }
+#endif //FEISTELNETWORK_HPP
