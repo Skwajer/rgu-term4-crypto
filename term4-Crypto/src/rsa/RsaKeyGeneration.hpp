@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../../../math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.hpp"
+#include "../../math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.hpp"
 #include <boost/io_fwd.hpp>
 #include <boost/multiprecision/integer.hpp>
 #include <memory>

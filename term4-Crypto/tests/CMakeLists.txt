@@ -82,8 +82,8 @@ target_link_libraries(test_MillerRabinPrimality
 
 add_executable(test_RSA
     test_RSA.cpp
-    ../src/crypto_core/rsa/RSA.cpp
-    ../src/crypto_core/rsa/RsaKeyGeneration.cpp
+    ../src/rsa/RSA.cpp
+    ../src/rsa/RsaKeyGeneration.cpp
     ../math/NumberTheoryService.cpp
     ../math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.cpp
     ../math/TemplateProbabilisticPrimalityTest.cpp)
@@ -106,6 +106,20 @@ target_link_libraries(test_FermatAttack
     gtest_main
 )
 
+add_executable(test_Rijndael
+    test_Rijndael.cpp
+    ../src/Rijndael/RijndaelCipher.cpp
+    ../src/mode/modes.cpp
+    ../src/padding/padding.cpp
+    ../src/crypto_core/CipherContext.cpp
+    )
+
+target_link_libraries(test_Rijndael
+    gtest
+    gtest_main
+)
+
+add_test(NAME test_Rijndael COMMAND test_Rijndael)
 add_test(NAME test_FermatAttack COMMAND test_FermatAttack)
 add_test(NAME test_RSA COMMAND test_RSA)
 add_test(NAME test_MillerRabinPrimality COMMAND test_MillerRabinPrimality)

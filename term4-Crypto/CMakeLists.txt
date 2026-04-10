@@ -55,9 +55,10 @@ set(SOURCES
     math/TemplateProbabilisticPrimalityTest.cpp
     math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.cpp
     math/Solovay_Strassen_primality_test/SolovayStrassenPrimalityTest.cpp
-    src/crypto_core/rsa/RSA.cpp
+    src/rsa/RSA.cpp
     src/cryptanalysis/VulnerableRsaKeyGenerator.cpp
     main.cpp
+    src/Rijndael/RijndaelCipher.cpp
 )
 
 add_executable(crypto_demo ${SOURCES})
