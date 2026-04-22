@@ -20,6 +20,9 @@ public:
       static BigInt Euler_func_definition(BigInt const &p);
       static BigInt Euler_func_factorization(BigInt const &n);
       static BigInt Euler_func_Fourier(BigInt const &n);
+      static BigInt generate_candidate(size_t bits);
+      static BigInt generate_prime(size_t bits_count, double target_prob);
+      static BigInt generate_random_bigint(BigInt const &from, BigInt const &to);
       
 };
 #endif

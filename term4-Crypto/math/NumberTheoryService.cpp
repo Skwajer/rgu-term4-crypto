@@ -2,6 +2,9 @@
 #include <boost/multiprecision/detail/default_ops.hpp>
 #include <cstddef>
 #include <stdexcept>
+#include "Miller_Rabin_primality_test/MillerRabinPrimalityTest.hpp"
+#include <random>
+#include <memory>
 
 BigInt NumberTheoryService::pow_mod(BigInt base, BigInt exp, BigInt mod)
 {
@@ -190,3 +193,60 @@ BigInt NumberTheoryService::Euler_func_Fourier(BigInt const &n)
     }
     return static_cast<BigInt>(round(result_sum));
 }
+
+BigInt NumberTheoryService::generate_candidate(size_t bits)
+    {
+        static boost::random::mt19937_64 rng(std::random_device{}());
+
+        BigInt n = 0;
+
+        size_t words = (bits + 63) / 64;
+
+        for (size_t i = 0; i < words; ++i)
+        {
+            n <<= 64;
+            n |= rng();
+        }
+
+        size_t extra_bits = words * 64 - bits;
+        if (extra_bits > 0)
+        {
+            n >>= extra_bits;
+        }
+
+        n |= (BigInt(1) << (bits - 1));
+        n |= 1;
+
+        return n;
+    }
+
+    BigInt NumberTheoryService::generate_prime(size_t bits_count, double target_prob)
+    {
+        if (target_prob <= 0 || target_prob >= 1)
+        {
+            throw std::invalid_argument("the target probability should be in (0 ; 1)");
+        }
+
+        auto primality_test = std::make_unique<MillerRabinPrimalityTest>();
+
+        BigInt p = generate_candidate(bits_count);
+
+        while (!(primality_test->is_prime(p, target_prob)))
+        {
+            p += 2;
+
+            if (boost::multiprecision::msb(p) + 1 > bits_count)
+            {
+                p = generate_candidate(bits_count);
+            }
+        }
+
+        return p;
+    }
+
+    BigInt NumberTheoryService::generate_random_bigint(BigInt const &from,  BigInt const &to)
+    {
+        boost::random::mt19937 rng(std::random_device{}());
+        boost::random::uniform_int_distribution<BigInt> dist(from, to);
+        return dist(rng);
+    }
