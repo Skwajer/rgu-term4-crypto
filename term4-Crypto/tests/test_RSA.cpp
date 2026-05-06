@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
-#include "../src/crypto_core/rsa/RSA.hpp"
-#include "../src/crypto_core/rsa/RsaKeyGeneration.hpp"
+#include "../src/rsa/RSA.hpp"
+#include "../src/rsa/RsaKeyGeneration.hpp"
 #include <vector>
 
 class RSATest : public ::testing::Test {

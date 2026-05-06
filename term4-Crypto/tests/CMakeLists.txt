@@ -51,6 +51,7 @@ add_executable(test_FermatPrimality
     test_Fermat_primality.cpp
     ../math/NumberTheoryService.cpp
     ../math/fermat_primality_test/FermatPrimalityTest.cpp
+    ../math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.cpp
     ../math/TemplateProbabilisticPrimalityTest.cpp)
 
 target_link_libraries(test_FermatPrimality
@@ -61,6 +62,7 @@ target_link_libraries(test_FermatPrimality
 add_executable(test_SolovayStrassenPrimality
     test_Solovay_Strassen_primality_test.cpp
     ../math/NumberTheoryService.cpp
+    ../math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.cpp
     ../math/Solovay_Strassen_primality_test/SolovayStrassenPrimalityTest.cpp
     ../math/TemplateProbabilisticPrimalityTest.cpp)
 
@@ -119,6 +121,70 @@ target_link_libraries(test_Rijndael
     gtest_main
 )
 
+add_executable(test_twofish
+    test_twofish.cpp
+    ../src/twofish/TwoFishCipher.cpp
+    ../src/mode/modes.cpp
+    ../src/padding/padding.cpp
+    ../src/crypto_core/CipherContext.cpp
+    )
+
+target_link_libraries(test_twofish
+    gtest
+    gtest_main
+)
+
+add_executable(test_mars
+    test_mars.cpp
+    ../src/mars/MarsCipher.cpp
+    ../src/mode/modes.cpp
+    ../src/padding/padding.cpp
+    ../src/crypto_core/CipherContext.cpp
+    )
+
+target_link_libraries(test_mars
+    gtest
+    gtest_main
+)
+
+add_executable(test_Elgamal
+    test_ElGamalKeyGeneration.cpp
+    ../src/Elgamal/ElGamalKeyGeneration.cpp
+    ../src/Elgamal/ElGamalCipher.cpp
+    ../src/mode/modes.cpp
+    ../src/padding/padding.cpp
+    ../src/crypto_core/CipherContext.cpp
+    ../math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.cpp
+    ../math/TemplateProbabilisticPrimalityTest.cpp
+    ../math/NumberTheoryService.cpp
+    )
+
+target_link_libraries(test_Elgamal
+    gtest
+    gtest_main
+)
+
+add_executable(test_RabinCryptosystem
+    test_RabinCryptosystem.cpp
+    ../src/RabinCryptoSystem/RabinCryptosystem.cpp
+    ../src/mode/modes.cpp
+    ../src/padding/padding.cpp
+    ../src/crypto_core/CipherContext.cpp
+    ../math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.cpp
+    ../math/TemplateProbabilisticPrimalityTest.cpp
+    ../math/NumberTheoryService.cpp
+    )
+
+target_link_libraries(test_RabinCryptosystem
+    gtest
+    gtest_main
+)
+
+add_test(NAME test_RabinCryptosystem COMMAND test_RabinCryptosystem)
+
+add_test(NAME test_Elgamal COMMAND test_Elgamal)
+add_test(NAME test_mars COMMAND test_mars)
+add_test(NAME test_twofish COMMAND test_twofish)
 add_test(NAME test_Rijndael COMMAND test_Rijndael)
 add_test(NAME test_FermatAttack COMMAND test_FermatAttack)
 add_test(NAME test_RSA COMMAND test_RSA)

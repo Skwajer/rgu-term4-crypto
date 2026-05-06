@@ -57,8 +57,13 @@ set(SOURCES
     math/Solovay_Strassen_primality_test/SolovayStrassenPrimalityTest.cpp
     src/rsa/RSA.cpp
     src/cryptanalysis/VulnerableRsaKeyGenerator.cpp
-    main.cpp
     src/Rijndael/RijndaelCipher.cpp
+    src/twofish/TwoFishCipher.cpp
+    src/mars/MarsCipher.cpp
+    src/Elgamal/ElGamalKeyGeneration.cpp
+    src/Elgamal/ElGamalCipher.cpp
+    src/RabinCryptoSystem/RabinCryptosystem.cpp
+    main.cpp
 )
 
 add_executable(crypto_demo ${SOURCES})
