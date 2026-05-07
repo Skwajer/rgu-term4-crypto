@@ -228,15 +228,6 @@ std::vector<uint8_t> RabinCryptosystem::encrypt(
 
     size_t n_byte_size = bigint_byte_size(n);
 
-    /*
-        Формат блока:
-
-        [PREFIX][SIZE][DATA][RANDOM...]
-
-        PREFIX = 0xAA
-        SIZE   = размер полезных данных
-    */
-
     constexpr size_t overhead = 2;
 
     if (n_byte_size <= overhead + 1)
@@ -269,22 +260,18 @@ std::vector<uint8_t> RabinCryptosystem::encrypt(
 
         std::vector<uint8_t> block;
 
-        // PREFIX
         block.push_back(PREFIX_MARKER);
 
-        // SIZE
         block.push_back(
             static_cast<uint8_t>(current_size)
         );
 
-        // DATA
         block.insert(
             block.end(),
             plaintext.begin() + i,
             plaintext.begin() + i + current_size
         );
 
-        // RANDOM PADDING
         while (block.size() < n_byte_size - 1)
         {
             block.push_back(
@@ -295,11 +282,6 @@ std::vector<uint8_t> RabinCryptosystem::encrypt(
         }
 
         BigInt m = bytes_to_bigint(block);
-
-        /*
-            На практике сюда почти никогда не попадём,
-            но гарантируем m < n.
-        */
 
         while (m >= n)
         {
@@ -379,10 +361,6 @@ std::vector<uint8_t> RabinCryptosystem::decrypt(
 
         BigInt c = bytes_to_bigint(enc_block);
 
-        /*
-            D = B² + 4c
-        */
-
         BigInt D =
             (B * B + 4 * c) % n;
 
@@ -425,12 +403,6 @@ std::vector<uint8_t> RabinCryptosystem::decrypt(
                     m,
                     n_byte_size - 1
                 );
-
-            /*
-                Проверяем структуру:
-
-                [PREFIX][SIZE][DATA][RANDOM]
-            */
 
             if (bytes.size() < 2)
             {
