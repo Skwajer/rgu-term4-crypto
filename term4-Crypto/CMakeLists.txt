@@ -63,6 +63,7 @@ set(SOURCES
     src/Elgamal/ElGamalKeyGeneration.cpp
     src/Elgamal/ElGamalCipher.cpp
     src/RabinCryptoSystem/RabinCryptosystem.cpp
+    src/DSA/DSA.cpp
     main.cpp
 )
 

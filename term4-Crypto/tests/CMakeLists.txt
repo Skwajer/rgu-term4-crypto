@@ -180,8 +180,25 @@ target_link_libraries(test_RabinCryptosystem
     gtest_main
 )
 
-add_test(NAME test_RabinCryptosystem COMMAND test_RabinCryptosystem)
+add_executable(test_DSA
+    test_DSA.cpp
+    ../src/DSA/DSA.cpp
+    ../src/mode/modes.cpp
+    ../src/padding/padding.cpp
+    ../src/crypto_core/CipherContext.cpp
+    ../math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.cpp
+    ../math/TemplateProbabilisticPrimalityTest.cpp
+    ../math/NumberTheoryService.cpp
+    )
 
+target_link_libraries(test_DSA
+    gtest
+    gtest_main
+)
+
+add_test(NAME test_DSA COMMAND test_DSA)
+
+add_test(NAME test_RabinCryptosystem COMMAND test_RabinCryptosystem)
 add_test(NAME test_Elgamal COMMAND test_Elgamal)
 add_test(NAME test_mars COMMAND test_mars)
 add_test(NAME test_twofish COMMAND test_twofish)
