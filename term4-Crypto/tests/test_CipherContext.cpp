@@ -4,7 +4,6 @@
 #include "../src/des/DESCipher.hpp"
 #include <fstream>
 #include <filesystem>
-#include <thread>
 #include <random>
 #include "../src/des/des_tables.cpp"
 #include "../src/bits/Pbox_permutation.hpp"
@@ -181,7 +180,6 @@ TEST_F(CipherContextTest, CBC_ANSIX923_VariousShortInputs) {
     }
 }
 
-// Тест 2: Граничные значения - пустая строка и 1 блок
 TEST_F(CipherContextTest, CBC_ANSIX923_Boundaries) {
     auto iv = generate_random_iv(8);
     CipherContext context(std::move(m_des), CBC_md, ANSIX923, iv);
@@ -209,7 +207,6 @@ TEST_F(CipherContextTest, CBC_ANSIX923_Boundaries) {
     EXPECT_EQ(two_blocks, decrypted3);
 }
 
-// Тест 3: Специальные символы и бинарные данные
 TEST_F(CipherContextTest, CBC_ANSIX923_BinaryData) {
     auto iv = generate_random_iv(8);
     CipherContext context(std::move(m_des), CBC_md, ANSIX923, iv);
@@ -232,7 +229,6 @@ TEST_F(CipherContextTest, CBC_ANSIX923_BinaryData) {
     EXPECT_EQ(all_bytes, decrypted2);
 }
 
-// Тест 4: Очень длинные данные (много блоков)
 TEST_F(CipherContextTest, CBC_ANSIX923_LongData) {
     auto iv = generate_random_iv(8);
     CipherContext context(std::move(m_des), CBC_md, ANSIX923, iv);
@@ -251,11 +247,9 @@ TEST_F(CipherContextTest, CBC_ANSIX923_LongData) {
     EXPECT_EQ(long_data.size(), decrypted.size());
     EXPECT_EQ(long_data, decrypted);
     
-    // Проверяем размер ciphertext (должен быть кратен блоку)
     EXPECT_EQ(ciphertext.size() % 8, 0);
 }
 
-// Тест 5: Многопоточность с разными размерами
 TEST_F(CipherContextTest, CBC_ANSIX923_Multithreaded) {
     auto iv = generate_random_iv(8);
     CipherContext context(std::move(m_des), CBC_md, ANSIX923, iv);
@@ -402,7 +396,6 @@ TEST_F(CipherContextTest, EncryptDecrypt_File_Async)
     EXPECT_EQ(test_content, decrypted_content);
 }
 
-// Тесты ошибок
 TEST_F(CipherContextTest, ProcessFile_InputNotFound) 
 {
     CipherContext context(std::move(m_des), ECB_md, Zeros, {});

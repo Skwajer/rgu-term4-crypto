@@ -23,6 +23,17 @@ public:
       static BigInt generate_candidate(size_t bits);
       static BigInt generate_prime(size_t bits_count, double target_prob);
       static BigInt generate_random_bigint(BigInt const &from, BigInt const &to);
+      static BigInt find_primitive_root_for_prime(BigInt const &p);
+
+      static bool primitiveRootExists(BigInt const &n);
+      static BigInt findSmallestPrimitiveRoot(BigInt const &n);
+      static std::vector<BigInt> getAllPrimitiveRoots(BigInt const &n);
+      static std::vector<BigInt> getPrimeFactors(BigInt n);
+      static bool isPrimitiveRoot(
+            BigInt const &g,
+            BigInt const &n,
+            BigInt const &phi_n,
+            std::vector<BigInt> const &factors);
       
 };
 #endif

@@ -42,9 +42,9 @@ TEST_F(DSATest, SignAndVerifyShortMessage)
 TEST_F(DSATest, SignAndVerifyLongMessage)
 {
     std::string text =
-        "This is a very long message for DSA signing test. "
-        "It should verify correctly even when message size is large. "
-        "Cryptography is fun.";
+        "This is message for DSA signing test. "
+        "It should verify correctly pupupupuppupupupupupupupupupupupupupupupupup"
+;
 
     auto message = to_bytes(text);
 

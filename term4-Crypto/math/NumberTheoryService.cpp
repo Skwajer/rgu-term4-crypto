@@ -250,3 +250,161 @@ BigInt NumberTheoryService::generate_candidate(size_t bits)
         boost::random::uniform_int_distribution<BigInt> dist(from, to);
         return dist(rng);
     }
+
+    std::vector<BigInt> NumberTheoryService::getPrimeFactors(BigInt n)
+    {
+        std::vector<BigInt> factors;
+        
+        if (n % 2 == 0) {
+            factors.push_back(2);
+            while (n % 2 == 0) {
+                n /= 2;
+            }
+        }
+        
+        for (BigInt i = 3; i * i <= n; i += 2) {
+            if (n % i == 0) {
+                factors.push_back(i);
+                while (n % i == 0) {
+                    n /= i;
+                }
+            }
+        }
+        
+        if (n > 1) {
+            factors.push_back(n);
+        }
+        
+        return factors;
+    }
+
+   bool NumberTheoryService::primitiveRootExists(BigInt const& n)
+    {
+        if (n == 2 || n == 4)
+            return true;
+
+        BigInt tmp = n;
+
+        if (tmp % 2 == 0)
+            tmp /= 2;
+
+        if (tmp % 2 == 0)
+            return false;
+
+        BigInt p = 1;
+
+        for (BigInt d = 3; d * d <= tmp; d += 2)
+        {
+            if (tmp % d == 0)
+            {
+                p = d;
+
+                while (tmp % d == 0)
+                    tmp /= d;
+
+                break;
+            }
+        }
+
+        if (tmp > 1)
+            p = tmp;
+
+        if (p == 1)
+            return false;
+
+        BigInt remainder = n;
+
+        if (remainder % 2 == 0)
+            remainder /= 2;
+
+        while (remainder % p == 0)
+            remainder /= p;
+
+        return remainder == 1;
+    }
+
+    bool NumberTheoryService::isPrimitiveRoot(BigInt const &g, BigInt const &n, 
+                                            BigInt const &phi_n, std::vector<BigInt> const &factors)
+    {
+        if (gcd(g, n) != 1) {
+            return false;
+        }
+        
+        for (const auto& factor : factors) {
+            if (pow_mod(g, phi_n / factor, n) == 1) {
+                return false;
+            }
+        }
+        
+        return true;
+    }
+
+    BigInt NumberTheoryService::findSmallestPrimitiveRoot(BigInt const &n)
+    {
+        if (!primitiveRootExists(n)) {
+            std::cout << "primitive root not exist\n";
+            return -1;
+        }
+        
+        BigInt phi_n = Euler_func_factorization(n);
+        std::vector<BigInt> factors = getPrimeFactors(phi_n);
+        
+        for (BigInt g = 2; g < n; ++g) {
+            if (isPrimitiveRoot(g, n, phi_n, factors)) {
+                return g;
+            }
+        }
+        
+        return -1;
+    }
+
+    std::vector<BigInt> NumberTheoryService::getAllPrimitiveRoots(BigInt const &n)
+    {
+        std::vector<BigInt> roots;
+        
+        if (!primitiveRootExists(n)) {
+            return roots;
+        }
+        
+        BigInt phi_n = Euler_func_factorization(n);
+        BigInt g = findSmallestPrimitiveRoot(n);
+        
+        if (g == -1) {
+            return roots;
+        }
+        
+        for (BigInt i = 1; i <= phi_n; ++i) {
+            if (gcd(i, phi_n) == 1) {
+                BigInt root = pow_mod(g, i, n);
+                roots.push_back(root);
+            }
+        }
+        
+        std::sort(roots.begin(), roots.end());
+        return roots;
+    }
+
+    BigInt NumberTheoryService::find_primitive_root_for_prime(BigInt const &p)
+    {
+        BigInt phi = p - 1;
+        BigInt q = phi >> 1;
+
+        for (BigInt g = 2; g < p; ++g)
+        {
+            if (NumberTheoryService::gcd(g, p) != 1)
+            {
+                continue;
+            }
+            if (NumberTheoryService::pow_mod(g, 2, p) == 1)
+            {
+                continue;
+            }
+            if (NumberTheoryService::pow_mod(g, q, p) == 1)
+            {
+                continue;
+            }
+            return g;
+        }
+        
+        return -1;
+    }

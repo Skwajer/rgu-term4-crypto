@@ -196,8 +196,43 @@ target_link_libraries(test_DSA
     gtest_main
 )
 
-add_test(NAME test_DSA COMMAND test_DSA)
+add_executable(test_TDES
+    test_TDES.cpp
+    ../src/des/3DES.cpp
+    ../src/des/DESCipher.cpp
+    ../src/des/des_tables.cpp
+    ../src/crypto_core/FeistelCipher.cpp
+    ../src/crypto_core/FeistelNetwork.cpp
+    ../src/bits/Pbox_permutation.cpp
+    ../src/bits/Sbox_substitution.cpp
+    ../src/bits/utils.cpp
+    ../src/mode/modes.cpp
+    ../src/padding/padding.cpp
+    ../src/crypto_core/CipherContext.cpp
+    )
 
+target_link_libraries(test_TDES
+    gtest
+    gtest_main
+)
+
+add_executable(test_DH
+    test_DH.cpp
+    ../src/Diffie-Hellman/DH.cpp
+    ../math/NumberTheoryService.cpp
+    ../math/Miller_Rabin_primality_test/MillerRabinPrimalityTest.cpp
+    ../math/TemplateProbabilisticPrimalityTest.cpp
+    )
+
+target_link_libraries(test_DH
+    gtest
+    gtest_main
+)
+
+add_test(NAME test_DH COMMAND test_DH)
+
+add_test(NAME test_TDES COMMAND test_TDES)
+add_test(NAME test_DSA COMMAND test_DSA)
 add_test(NAME test_RabinCryptosystem COMMAND test_RabinCryptosystem)
 add_test(NAME test_Elgamal COMMAND test_Elgamal)
 add_test(NAME test_mars COMMAND test_mars)
@@ -213,5 +248,4 @@ add_test(NAME test_crypto_bits_substitute COMMAND test_crypto_bits_substitute)
 add_test(NAME test_crypto_paddings COMMAND test_padding)
 add_test(NAME test_CipherContext COMMAND test_CipherContext)
 add_test(NAME test_CipherContextlab4 COMMAND test_CipherContextlab4)
-
 
